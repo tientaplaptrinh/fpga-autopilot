@@ -1,0 +1,67 @@
+[*]
+[*] Auto-generated GTKWave layout — fpga_autopilot
+[*]
+[dumpfile] "uart_fifo_top.vcd"
+[sst_width] 220
+[signals_width] 240
+[sst_expanded] 1
+[sst_vpaned_height] 240
+*-19.706468 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+@28
+tb_uart_fifo_top.dut.clk
+@28
+tb_uart_fifo_top.dut.rst_n
+@28
+tb_uart_fifo_top.dut.u_rx_fifo.clk
+@28
+tb_uart_fifo_top.dut.u_rx_fifo.rst_n
+@28
+tb_uart_fifo_top.dut.wr_en
+@22
+tb_uart_fifo_top.dut.wr_data[7:0]
+@28
+tb_uart_fifo_top.dut.tx_serial
+@28
+tb_uart_fifo_top.dut.rx_serial
+@28
+tb_uart_fifo_top.dut.rd_en
+@22
+tb_uart_fifo_top.dut.rd_data[7:0]
+@28
+tb_uart_fifo_top.dut.tx_full
+@28
+tb_uart_fifo_top.dut.rx_empty
+@28
+tb_uart_fifo_top.dut.tx_busy
+@28
+tb_uart_fifo_top.dut.framing_error
+@22
+tb_uart_fifo_top.dut.u_uart_rx.state[2:0]
+@28
+tb_uart_fifo_top.dut.u_tx_fifo.clk
+@28
+tb_uart_fifo_top.dut.u_tx_fifo.rst_n
+@28
+tb_uart_fifo_top.dut.u_rx_fifo.wr_en
+@22
+tb_uart_fifo_top.dut.u_rx_fifo.wr_data[7:0]
+@28
+tb_uart_fifo_top.dut.u_rx_fifo.rd_en
+@28
+tb_uart_fifo_top.dut.u_uart_rx.rx_serial
+@28
+tb_uart_fifo_top.dut.clr_err
+@28
+tb_uart_fifo_top.dut.u_uart_tx.tx_serial
+@22
+tb_uart_fifo_top.dut.u_rx_fifo.rd_data[7:0]
+@28
+tb_uart_fifo_top.dut.tx_empty
+@28
+tb_uart_fifo_top.dut.rx_full
+@28
+tb_uart_fifo_top.dut.u_uart_tx.tx_busy
+@28
+tb_uart_fifo_top.dut.u_uart_rx.framing_error
+[pattern_trace] 1
+[pattern_trace] 0

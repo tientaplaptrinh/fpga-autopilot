@@ -1,0 +1,144 @@
+{
+  "spec_name": "traffic_fsm",
+  "top_module": "traffic_fsm",
+  "board_preset": "DE2-115",
+  "rtl_paths": [
+    "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\rtl\\traffic_fsm.sv"
+  ],
+  "tb_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\tb\\tb_traffic_fsm.sv",
+  "healing_iterations": 0,
+  "lint_report": {
+    "passed": true,
+    "inferred_latches": 0,
+    "blocking_in_seq": 0,
+    "nonblocking_in_comb": 0,
+    "missing_reset_clauses": 0,
+    "undriven_nets": 0,
+    "multidriven_nets": 0,
+    "width_mismatches": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "tools_used": [
+      "static_analyzer",
+      "verilator",
+      "iverilog"
+    ],
+    "warnings": []
+  },
+  "sim_result": {
+    "simulator": "iverilog",
+    "compile_passed": true,
+    "sim_passed": true,
+    "timed_out": false,
+    "total_vectors": 230,
+    "passed_vectors": 230,
+    "failed_vectors": 0,
+    "mismatches": [],
+    "vcd_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\sim\\traffic_fsm.vcd",
+    "stdout": "VCD info: dumpfile traffic_fsm.vcd opened for output.\n[SUMMARY] passed=230 failed=0\ntb_traffic_fsm.sv:270: $finish called at 2298000 (1ps)\n",
+    "stderr": "warning: Some design elements have no explicit time unit and/or\n       : time precision. This may cause confusing timing results.\n       : Affected design elements are:\n       :   -- module traffic_fsm declared here: traffic_fsm.sv:4\n",
+    "runtime_sec": 0.0945
+  },
+  "synthesis_report": {
+    "backend": "quartus",
+    "compile_passed": true,
+    "family": "Cyclone IV E",
+    "device": "EP4CE115F29C7",
+    "top_module": "traffic_fsm",
+    "project_dir": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus",
+    "qpf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qpf",
+    "qsf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qsf",
+    "sdc_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.sdc",
+    "tcl_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\compile_traffic_fsm.tcl",
+    "map_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\output_files\\traffic_fsm.map.rpt",
+    "fit_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\output_files\\traffic_fsm.fit.rpt",
+    "sta_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\output_files\\traffic_fsm.sta.rpt",
+    "resources": {
+      "logic_elements_or_alms": 133,
+      "combinational_functions": 132,
+      "dedicated_logic_registers": 81,
+      "memory_bits": 0,
+      "dsp_elements": 0,
+      "total_pins": 15,
+      "inferred_latches": 0
+    },
+    "timing": {
+      "fmax_mhz": 71.69,
+      "restricted_fmax_mhz": 71.69,
+      "worst_setup_slack_ns": 6.051,
+      "worst_hold_slack_ns": 0.181,
+      "worst_recovery_slack_ns": 9.439,
+      "worst_removal_slack_ns": 9.439,
+      "max_comb_delay_ns": null,
+      "timing_met": true
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "visual_captures": [
+    {
+      "capture_type": "gtkwave_waveform",
+      "tool_name": "gtkwave",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_waveform.png",
+      "window_title": "GTKWave - traffic_fsm.vcd",
+      "window_bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "width_px": 1420,
+      "height_px": 820,
+      "visual_audit_passed": true,
+      "edge_density": 0.12307,
+      "transition_columns_detected": 638,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Crisp digital signal transitions verified"
+    },
+    {
+      "capture_type": "quartus_rtl_viewer",
+      "tool_name": "quartus",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_rtl_viewer.png",
+      "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "window_bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "width_px": 1460,
+      "height_px": 860,
+      "visual_audit_passed": true,
+      "edge_density": 0.07818,
+      "transition_columns_detected": 1039,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Schematic symbols and nets verified"
+    },
+    {
+      "capture_type": "quartus_fsm_viewer",
+      "tool_name": "quartus",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_fsm_viewer.png",
+      "window_title": "State Machine Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "window_bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "width_px": 1460,
+      "height_px": 860,
+      "visual_audit_passed": true,
+      "edge_density": 0.04505,
+      "transition_columns_detected": 1139,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Schematic symbols and nets verified"
+    }
+  ],
+  "summary_md_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\summary.md",
+  "latex_tex_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\lab_report.tex",
+  "latex_pdf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\lab_report.pdf",
+  "overall_passed": true
+}

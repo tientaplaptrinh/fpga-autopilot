@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+outputs/*/quartus/db/
+outputs/*/quartus/incremental_db/
+outputs/*/sim/*.vvp
+outputs/*/*.vcd

@@ -1,0 +1,1031 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.11.27)  27 NOV 2026 11:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./lab_report.tex
+(lab_report.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/base\artic
+le.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/base\size1
+1.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\f
+ontspec.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/l3packages
+/xparse\xparse.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\e
+xpl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\
+l3backend-xetex.def
+File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
+\g__graphics_track_int=\count191
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count192
+\g__pdf_backend_annotation_int=\count193
+\g__pdf_backend_link_int=\count194
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\f
+ontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count195
+\l__fontspec_language_int=\count196
+\l__fontspec_strnum_int=\count197
+\l__fontspec_tmp_int=\count198
+\l__fontspec_tmpa_int=\count199
+\l__fontspec_tmpb_int=\count266
+\l__fontspec_tmpc_int=\count267
+\l__fontspec_em_int=\count268
+\l__fontspec_emdef_int=\count269
+\l__fontspec_strong_int=\count270
+\l__fontspec_strongdef_int=\count271
+\l__fontspec_tmpa_dim=\dimen141
+\l__fontspec_tmpb_dim=\dimen142
+\l__fontspec_tmpc_dim=\dimen143
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/base\fonte
+nc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\f
+ontspec.cfg)))
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: <->"Times
+(fontspec)             New
+(fontspec)             Roman/B/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/I/OT:script=latn;language=dflt;+smcp;mapping=tex-t
+ext;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Times New
+(fontspec)             Roman/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
+text;"
+
+
+Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;+smcp;mapping=tex
+-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;+smcp;mapping=t
+ex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;mapping=
+tex-text;"
+
+
+Package fontspec Info: Font family 'Consolas(0)' created for font 'Consolas'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Consolas/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Consolas/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Consolas/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Consolas/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/geometry\g
+eometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics\k
+eyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/iftex\if
+vtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/iftex\if
+tex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count272
+\Gm@cntv=\count273
+\c@Gm@tempcnt=\count274
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks18
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/geometry\g
+eometry.cfg))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xco
+lor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics-c
+fg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics-d
+ef\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics\m
+athcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/fronte
+ndlayer\tikz.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basicl
+ayer\pgf.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilit
+ies\pgfrcs.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/util
+ities\pgfutil-common.tex
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen152
+\pgfutil@tempdimb=\dimen153
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/util
+ities\pgfutil-latex.def
+\pgfutil@abb=\box52
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/util
+ities\pgfrcs.code.tex
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.
+revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basicl
+ayer\pgfcore.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics\g
+raphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics\g
+raphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics\t
+rig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/graphics-c
+fg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/system
+layer\pgfsys.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/syst
+emlayer\pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/util
+ities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/util
+ities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks22
+))
+\pgf@x=\dimen156
+\pgf@y=\dimen157
+\pgf@xa=\dimen158
+\pgf@ya=\dimen159
+\pgf@xb=\dimen160
+\pgf@yb=\dimen161
+\pgf@xc=\dimen162
+\pgf@yc=\dimen163
+\pgf@xd=\dimen164
+\pgf@yd=\dimen165
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count275
+\c@pgf@countb=\count276
+\c@pgf@countc=\count277
+\c@pgf@countd=\count278
+\t@pgf@toka=\toks23
+\t@pgf@tokb=\toks24
+\t@pgf@tokc=\toks25
+\pgf@sys@id@count=\count279
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/syst
+emlayer\pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/syst
+emlayer\pgfsys-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/syst
+emlayer\pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/syst
+emlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count280
+)))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/syst
+emlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count281
+\pgfsyssoftpath@bigbuffer@items=\count282
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/syst
+emlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmath.code.tex
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathutil.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen166
+\pgfmath@count=\count283
+\pgfmath@box=\box53
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.basic.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.trigonometric.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.random.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.comparison.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.base.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.round.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.misc.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfunctions.integerarithmetics.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathcalc.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count284
+))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfint.code.tex)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen167
+\pgf@picmaxx=\dimen168
+\pgf@picminy=\dimen169
+\pgf@picmaxy=\dimen170
+\pgf@pathminx=\dimen171
+\pgf@pathmaxx=\dimen172
+\pgf@pathminy=\dimen173
+\pgf@pathmaxy=\dimen174
+\pgf@xx=\dimen175
+\pgf@xy=\dimen176
+\pgf@yx=\dimen177
+\pgf@yy=\dimen178
+\pgf@zx=\dimen179
+\pgf@zy=\dimen180
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen181
+\pgf@path@lasty=\dimen182
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen183
+\pgf@shorten@start@additional=\dimen184
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count285
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen185
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen186
+\pgf@pt@y=\dimen187
+\pgf@pt@temp=\dimen188
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen189
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen190
+\pgf@sys@shading@range@num=\count286
+\pgf@shadingcount=\count287
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box57
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basi
+clayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modu
+les\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box58
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modu
+les\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compat
+ibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compat
+ibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilit
+ies\pgffor.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilit
+ies\pgfkeys.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/util
+ities\pgfkeys.code.tex))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\p
+gfmath.sty
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math
+\pgfmath.code.tex))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/util
+ities\pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
+))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fron
+tendlayer/tikz\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libr
+aries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count288
+\pgfplotmarksize=\dimen195
+)
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikz@lastmovetox=\dimen256
+\tikz@lastmovetoy=\dimen257
+\tikzleveldistance=\dimen258
+\tikzsiblingdistance=\dimen259
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modu
+les\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
+)
+\tikz@expandcount=\count296
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fron
+tendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fron
+tendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\b
+ooktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen260
+\lightrulewidth=\dimen261
+\cmidrulewidth=\dimen262
+\belowrulesep=\dimen263
+\belowbottomsep=\dimen264
+\aboverulesep=\dimen265
+\abovetopsep=\dimen266
+\cmidrulesep=\dimen267
+\cmidrulekern=\dimen268
+\defaultaddspace=\dimen269
+\@cmidla=\count297
+\@cmidlb=\count298
+\@aboverulesep=\dimen270
+\@belowrulesep=\dimen271
+\@thisruleclass=\count299
+\@lastruleclass=\count300
+\@thisrulewidth=\dimen272
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabu
+larx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/tools\arra
+y.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen273
+\ar@mcellbox=\box63
+\extrarowheight=\dimen274
+\NC@list=\toks31
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box64
+)
+\TX@col@width=\dimen275
+\TX@old@table=\dimen276
+\TX@old@col=\dimen277
+\TX@target=\dimen278
+\TX@delta=\dimen279
+\TX@cols=\count301
+\TX@ftn=\toks32
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/float\floa
+t.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count302
+\float@exts=\toks33
+\float@box=\box65
+\@float@everytoks=\toks34
+\@floatcapt=\box66
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/listings\l
+istings.sty
+\lst@mode=\count303
+\lst@gtempboxa=\box67
+\lst@token=\toks35
+\lst@length=\count304
+\lst@currlwidth=\dimen280
+\lst@column=\count305
+\lst@pos=\count306
+\lst@lostspace=\dimen281
+\lst@width=\dimen282
+\lst@newlines=\count307
+\lst@lineno=\count308
+\lst@maxwidth=\dimen283
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/listings\l
+stmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count309
+\lst@skipnumbers=\count310
+\lst@framebox=\box68
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/listings\l
+istings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\h
+yperref.sty
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/infwarer
+r\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\
+kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/kvdefine
+keys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pdfescap
+e\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\
+ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcm
+ds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+))
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hy
+color.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacr
+o\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\au
+xhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\n
+ameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/refcount\r
+efcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/gettitle
+string\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\
+kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count311
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\e
+toolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count312
+)
+\@linkdim=\dimen284
+\Hy@linkcounter=\count313
+\Hy@pagecounter=\count314
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\p
+d1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\
+intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count315
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\p
+uenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count316
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/url\url.st
+y
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4786.
+\XeTeXLinkMargin=\dimen285
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/bitset\b
+itset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/bigintca
+lc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count317
+\Field@Width=\dimen286
+\Fld@charsize=\dimen287
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring OFF on input line 6085.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/base\atbeg
+shi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count318
+\c@Item=\count319
+\c@Hfootnote=\count320
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\h
+xetex.def
+File: hxetex.def 2023-11-26 v7.01g Hyperref driver for XeTeX
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/stringen
+c\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box69
+\c@Hy@AnnotLevel=\count321
+\HyField@AnnotCount=\count322
+\Fld@listcount=\count323
+\c@bookmark@seq@number=\count324
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilec
+heck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/generic/uniqueco
+unter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip52
+)
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\f
+ancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip53
+\f@nch@offset@elh=\skip54
+\f@nch@offset@erh=\skip55
+\f@nch@offset@olh=\skip56
+\f@nch@offset@orh=\skip57
+\f@nch@offset@elf=\skip58
+\f@nch@offset@erf=\skip59
+\f@nch@offset@olf=\skip60
+\f@nch@offset@orf=\skip61
+\f@nch@height=\skip62
+\f@nch@footalignment=\skip63
+\f@nch@widthL=\skip64
+\f@nch@widthC=\skip65
+\f@nch@widthR=\skip66
+\@temptokenb=\toks36
+) (lab_report.aux)
+\openout1 = `lab_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
+5.
+
+(C:\Users\DELL INSPIRON 5515\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cm
+r.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 55.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 55.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 55.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 55.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 55.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 55.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 55.
+LaTeX Font Info:    Redeclaring math accent \check on input line 55.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 55.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 55.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 55.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 55.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 55.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 5
+5.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 55.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+55.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 55.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 55.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+55.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/Arial(0)/m/n on input line 55.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/m/n on input line 55.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
+input line 55.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 55.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/Arial(0)/b/n on input line 55.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/Consolas(0)/b/n on input line 55.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count325
+Package hyperref Info: Link coloring OFF on input line 55.
+(lab_report.out) (lab_report.out)
+\@outlinefile=\write4
+\openout4 = `lab_report.out'.
+
+ [1
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.51117pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.51117pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.51117pt}.
+
+[1]
+File: figures/fig_0_gtkwave_waveform.png Graphic file (type bmp)
+<figures/fig_0_gtkwave_waveform.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.51117pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.51117pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.51117pt}.
+
+[2]
+File: figures/fig_1_quartus_rtl_viewer.png Graphic file (type bmp)
+<figures/fig_1_quartus_rtl_viewer.png>
+File: figures/fig_2_quartus_fsm_viewer.png Graphic file (type bmp)
+<figures/fig_2_quartus_fsm_viewer.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.51117pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.51117pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.51117pt}.
+
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.51117pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.51117pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.51117pt}.
+
+[4] (lab_report.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+Package rerunfilecheck Info: File `lab_report.out' has not changed.
+(rerunfilecheck)             Checksum: 52651F42997BBDD0BD60057B8A3BA271;1962.
+ ) 
+Here is how much of TeX's memory you used:
+ 23573 strings out of 409617
+ 479333 string characters out of 5771373
+ 2194191 words of memory out of 5000000
+ 45297 multiletter control sequences out of 15000+600000
+ 561584 words of font info for 98 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 102i,13n,107p,462b,1773s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on lab_report.pdf (5 pages).

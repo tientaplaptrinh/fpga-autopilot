@@ -1,0 +1,90 @@
+{
+  "os": "nt",
+  "platform": "win32",
+  "tools": {
+    "quartus_sh": {
+      "available": true,
+      "path": "C:\\altera\\quartus\\bin64\\quartus_sh.exe",
+      "version": "Quartus II 64-Bit Shell"
+    },
+    "quartus_map": {
+      "available": true,
+      "path": "C:\\altera\\quartus\\bin64\\quartus_map.exe",
+      "version": "Quartus II 64-Bit Analysis & Synthesis"
+    },
+    "quartus_fit": {
+      "available": true,
+      "path": "C:\\altera\\quartus\\bin64\\quartus_fit.exe",
+      "version": "Quartus II 64-Bit Fitter"
+    },
+    "quartus_sta": {
+      "available": true,
+      "path": "C:\\altera\\quartus\\bin64\\quartus_sta.exe",
+      "version": "Quartus II 64-Bit TimeQuest Timing Analyzer"
+    },
+    "quartus": {
+      "available": true,
+      "path": "C:\\altera\\quartus\\bin64\\quartus.exe",
+      "version": "detected (TimeoutExpired)"
+    },
+    "vsim": {
+      "available": true,
+      "path": "C:\\altera\\modelsim_ase\\win32aloem\\vsim.exe",
+      "version": "Model Technology ModelSim ALTERA STARTER EDITION vsim 10.1d Simulator 2012.11 Nov  2 2012"
+    },
+    "vlog": {
+      "available": true,
+      "path": "C:\\altera\\modelsim_ase\\win32aloem\\vlog.exe",
+      "version": "Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012"
+    },
+    "vlib": {
+      "available": true,
+      "path": "C:\\altera\\modelsim_ase\\win32aloem\\vlib.exe",
+      "version": "Usage: vlib -help"
+    },
+    "iverilog": {
+      "available": true,
+      "path": "C:\\msys64\\ucrt64\\bin\\iverilog.exe",
+      "version": "Icarus Verilog version 13.0 (stable) (v13_0)"
+    },
+    "vvp": {
+      "available": true,
+      "path": "C:\\msys64\\ucrt64\\bin\\vvp.exe",
+      "version": "Icarus Verilog runtime version 13.0 (stable) (v13_0)"
+    },
+    "verilator": {
+      "available": true,
+      "path": "C:\\msys64\\ucrt64\\bin\\verilator_bin.exe",
+      "version": "Verilator 5.054 2026-11-01 rev vUNKNOWN-built20261112"
+    },
+    "yosys": {
+      "available": false,
+      "path": null,
+      "version": null
+    },
+    "gtkwave": {
+      "available": true,
+      "path": "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+      "version": "GTKWave Analyzer v3.3.128 (w)1999-2026 BSI"
+    },
+    "xelatex": {
+      "available": true,
+      "path": "C:\\Users\\DELL INSPIRON 5515\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe",
+      "version": "MiKTeX-XeTeX 4.10 (MiKTeX 24.1)"
+    },
+    "pdflatex": {
+      "available": true,
+      "path": "C:\\Users\\DELL INSPIRON 5515\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+      "version": "MiKTeX-pdfTeX 4.18 (MiKTeX 24.1)"
+    }
+  },
+  "quartus_installed_families": [],
+  "capabilities": {
+    "has_simulator": true,
+    "has_quartus_cli": true,
+    "has_quartus_gui": true,
+    "has_yosys": false,
+    "has_gtkwave": true,
+    "has_latex": true
+  }
+}

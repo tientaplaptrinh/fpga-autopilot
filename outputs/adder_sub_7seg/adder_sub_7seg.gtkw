@@ -1,0 +1,37 @@
+[*]
+[*] Auto-generated GTKWave layout — fpga_autopilot
+[*]
+[dumpfile] "adder_sub_7seg.vcd"
+[sst_width] 220
+[signals_width] 240
+[sst_expanded] 1
+[sst_vpaned_height] 240
+*-15.992222 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+@28
+tb_adder_sub_7seg.dut.sub_mode
+@420
+tb_adder_sub_7seg.dut.a[3:0]
+@420
+tb_adder_sub_7seg.dut.b[3:0]
+@420
+tb_adder_sub_7seg.dut.result[3:0]
+@28
+tb_adder_sub_7seg.dut.cout
+@28
+tb_adder_sub_7seg.dut.overflow
+@28
+tb_adder_sub_7seg.dut.zero
+@22
+tb_adder_sub_7seg.dut.seg_sign[6:0]
+@22
+tb_adder_sub_7seg.dut.seg_mag[6:0]
+@22
+tb_adder_sub_7seg.dut.a_u[3:0]
+@22
+tb_adder_sub_7seg.dut.b_eff[3:0]
+@22
+tb_adder_sub_7seg.dut.mag[3:0]
+@22
+tb_adder_sub_7seg.dut.sum_ext[4:0]
+[pattern_trace] 1
+[pattern_trace] 0

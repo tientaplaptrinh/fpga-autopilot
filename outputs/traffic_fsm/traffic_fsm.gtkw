@@ -1,0 +1,39 @@
+[*]
+[*] Auto-generated GTKWave layout — fpga_autopilot
+[*]
+[dumpfile] "traffic_fsm.vcd"
+[sst_width] 220
+[signals_width] 240
+[sst_expanded] 1
+[sst_vpaned_height] 240
+*-18.314150 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+@28
+tb_traffic_fsm.dut.clk
+@28
+tb_traffic_fsm.dut.rst_n
+@28
+tb_traffic_fsm.dut.ped_btn_raw
+@28
+tb_traffic_fsm.dut.emergency_ovr
+@22
+tb_traffic_fsm.dut.state[2:0]
+@28
+tb_traffic_fsm.dut.ped_pending
+@22
+tb_traffic_fsm.dut.ns_light[2:0]
+@22
+tb_traffic_fsm.dut.ew_light[2:0]
+@28
+tb_traffic_fsm.dut.ped_walk
+@24
+tb_traffic_fsm.dut.countdown[3:0]
+@28
+tb_traffic_fsm.dut.sec_tick
+@22
+tb_traffic_fsm.dut.ALL_RED_SEC
+@22
+tb_traffic_fsm.dut.GREEN_SEC
+@22
+tb_traffic_fsm.dut.LIGHT_GREEN
+[pattern_trace] 1
+[pattern_trace] 0

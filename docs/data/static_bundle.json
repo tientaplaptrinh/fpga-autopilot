@@ -1,0 +1,2041 @@
+{
+  "mode": "static_showcase",
+  "live_tunnel_url": "https://testing-attractive-periods-telecom.trycloudflare.com",
+  "toolchain": {
+    "os": "nt",
+    "platform": "win32",
+    "tools": {
+      "quartus_sh": {
+        "available": true,
+        "path": "C:\\altera\\quartus\\bin64\\quartus_sh.exe",
+        "version": "Quartus II 64-Bit Shell"
+      },
+      "quartus_map": {
+        "available": true,
+        "path": "C:\\altera\\quartus\\bin64\\quartus_map.exe",
+        "version": "Quartus II 64-Bit Analysis & Synthesis"
+      },
+      "quartus_fit": {
+        "available": true,
+        "path": "C:\\altera\\quartus\\bin64\\quartus_fit.exe",
+        "version": "Quartus II 64-Bit Fitter"
+      },
+      "quartus_sta": {
+        "available": true,
+        "path": "C:\\altera\\quartus\\bin64\\quartus_sta.exe",
+        "version": "Quartus II 64-Bit TimeQuest Timing Analyzer"
+      },
+      "quartus": {
+        "available": true,
+        "path": "C:\\altera\\quartus\\bin64\\quartus.exe",
+        "version": "detected (TimeoutExpired)"
+      },
+      "vsim": {
+        "available": true,
+        "path": "C:\\altera\\modelsim_ase\\win32aloem\\vsim.exe",
+        "version": "Model Technology ModelSim ALTERA STARTER EDITION vsim 10.1d Simulator 2012.11 Nov  2 2012"
+      },
+      "vlog": {
+        "available": true,
+        "path": "C:\\altera\\modelsim_ase\\win32aloem\\vlog.exe",
+        "version": "Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012"
+      },
+      "vlib": {
+        "available": true,
+        "path": "C:\\altera\\modelsim_ase\\win32aloem\\vlib.exe",
+        "version": "Usage: vlib -help"
+      },
+      "iverilog": {
+        "available": true,
+        "path": "C:\\msys64\\ucrt64\\bin\\iverilog.exe",
+        "version": "Icarus Verilog version 13.0 (stable) (v13_0)"
+      },
+      "vvp": {
+        "available": true,
+        "path": "C:\\msys64\\ucrt64\\bin\\vvp.exe",
+        "version": "Icarus Verilog runtime version 13.0 (stable) (v13_0)"
+      },
+      "verilator": {
+        "available": true,
+        "path": "C:\\msys64\\ucrt64\\bin\\verilator_bin.exe",
+        "version": "Verilator 5.054 2026-11-01 rev vUNKNOWN-built20261112"
+      },
+      "yosys": {
+        "available": false,
+        "path": null,
+        "version": null
+      },
+      "gtkwave": {
+        "available": true,
+        "path": "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "version": "GTKWave Analyzer v3.3.128 (w)1999-2026 BSI"
+      },
+      "xelatex": {
+        "available": true,
+        "path": "C:\\Users\\DELL INSPIRON 5515\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe",
+        "version": "MiKTeX-XeTeX 4.10 (MiKTeX 24.1)"
+      },
+      "pdflatex": {
+        "available": true,
+        "path": "C:\\Users\\DELL INSPIRON 5515\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+        "version": "MiKTeX-pdfTeX 4.18 (MiKTeX 24.1)"
+      }
+    },
+    "quartus_installed_families": [],
+    "capabilities": {
+      "has_simulator": true,
+      "has_quartus_cli": true,
+      "has_quartus_gui": true,
+      "has_yosys": false,
+      "has_gtkwave": true,
+      "has_latex": true
+    }
+  },
+  "runs": [
+    {
+      "name": "adder_sub_7seg",
+      "title": "4-Bit Signed Adder/Subtractor + Dual 7-Segment Decoder",
+      "description": "Pure combinational 4-bit two's-complement adder/subtractor with carry-out, signed overflow, zero flag, and dual active-low 7-segment display decoders for sign and magnitude on Terasic DE2-115.",
+      "clock_freq_mhz": 50.0,
+      "ports": [
+        {
+          "name": "a",
+          "direction": "input",
+          "width": 4,
+          "width_expr": null,
+          "signed": true,
+          "active_low": false,
+          "description": "4-bit signed operand A (-8 to +7)",
+          "pin_assignment": null
+        },
+        {
+          "name": "b",
+          "direction": "input",
+          "width": 4,
+          "width_expr": null,
+          "signed": true,
+          "active_low": false,
+          "description": "4-bit signed operand B (-8 to +7)",
+          "pin_assignment": null
+        },
+        {
+          "name": "sub_mode",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Operation select (0: A + B, 1: A - B)",
+          "pin_assignment": null
+        },
+        {
+          "name": "result",
+          "direction": "output",
+          "width": 4,
+          "width_expr": null,
+          "signed": true,
+          "active_low": false,
+          "description": "4-bit two's-complement signed sum/difference",
+          "pin_assignment": null
+        },
+        {
+          "name": "cout",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Carry-out bit from MSB adder stage",
+          "pin_assignment": null
+        },
+        {
+          "name": "overflow",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Signed two's-complement arithmetic overflow flag",
+          "pin_assignment": null
+        },
+        {
+          "name": "zero",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Asserted high when result == 0",
+          "pin_assignment": null
+        },
+        {
+          "name": "seg_sign",
+          "direction": "output",
+          "width": 7,
+          "width_expr": null,
+          "signed": false,
+          "active_low": true,
+          "description": "Active-low 7-segment sign output ('-' when result < 0, blank otherwise)",
+          "pin_assignment": null
+        },
+        {
+          "name": "seg_mag",
+          "direction": "output",
+          "width": 7,
+          "width_expr": null,
+          "signed": false,
+          "active_low": true,
+          "description": "Active-low 7-segment magnitude output (0..8)",
+          "pin_assignment": null
+        }
+      ],
+      "fsm_states": [],
+      "summary": {
+        "spec_name": "adder_sub_7seg",
+        "top_module": "adder_sub_7seg",
+        "board_preset": "DE2-115",
+        "rtl_paths": [
+          "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\rtl\\adder_sub_7seg.sv"
+        ],
+        "tb_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\tb\\tb_adder_sub_7seg.sv",
+        "healing_iterations": 0,
+        "lint_report": {
+          "passed": true,
+          "inferred_latches": 0,
+          "blocking_in_seq": 0,
+          "nonblocking_in_comb": 0,
+          "missing_reset_clauses": 0,
+          "undriven_nets": 0,
+          "multidriven_nets": 0,
+          "width_mismatches": 0,
+          "error_count": 0,
+          "warning_count": 0,
+          "tools_used": [
+            "static_analyzer",
+            "verilator",
+            "iverilog"
+          ],
+          "warnings": []
+        },
+        "sim_result": {
+          "simulator": "iverilog",
+          "compile_passed": true,
+          "sim_passed": true,
+          "timed_out": false,
+          "total_vectors": 512,
+          "passed_vectors": 512,
+          "failed_vectors": 0,
+          "mismatches": [],
+          "vcd_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\sim\\adder_sub_7seg.vcd",
+          "stdout": "VCD info: dumpfile adder_sub_7seg.vcd opened for output.\n[SUMMARY] passed=512 failed=0\ntb_adder_sub_7seg.sv:132: $finish called at 5125000 (1ps)\n",
+          "stderr": "warning: Some design elements have no explicit time unit and/or\n       : time precision. This may cause confusing timing results.\n       : Affected design elements are:\n       :   -- module adder_sub_7seg declared here: adder_sub_7seg.sv:4\nadder_sub_7seg.sv:38: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:39: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'a_u[3:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'b_eff[3:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'a_u[3:0]').\nadder_sub_7seg.sv:41: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:43: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:45: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:48: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\n",
+          "runtime_sec": 0.0949
+        },
+        "synthesis_report": {
+          "backend": "quartus",
+          "compile_passed": true,
+          "family": "Cyclone IV E",
+          "device": "EP4CE115F29C7",
+          "top_module": "adder_sub_7seg",
+          "project_dir": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus",
+          "qpf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.qpf",
+          "qsf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.qsf",
+          "sdc_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.sdc",
+          "tcl_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\compile_adder_sub_7seg.tcl",
+          "map_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\output_files\\adder_sub_7seg.map.rpt",
+          "fit_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\output_files\\adder_sub_7seg.fit.rpt",
+          "sta_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\output_files\\adder_sub_7seg.sta.rpt",
+          "resources": {
+            "logic_elements_or_alms": 19,
+            "combinational_functions": 19,
+            "dedicated_logic_registers": 0,
+            "memory_bits": 0,
+            "dsp_elements": 0,
+            "total_pins": 30,
+            "inferred_latches": 0
+          },
+          "timing": {
+            "fmax_mhz": 61.88,
+            "restricted_fmax_mhz": 50.01,
+            "worst_setup_slack_ns": 3.84,
+            "worst_hold_slack_ns": 4.439,
+            "worst_recovery_slack_ns": 5.129,
+            "worst_removal_slack_ns": 5.129,
+            "max_comb_delay_ns": null,
+            "timing_met": true
+          },
+          "warnings": [],
+          "errors": []
+        },
+        "visual_captures": [
+          {
+            "capture_type": "gtkwave_waveform",
+            "tool_name": "gtkwave",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_waveform.png",
+            "window_title": "GTKWave - adder_sub_7seg.vcd",
+            "window_bbox": [
+              50,
+              40,
+              1420,
+              820
+            ],
+            "width_px": 1420,
+            "height_px": 820,
+            "visual_audit_passed": true,
+            "edge_density": 0.1214,
+            "transition_columns_detected": 477,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Crisp digital signal transitions verified"
+          },
+          {
+            "capture_type": "quartus_rtl_viewer",
+            "tool_name": "quartus",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_rtl_viewer.png",
+            "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/adder_sub_7seg/quartus/adder_sub_7seg - adder_sub_7seg",
+            "window_bbox": [
+              30,
+              30,
+              1460,
+              860
+            ],
+            "width_px": 1460,
+            "height_px": 860,
+            "visual_audit_passed": true,
+            "edge_density": 0.03449,
+            "transition_columns_detected": 912,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Schematic symbols and nets verified"
+          }
+        ],
+        "summary_md_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\summary.md",
+        "latex_tex_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\lab_report.tex",
+        "latex_pdf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\lab_report.pdf",
+        "overall_passed": true
+      },
+      "sources": {
+        "rtl": [
+          {
+            "filename": "adder_sub_7seg.sv",
+            "code": "// Auto-generated by fpga_autopilot \u2014 Strict Synthesizable SystemVerilog-2012\n// Zero inferred latches, pure combinational arithmetic + dual active-low 7-seg decoder\n\nmodule adder_sub_7seg (\n    input  logic signed [3:0] a,\n    input  logic signed [3:0] b,\n    input  logic              sub_mode,\n    output logic signed [3:0] result,\n    output logic              cout,\n    output logic              overflow,\n    output logic              zero,\n    output logic        [6:0] seg_sign,\n    output logic        [6:0] seg_mag\n);\n\n    logic [3:0] a_u;\n    logic [3:0] b_eff;\n    logic [4:0] sum_ext;\n    logic [3:0] mag;\n\n    always_comb begin\n        // Explicit default assignments guarantee 0 inferred latches\n        a_u      = 4'd0;\n        b_eff    = 4'd0;\n        sum_ext  = 5'd0;\n        result   = 4'sd0;\n        cout     = 1'b0;\n        overflow = 1'b0;\n        zero     = 1'b0;\n        mag      = 4'd0;\n        seg_sign = 7'b111_1111;\n        seg_mag  = 7'b111_1111;\n\n        a_u      = a[3:0];\n        b_eff    = b[3:0] ^ {4{sub_mode}};\n        sum_ext  = {1'b0, a_u} + {1'b0, b_eff} + {4'b0000, sub_mode};\n\n        result   = $signed(sum_ext[3:0]);\n        cout     = sum_ext[4];\n        overflow = (a_u[3] == b_eff[3]) && (sum_ext[3] != a_u[3]);\n        zero     = (sum_ext[3:0] == 4'd0);\n\n        if (sum_ext[3]) begin\n            seg_sign = 7'b011_1111; // '-' on segment g (active-low)\n            mag      = (~sum_ext[3:0]) + 4'd1;\n        end else begin\n            seg_sign = 7'b111_1111; // blank when >= 0 (active-low)\n            mag      = sum_ext[3:0];\n        end\n\n        case (mag)\n            4'h0:    seg_mag = 7'b100_0000;\n            4'h1:    seg_mag = 7'b111_1001;\n            4'h2:    seg_mag = 7'b010_0100;\n            4'h3:    seg_mag = 7'b011_0000;\n            4'h4:    seg_mag = 7'b001_1001;\n            4'h5:    seg_mag = 7'b001_0010;\n            4'h6:    seg_mag = 7'b000_0010;\n            4'h7:    seg_mag = 7'b111_1000;\n            4'h8:    seg_mag = 7'b000_0000;\n            4'h9:    seg_mag = 7'b001_0000;\n            4'hA:    seg_mag = 7'b000_1000;\n            4'hB:    seg_mag = 7'b000_0011;\n            4'hC:    seg_mag = 7'b100_0110;\n            4'hD:    seg_mag = 7'b010_0001;\n            4'hE:    seg_mag = 7'b000_0110;\n            4'hF:    seg_mag = 7'b000_1110;\n            default: seg_mag = 7'b111_1111;\n        endcase\n    end\n\nendmodule\n"
+          }
+        ],
+        "tb_filename": "tb_adder_sub_7seg.sv",
+        "tb": "`timescale 1ns/1ps\n\nmodule tb_adder_sub_7seg;\n\n    logic              clk;\n    logic signed [3:0] a;\n    logic signed [3:0] b;\n    logic              sub_mode;\n    logic signed [3:0] result;\n    logic              cout;\n    logic              overflow;\n    logic              zero;\n    logic        [6:0] seg_sign;\n    logic        [6:0] seg_mag;\n\n    integer passed_cnt;\n    integer failed_cnt;\n    integer cycle_cnt;\n\n    adder_sub_7seg dut (\n        .a        (a),\n        .b        (b),\n        .sub_mode (sub_mode),\n        .result   (result),\n        .cout     (cout),\n        .overflow (overflow),\n        .zero     (zero),\n        .seg_sign (seg_sign),\n        .seg_mag  (seg_mag)\n    );\n\n    initial begin\n        clk = 1'b0;\n        forever #5 clk = ~clk;\n    end\n\n    function automatic [6:0] golden_seg7(input [3:0] nib);\n        begin\n            case (nib)\n                4'h0:    golden_seg7 = 7'b100_0000;\n                4'h1:    golden_seg7 = 7'b111_1001;\n                4'h2:    golden_seg7 = 7'b010_0100;\n                4'h3:    golden_seg7 = 7'b011_0000;\n                4'h4:    golden_seg7 = 7'b001_1001;\n                4'h5:    golden_seg7 = 7'b001_0010;\n                4'h6:    golden_seg7 = 7'b000_0010;\n                4'h7:    golden_seg7 = 7'b111_1000;\n                4'h8:    golden_seg7 = 7'b000_0000;\n                4'h9:    golden_seg7 = 7'b001_0000;\n                4'hA:    golden_seg7 = 7'b000_1000;\n                4'hB:    golden_seg7 = 7'b000_0011;\n                4'hC:    golden_seg7 = 7'b100_0110;\n                4'hD:    golden_seg7 = 7'b010_0001;\n                4'hE:    golden_seg7 = 7'b000_0110;\n                4'hF:    golden_seg7 = 7'b000_1110;\n                default: golden_seg7 = 7'b111_1111;\n            endcase\n        end\n    endfunction\n\n    task automatic check_vector(\n        input        in_sub,\n        input [3:0]  in_a,\n        input [3:0]  in_b\n    );\n        integer       a_int, b_int, math_val;\n        logic [3:0]   b_xor, exp_res, exp_mag;\n        logic [4:0]   sum5;\n        logic         exp_cout, exp_ovf, exp_zero;\n        logic [6:0]   exp_sign, exp_seg;\n        logic [20:0]  exp_packed, got_packed;\n        logic [8:0]   in_packed;\n        begin\n            sub_mode = in_sub;\n            a        = $signed(in_a);\n            b        = $signed(in_b);\n            @(posedge clk);\n            #1;\n            cycle_cnt = cycle_cnt + 1;\n\n            a_int    = in_a[3] ? ($signed({28'hFFFFFFF, in_a})) : $signed({28'd0, in_a});\n            b_int    = in_b[3] ? ($signed({28'hFFFFFFF, in_b})) : $signed({28'd0, in_b});\n            math_val = in_sub ? (a_int - b_int) : (a_int + b_int);\n\n            b_xor    = in_b ^ {4{in_sub}};\n            sum5     = {1'b0, in_a} + {1'b0, b_xor} + {4'd0, in_sub};\n            exp_res  = sum5[3:0];\n            exp_cout = sum5[4];\n            exp_ovf  = (math_val < -8) || (math_val > 7);\n            exp_zero = (exp_res == 4'd0);\n            exp_sign = exp_res[3] ? 7'b011_1111 : 7'b111_1111;\n            exp_mag  = exp_res[3] ? ((~exp_res) + 4'd1) : exp_res;\n            exp_seg  = golden_seg7(exp_mag);\n\n            in_packed  = {in_sub, in_a, in_b};\n            exp_packed = {exp_res, exp_cout, exp_ovf, exp_zero, exp_sign, exp_seg};\n            got_packed = {result[3:0], cout, overflow, zero, seg_sign, seg_mag};\n\n            if (got_packed === exp_packed) begin\n                passed_cnt = passed_cnt + 1;\n            end else begin\n                failed_cnt = failed_cnt + 1;\n                $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, in_packed, exp_packed, got_packed);\n            end\n        end\n    endtask\n\n    integer sm, ia, ib;\n\n    initial begin\n        $dumpfile(\"adder_sub_7seg.vcd\");\n        $dumpvars(0, tb_adder_sub_7seg);\n\n        passed_cnt = 0;\n        failed_cnt = 0;\n        cycle_cnt  = 0;\n        a          = 4'sd0;\n        b          = 4'sd0;\n        sub_mode   = 1'b0;\n\n        // Exhaustive 16 x 16 x 2 = 512 directed & corner truth-table sweep\n        for (sm = 0; sm < 2; sm = sm + 1) begin\n            for (ia = 0; ia < 16; ia = ia + 1) begin\n                for (ib = 0; ib < 16; ib = ib + 1) begin\n                    check_vector(sm[0], ia[3:0], ib[3:0]);\n                end\n            end\n        end\n\n        @(posedge clk);\n        $display(\"[SUMMARY] passed=%0d failed=%0d\", passed_cnt, failed_cnt);\n        $finish;\n    end\n\nendmodule\n",
+        "qsf": "# Auto-generated Quartus II Settings File (.qsf) \u2014 fpga_autopilot\nset_global_assignment -name FAMILY \"Cyclone IV E\"\nset_global_assignment -name DEVICE EP4CE115F29C7\nset_global_assignment -name TOP_LEVEL_ENTITY adder_sub_7seg\nset_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files\nset_global_assignment -name MIN_CORE_JUNCTION_TEMP 0\nset_global_assignment -name MAX_CORE_JUNCTION_TEMP 85\nset_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1\nset_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005\nset_global_assignment -name SDC_FILE adder_sub_7seg.sdc\n\nset_global_assignment -name SYSTEMVERILOG_FILE \"../rtl/adder_sub_7seg.sv\"\n\n# Board Pinout Preset: DE2-115 (EP4CE115F29C7)\nset_location_assignment PIN_AB28 -to a[0]\nset_location_assignment PIN_AC28 -to a[1]\nset_location_assignment PIN_AC27 -to a[2]\nset_location_assignment PIN_AD27 -to a[3]\nset_location_assignment PIN_AB27 -to b[0]\nset_location_assignment PIN_AC26 -to b[1]\nset_location_assignment PIN_AD26 -to b[2]\nset_location_assignment PIN_AB26 -to b[3]\nset_location_assignment PIN_AC25 -to sub_mode\nset_location_assignment PIN_G18 -to result[0]\nset_location_assignment PIN_F22 -to result[1]\nset_location_assignment PIN_E17 -to result[2]\nset_location_assignment PIN_L26 -to result[3]\nset_location_assignment PIN_L25 -to cout\nset_location_assignment PIN_J22 -to overflow\nset_location_assignment PIN_H22 -to zero\nset_location_assignment PIN_M24 -to seg_sign[0]\nset_location_assignment PIN_Y22 -to seg_sign[1]\nset_location_assignment PIN_W21 -to seg_sign[2]\nset_location_assignment PIN_W22 -to seg_sign[3]\nset_location_assignment PIN_W25 -to seg_sign[4]\nset_location_assignment PIN_U23 -to seg_sign[5]\nset_location_assignment PIN_U24 -to seg_sign[6]\nset_location_assignment PIN_G19 -to seg_mag[0]\nset_location_assignment PIN_F19 -to seg_mag[1]\nset_location_assignment PIN_E19 -to seg_mag[2]\nset_location_assignment PIN_F21 -to seg_mag[3]\nset_location_assignment PIN_F18 -to seg_mag[4]\nset_location_assignment PIN_E18 -to seg_mag[5]\nset_location_assignment PIN_J19 -to seg_mag[6]\n\nset_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top\nset_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top\nset_global_assignment -name PARTITION_COLOR 16764057 -section_id Top\n\nset_global_assignment -name LAST_QUARTUS_VERSION \"13.0 SP1\"\nset_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top",
+        "sdc": "# Auto-generated Synopsys Design Constraints (.sdc) \u2014 fpga_autopilot\nset_time_format -unit ns -decimal_places 3\n\ncreate_clock -name {virt_clk} -period 20.000\nderive_clock_uncertainty\n\nset_input_delay -clock {virt_clk} -max 2.000 [get_ports {a[*]}]\nset_input_delay -clock {virt_clk} -min 0.400 [get_ports {a[*]}]\nset_input_delay -clock {virt_clk} -max 2.000 [get_ports {b[*]}]\nset_input_delay -clock {virt_clk} -min 0.400 [get_ports {b[*]}]\nset_input_delay -clock {virt_clk} -max 2.000 [get_ports {sub_mode}]\nset_input_delay -clock {virt_clk} -min 0.400 [get_ports {sub_mode}]\nset_output_delay -clock {virt_clk} -max 2.000 [get_ports {result[*]}]\nset_output_delay -clock {virt_clk} -min 0.400 [get_ports {result[*]}]\nset_output_delay -clock {virt_clk} -max 2.000 [get_ports {cout}]\nset_output_delay -clock {virt_clk} -min 0.400 [get_ports {cout}]\nset_output_delay -clock {virt_clk} -max 2.000 [get_ports {overflow}]\nset_output_delay -clock {virt_clk} -min 0.400 [get_ports {overflow}]\nset_output_delay -clock {virt_clk} -max 2.000 [get_ports {zero}]\nset_output_delay -clock {virt_clk} -min 0.400 [get_ports {zero}]\nset_output_delay -clock {virt_clk} -max 2.000 [get_ports {seg_sign[*]}]\nset_output_delay -clock {virt_clk} -min 0.400 [get_ports {seg_sign[*]}]\nset_output_delay -clock {virt_clk} -max 2.000 [get_ports {seg_mag[*]}]\nset_output_delay -clock {virt_clk} -min 0.400 [get_ports {seg_mag[*]}]\n\nset_max_delay -from [all_inputs] -to [all_outputs] 20.000\n",
+        "tex": "\\documentclass[11pt,a4paper]{article}\n\\usepackage{fontspec}\n\\setmainfont{Times New Roman}\n\\setsansfont{Arial}\n\\setmonofont{Consolas}\n\\usepackage[a4paper,margin=2.0cm]{geometry}\n\\usepackage{xcolor}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\\usepackage{booktabs}\n\\usepackage{tabularx}\n\\usepackage{graphicx}\n\\usepackage{float}\n\\usepackage{listings}\n\\usepackage{hyperref}\n\\usepackage{fancyhdr}\n\n\\definecolor{deepblue}{RGB}{14,58,130}\n\\definecolor{accentblue}{RGB}{37,99,235}\n\\definecolor{codebg}{RGB}{247,249,252}\n\n\\setlength{\\emergencystretch}{3em}\n\\hbadness=10000\n\\hfuzz=2pt\n\n\\lstdefinelanguage{SystemVerilog}{\n    keywords={module,endmodule,input,output,inout,logic,signed,parameter,localparam,typedef,enum,always_ff,always_comb,posedge,negedge,or,if,else,case,endcase,default,begin,end,for,integer},\n    sensitive=true,\n    morecomment=[l]{//},\n    morecomment=[s]{/*}{*/}\n}\n\n\\lstset{\n    language=SystemVerilog,\n    backgroundcolor=\\color{codebg},\n    basicstyle=\\ttfamily\\scriptsize,\n    keywordstyle=\\color{deepblue}\\bfseries,\n    commentstyle=\\color{gray}\\itshape,\n    frame=single,\n    rulecolor=\\color{accentblue!40},\n    breaklines=true,\n    breakatwhitespace=false,\n    columns=fullflexible,\n    keepspaces=true,\n    showstringspaces=false,\n    tabsize=4\n}\n\n\\pagestyle{fancy}\n\\fancyhf{}\n\\fancyhead[L]{\\small\\textcolor{deepblue}{B\u00e1o C\u00e1o Th\u1ef1c H\u00e0nh Thi\u1ebft K\u1ebf S\u1ed1 \\& FPGA Autopilot}}\n\\fancyhead[R]{\\small\\texttt{adder\\_sub\\_7seg}}\n\\fancyfoot[C]{\\thepage}\n\n\\begin{document}\n\n% ==================== TIKZ BLUE DOUBLE-LINE COVER PAGE ====================\n\\begin{titlepage}\n    \\begin{tikzpicture}[remember picture, overlay]\n        \\draw[color=deepblue, line width=2.4pt]\n            ($(current page.north west)+(1.2cm,-1.2cm)$)\n            rectangle\n            ($(current page.south east)+(-1.2cm,1.2cm)$);\n        \\draw[color=accentblue, line width=0.9pt]\n            ($(current page.north west)+(1.42cm,-1.42cm)$)\n            rectangle\n            ($(current page.south east)+(-1.42cm,1.42cm)$);\n    \\end{tikzpicture}\n\n    \\centering\n    \\vspace*{1.6cm}\n    {\\Large\\bfseries\\textcolor{deepblue}{\u0110\u1ea0I H\u1eccC QU\u1ed0C GIA \u2014 PH\u00d2NG TH\u00cd NGHI\u1ec6M VI M\u1ea0CH \\& FPGA}\\\\[0.3cm]}\n    {\\large\\textsc{Digital Systems Design \\& Quartus II Verification Lab Report}}\\\\[1.2cm]\n\n    \\rule{0.82\\textwidth}{1.2pt}\\\\[0.5cm]\n    {\\huge\\bfseries\\textcolor{deepblue}{4-Bit Signed Adder/Subtractor + Dual 7-Segment Decoder}}\\\\[0.4cm]\n    {\\Large Module: \\texttt{adder\\_sub\\_7seg}}\\\\[0.4cm]\n    \\rule{0.82\\textwidth}{1.2pt}\\\\[1.4cm]\n\n    \\begin{tabularx}{0.84\\textwidth}{@{}lX@{}}\n        \\toprule\n        \\textbf{H\u1ea1ng m\u1ee5c (Metadata)} & \\textbf{Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt (Specification)} \\\\\n        \\midrule\n        T\u00ean b\u00e0i th\u00ed nghi\u1ec7m (Benchmark) & \\texttt{adder\\_sub\\_7seg} \\\\\n        Kit FPGA m\u1ee5c ti\u00eau (Target Kit) & DE2-115 (Cyclone IV E) \\\\\n        M\u00e3 chip FPGA (Device Part) & \\texttt{EP4CE115F29C7} \\\\\n        T\u1ea7n s\u1ed1 xung nh\u1ecbp (Target Clock) & 50.0 MHz \\\\\n        K\u1ebft qu\u1ea3 ki\u1ec3m tra t\u0129nh (Static Lint) & PASS (0 Latches, 0 Width Warnings) \\\\\n        K\u1ebft qu\u1ea3 m\u00f4 ph\u1ecfng (Self-Checking TB) & 512 / 512 Vectors Passed (100\\%) \\\\\n        Tr\u00ecnh t\u1ed5ng h\u1ee3p (Synthesis Engine) & \\texttt{quartus} \\\\\n        \\bottomrule\n    \\end{tabularx}\n\n    \\vfill\n    {\\normalsize H\u1ec7 th\u1ed1ng t\u1ef1 \u0111\u1ed9ng h\u00f3a thi\u1ebft k\u1ebf v\u00e0 ki\u1ec3m ch\u1ee9ng ph\u1ea7n c\u1ee9ng \\textbf{FPGA Autopilot}}\\\\[0.2cm]\n    {\\small Generated with 100\\% Bit-Exact Simulation \\& Hardware Synthesis Verification}\n    \\vspace*{1.2cm}\n\\end{titlepage}\n\n\\section{T\u1ed5ng Quan Thi\u1ebft K\u1ebf \\& \u0110\u1eb7c T\u1ea3 C\u1ed5ng Giao Ti\u1ebfp (Port Specification)}\nPure combinational 4-bit two's-complement adder/subtractor with carry-out, signed overflow, zero flag, and dual active-low 7-segment display decoders for sign and magnitude on Terasic DE2-115.\n\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{B\u1ea3ng \u0111\u1eb7c t\u1ea3 giao di\u1ec7n c\u1ed5ng v\u00e0o/ra c\u1ee7a module \\texttt{adder\\_sub\\_7seg}}\n    \\begin{tabularx}{\\textwidth}{@{}llllX@{}}\n        \\toprule\n        \\textbf{Port} & \\textbf{Dir} & \\textbf{Width} & \\textbf{Type} & \\textbf{Ch\u1ee9c n\u0103ng (Description)} \\\\\n        \\midrule\n        \\texttt{a} & input & 4 & signed & 4-bit signed operand A (-8 to +7) \\\\\n        \\texttt{b} & input & 4 & signed & 4-bit signed operand B (-8 to +7) \\\\\n        \\texttt{sub\\_mode} & input & 1 & logic & Operation select (0: A + B, 1: A - B) \\\\\n        \\texttt{result} & output & 4 & signed & 4-bit two's-complement signed sum/difference \\\\\n        \\texttt{cout} & output & 1 & logic & Carry-out bit from MSB adder stage \\\\\n        \\texttt{overflow} & output & 1 & logic & Signed two's-complement arithmetic overflow flag \\\\\n        \\texttt{zero} & output & 1 & logic & Asserted high when result == 0 \\\\\n        \\texttt{seg\\_sign} & output & 7 & active-low & Active-low 7-segment sign output ('-' when result < 0, blank otherwise) \\\\\n        \\texttt{seg\\_mag} & output & 7 & active-low & Active-low 7-segment magnitude output (0..8) \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\n\n\\section{Tri\u1ec3n Khai RTL SystemVerilog Chu\u1ea9n T\u1ed5ng H\u1ee3p (Synthesizable RTL)}\nThi\u1ebft k\u1ebf tu\u00e2n th\u1ee7 nghi\u00eam ng\u1eb7t quy t\u1eafc SystemVerilog-2012: s\u1eed d\u1ee5ng \\texttt{always\\_ff} v\u1edbi ph\u00e9p g\u00e1n kh\u00f4ng ch\u1eb7n (\\texttt{<=}) cho m\u1ea1ch tu\u1ea7n t\u1ef1, \\texttt{always\\_comb} v\u1edbi gi\u00e1 tr\u1ecb m\u1eb7c \u0111\u1ecbnh t\u01b0\u1eddng minh \u1edf \u0111\u1ea7u kh\u1ed1i cho m\u1ea1ch t\u1ed5 h\u1ee3p, cam k\u1ebft \\textbf{0 inferred latches}.\n\n\\begin{lstlisting}\n// Auto-generated by fpga_autopilot \u2014 Strict Synthesizable SystemVerilog-2012\n// Zero inferred latches, pure combinational arithmetic + dual active-low 7-seg decoder\n\nmodule adder_sub_7seg (\n    input  logic signed [3:0] a,\n    input  logic signed [3:0] b,\n    input  logic              sub_mode,\n    output logic signed [3:0] result,\n    output logic              cout,\n    output logic              overflow,\n    output logic              zero,\n    output logic        [6:0] seg_sign,\n    output logic        [6:0] seg_mag\n);\n\n    logic [3:0] a_u;\n    logic [3:0] b_eff;\n    logic [4:0] sum_ext;\n    logic [3:0] mag;\n\n    always_comb begin\n        // Explicit default assignments guarantee 0 inferred latches\n        a_u      = 4'd0;\n        b_eff    = 4'd0;\n        sum_ext  = 5'd0;\n        result   = 4'sd0;\n        cout     = 1'b0;\n        overflow = 1'b0;\n        zero     = 1'b0;\n        mag      = 4'd0;\n        seg_sign = 7'b111_1111;\n        seg_mag  = 7'b111_1111;\n\n        a_u      = a[3:0];\n        b_eff    = b[3:0] ^ {4{sub_mode}};\n        sum_ext  = {1'b0, a_u} + {1'b0, b_eff} + {4'b0000, sub_mode};\n\n        result   = $signed(sum_ext[3:0]);\n        cout     = sum_ext[4];\n        overflow = (a_u[3] == b_eff[3]) && (sum_ext[3] != a_u[3]);\n        zero     = (sum_ext[3:0] == 4'd0);\n\n        if (sum_ext[3]) begin\n            seg_sign = 7'b011_1111; // '-' on segment g (active-low)\n            mag      = (~sum_ext[3:0]) + 4'd1;\n        end else begin\n            seg_sign = 7'b111_1111; // blank when >= 0 (active-low)\n            mag      = sum_ext[3:0];\n        end\n\n        case (mag)\n            4'h0:    seg_mag = 7'b100_0000;\n            4'h1:    seg_mag = 7'b111_1001;\n            4'h2:    seg_mag = 7'b010_0100;\n            4'h3:    seg_mag = 7'b011_0000;\n            4'h4:    seg_mag = 7'b001_1001;\n            4'h5:    seg_mag = 7'b001_0010;\n            4'h6:    seg_mag = 7'b000_0010;\n// ... (truncated for report conciseness; full source in rtl/ directory)\n\\end{lstlisting}\n\n\\section{Ki\u1ec3m Ch\u1ee9ng T\u1ef1 \u0110\u1ed9ng (Self-Checking Testbench Coverage)}\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{T\u1ed5ng h\u1ee3p k\u1ebft qu\u1ea3 Linting v\u00e0 M\u00f4 ph\u1ecfng \u0111\u1ed1i chi\u1ebfu Golden Model}\n    \\begin{tabularx}{\\textwidth}{@{}lX@{}}\n        \\toprule\n        \\textbf{Ti\u00eau ch\u00ed ki\u1ec3m ch\u1ee9ng (Metric)} & \\textbf{K\u1ebft qu\u1ea3 \u0111o l\u01b0\u1eddng (Verified Value)} \\\\\n        \\midrule\n        Tr\u00ecnh m\u00f4 ph\u1ecfng HDL (Simulator) & \\texttt{iverilog} \\\\\n        C\u00f4ng c\u1ee5 ph\u00e2n t\u00edch t\u0129nh (Linters) & \\texttt{static\\_analyzer, verilator, iverilog} \\\\\n        S\u1ed1 ch\u1ed1t suy di\u1ec5n (Inferred Latches) & 0 (RTL) / 0 (Netlist) \\\\\n        T\u1ed5ng s\u1ed1 vector ki\u1ec3m th\u1eed (Total Vectors) & 512 \\\\\n        S\u1ed1 vector \u0111\u1ea1t chu\u1ea9n (Passed / Failed) & 512 Passed / 0 Failed \\\\\n        S\u1ed1 v\u00f2ng t\u1ef1 s\u1eeda l\u1ed7i (Self-Healing Loops) & 0 \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\\section{T\u00e0i Nguy\u00ean Ph\u1ea7n C\u1ee9ng \\& Ph\u00e2n T\u00edch \u0110\u1ecbnh Th\u1eddi (Synthesis \\& STA)}\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{B\u00e1o c\u00e1o t\u00e0i nguy\u00ean FPGA v\u00e0 ph\u00e2n t\u00edch \u0111\u1ecbnh th\u1eddi (EP4CE115F29C7)}\n    \\begin{tabularx}{\\textwidth}{@{}Xr@{}}\n        \\toprule\n        \\textbf{Th\u00f4ng s\u1ed1 ph\u1ea7n c\u1ee9ng / \u0110\u1ecbnh th\u1eddi (Hardware \\& Timing Metric)} & \\textbf{Gi\u00e1 tr\u1ecb} \\\\\n        \\midrule\n        Total Logic Elements / ALMs & 19 \\\\\n        Combinational Functions (LUTs) & 19 \\\\\n        Dedicated Logic Registers (Flip-Flops) & 0 \\\\\n        Total Memory Bits & 0 \\\\\n        Embedded Multiplier / DSP Elements & 0 \\\\\n        Total I/O Pins & 30 \\\\\n        Synthesized Inferred Latches & 0 \\\\\n        Worst-Case $F_{\\max}$ & 61.88 MHz \\\\\n        Worst-Case Setup Slack & 3.840 ns \\\\\n        Worst-Case Hold Slack & 4.439 ns \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\\section{K\u1ebft Qu\u1ea3 Ch\u1ee5p D\u1ea1ng S\u00f3ng GTKWave \\& S\u01a1 \u0110\u1ed3 M\u1ea1ch RTL Viewer}\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_0_gtkwave_waveform.png}\n    \\caption{GTKWave Verified Simulation Waveform (adder\\_sub\\_7seg) \u2014 477 transition columns audited.}\n\\end{figure}\n\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_1_quartus_rtl_viewer.png}\n    \\caption{Quartus II RTL Viewer Synthesized Schematic (adder\\_sub\\_7seg).}\n\\end{figure}\n\n\n\\end{document}\n",
+        "markdown": "# Engineering Verification Summary \u2014 `adder_sub_7seg`\n\n**Title:** 4-Bit Signed Adder/Subtractor + Dual 7-Segment Decoder  \n**Top Module:** `adder_sub_7seg`  \n**Target Board / Device:** `DE2-115` (`Cyclone IV E` \u2014 `EP4CE115F29C7`)  \n**Overall Gate Status:** **PASS**\n\n## 1. Static Lint & Synchronous Design Audit\n- **Lint Status:** `PASS` (Tools: `static_analyzer, verilator, iverilog`)\n- **Inferred Latches:** `0` (Synthesis Latches: `0`)\n- **Blocking in `always_ff`:** `0`\n- **Width Mismatches:** `0`\n- **Self-Healing Patch Iterations:** `0`\n\n## 2. Cycle-Accurate Self-Checking Simulation\n- **Simulator:** `iverilog`\n- **Vectors Passed:** `512 / 512` (`0` failures)\n- **Runtime:** `0.095 s`\n- **Waveform VCD:** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\sim\\adder_sub_7seg.vcd`\n\n## 3. Hardware Resource Utilization & Timing (`quartus`)\n\n| Metric | Value |\n| :--- | ---: |\n| Logic Elements / ALMs | 19 |\n| Combinational Functions (LUTs) | 19 |\n| Dedicated Logic Registers | 0 |\n| Memory Bits | 0 |\n| DSP / Multiplier Elements | 0 |\n| Total I/O Pins | 30 |\n| Inferred Latches | 0 |\n| Worst-Case Fmax | 61.88 MHz |\n| Worst Setup Slack | 3.840 ns |\n| Worst Hold Slack | 4.439 ns |\n\n## 4. Generated Artifacts & Visual Captures\n- **Quartus Project (`.qpf`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.qpf`\n- **Quartus Settings (`.qsf`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.qsf`\n- **Timing Constraints (`.sdc`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.sdc`\n- **gtkwave_waveform** (`1420x820`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_waveform.png`\n- **quartus_rtl_viewer** (`1460x860`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_rtl_viewer.png`\n"
+      },
+      "captures": [
+        {
+          "capture_type": "gtkwave_waveform",
+          "tool_name": "gtkwave",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_waveform.png",
+          "window_title": "GTKWave - adder_sub_7seg.vcd",
+          "window_bbox": [
+            50,
+            40,
+            1420,
+            820
+          ],
+          "width_px": 1420,
+          "height_px": 820,
+          "visual_audit_passed": true,
+          "edge_density": 0.1214,
+          "transition_columns_detected": 477,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Crisp digital signal transitions verified",
+          "url": "./assets/adder_sub_7seg/adder_sub_7seg_waveform.png"
+        },
+        {
+          "capture_type": "quartus_rtl_viewer",
+          "tool_name": "quartus",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_rtl_viewer.png",
+          "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/adder_sub_7seg/quartus/adder_sub_7seg - adder_sub_7seg",
+          "window_bbox": [
+            30,
+            30,
+            1460,
+            860
+          ],
+          "width_px": 1460,
+          "height_px": 860,
+          "visual_audit_passed": true,
+          "edge_density": 0.03449,
+          "transition_columns_detected": 912,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Schematic symbols and nets verified",
+          "url": "./assets/adder_sub_7seg/adder_sub_7seg_rtl_viewer.png"
+        }
+      ],
+      "downloads": {
+        "pdf_url": "./assets/adder_sub_7seg/lab_report.pdf",
+        "vcd_url": "./assets/adder_sub_7seg/adder_sub_7seg.vcd",
+        "quartus_zip_url": "./assets/adder_sub_7seg/adder_sub_7seg_quartus_bundle.zip"
+      }
+    },
+    {
+      "name": "traffic_fsm",
+      "title": "Parameterized Clock Divider + Smart Traffic Light Moore FSM",
+      "description": "Synchronous smart intersection controller featuring a parameterized 50 MHz / SIM_MODE 1-Hz tick divider, 2-FF asynchronous input synchronizer and counter debouncer for pedestrian button requests, emergency all-red override, countdown display, and glitch-free Moore traffic outputs.",
+      "clock_freq_mhz": 50.0,
+      "ports": [
+        {
+          "name": "clk",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "50 MHz system clock",
+          "pin_assignment": null
+        },
+        {
+          "name": "rst_n",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": true,
+          "description": "Asynchronous active-low system reset",
+          "pin_assignment": null
+        },
+        {
+          "name": "ped_btn_raw",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Asynchronous pedestrian request push-button",
+          "pin_assignment": null
+        },
+        {
+          "name": "emergency_ovr",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Synchronous high-priority emergency all-red override",
+          "pin_assignment": null
+        },
+        {
+          "name": "ns_light",
+          "direction": "output",
+          "width": 3,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "North-South {Red, Yellow, Green} one-hot lamp bus",
+          "pin_assignment": null
+        },
+        {
+          "name": "ew_light",
+          "direction": "output",
+          "width": 3,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "East-West {Red, Yellow, Green} one-hot lamp bus",
+          "pin_assignment": null
+        },
+        {
+          "name": "ped_walk",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Pedestrian WALK indicator",
+          "pin_assignment": null
+        },
+        {
+          "name": "countdown",
+          "direction": "output",
+          "width": 4,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Remaining seconds in active phase",
+          "pin_assignment": null
+        }
+      ],
+      "fsm_states": [
+        {
+          "name": "ST_NS_GREEN",
+          "encoding": "3'd0",
+          "outputs": {
+            "ns_light": "GREEN (001)",
+            "ew_light": "RED (100)",
+            "ped_walk": "0"
+          },
+          "transitions": [
+            {
+              "cond": "emergency_ovr",
+              "next": "ST_EMERGENCY"
+            },
+            {
+              "cond": "phase_done",
+              "next": "ST_NS_YELLOW"
+            }
+          ],
+          "description": ""
+        },
+        {
+          "name": "ST_NS_YELLOW",
+          "encoding": "3'd1",
+          "outputs": {
+            "ns_light": "YELLOW (010)",
+            "ew_light": "RED (100)",
+            "ped_walk": "0"
+          },
+          "transitions": [
+            {
+              "cond": "emergency_ovr",
+              "next": "ST_EMERGENCY"
+            },
+            {
+              "cond": "phase_done",
+              "next": "ST_ALL_RED_1"
+            }
+          ],
+          "description": ""
+        },
+        {
+          "name": "ST_ALL_RED_1",
+          "encoding": "3'd2",
+          "outputs": {
+            "ns_light": "RED (100)",
+            "ew_light": "RED (100)",
+            "ped_walk": "0"
+          },
+          "transitions": [
+            {
+              "cond": "phase_done & ped_pending",
+              "next": "ST_PED_WALK"
+            },
+            {
+              "cond": "phase_done & !ped_pending",
+              "next": "ST_EW_GREEN"
+            }
+          ],
+          "description": ""
+        },
+        {
+          "name": "ST_EW_GREEN",
+          "encoding": "3'd3",
+          "outputs": {
+            "ns_light": "RED (100)",
+            "ew_light": "GREEN (001)",
+            "ped_walk": "0"
+          },
+          "transitions": [
+            {
+              "cond": "emergency_ovr",
+              "next": "ST_EMERGENCY"
+            },
+            {
+              "cond": "phase_done",
+              "next": "ST_EW_YELLOW"
+            }
+          ],
+          "description": ""
+        },
+        {
+          "name": "ST_EW_YELLOW",
+          "encoding": "3'd4",
+          "outputs": {
+            "ns_light": "RED (100)",
+            "ew_light": "YELLOW (010)",
+            "ped_walk": "0"
+          },
+          "transitions": [
+            {
+              "cond": "emergency_ovr",
+              "next": "ST_EMERGENCY"
+            },
+            {
+              "cond": "phase_done",
+              "next": "ST_ALL_RED_2"
+            }
+          ],
+          "description": ""
+        },
+        {
+          "name": "ST_ALL_RED_2",
+          "encoding": "3'd5",
+          "outputs": {
+            "ns_light": "RED (100)",
+            "ew_light": "RED (100)",
+            "ped_walk": "0"
+          },
+          "transitions": [
+            {
+              "cond": "phase_done & ped_pending",
+              "next": "ST_PED_WALK"
+            },
+            {
+              "cond": "phase_done & !ped_pending",
+              "next": "ST_NS_GREEN"
+            }
+          ],
+          "description": ""
+        },
+        {
+          "name": "ST_PED_WALK",
+          "encoding": "3'd6",
+          "outputs": {
+            "ns_light": "RED (100)",
+            "ew_light": "RED (100)",
+            "ped_walk": "1"
+          },
+          "transitions": [
+            {
+              "cond": "phase_done & resume_to_ew",
+              "next": "ST_EW_GREEN"
+            },
+            {
+              "cond": "phase_done & !resume_to_ew",
+              "next": "ST_NS_GREEN"
+            }
+          ],
+          "description": ""
+        },
+        {
+          "name": "ST_EMERGENCY",
+          "encoding": "3'd7",
+          "outputs": {
+            "ns_light": "RED (100)",
+            "ew_light": "RED (100)",
+            "ped_walk": "0"
+          },
+          "transitions": [
+            {
+              "cond": "!emergency_ovr",
+              "next": "ST_ALL_RED_1"
+            }
+          ],
+          "description": ""
+        }
+      ],
+      "summary": {
+        "spec_name": "traffic_fsm",
+        "top_module": "traffic_fsm",
+        "board_preset": "DE2-115",
+        "rtl_paths": [
+          "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\rtl\\traffic_fsm.sv"
+        ],
+        "tb_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\tb\\tb_traffic_fsm.sv",
+        "healing_iterations": 0,
+        "lint_report": {
+          "passed": true,
+          "inferred_latches": 0,
+          "blocking_in_seq": 0,
+          "nonblocking_in_comb": 0,
+          "missing_reset_clauses": 0,
+          "undriven_nets": 0,
+          "multidriven_nets": 0,
+          "width_mismatches": 0,
+          "error_count": 0,
+          "warning_count": 0,
+          "tools_used": [
+            "static_analyzer",
+            "verilator",
+            "iverilog"
+          ],
+          "warnings": []
+        },
+        "sim_result": {
+          "simulator": "iverilog",
+          "compile_passed": true,
+          "sim_passed": true,
+          "timed_out": false,
+          "total_vectors": 230,
+          "passed_vectors": 230,
+          "failed_vectors": 0,
+          "mismatches": [],
+          "vcd_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\sim\\traffic_fsm.vcd",
+          "stdout": "VCD info: dumpfile traffic_fsm.vcd opened for output.\n[SUMMARY] passed=230 failed=0\ntb_traffic_fsm.sv:270: $finish called at 2298000 (1ps)\n",
+          "stderr": "warning: Some design elements have no explicit time unit and/or\n       : time precision. This may cause confusing timing results.\n       : Affected design elements are:\n       :   -- module traffic_fsm declared here: traffic_fsm.sv:4\n",
+          "runtime_sec": 0.0945
+        },
+        "synthesis_report": {
+          "backend": "quartus",
+          "compile_passed": true,
+          "family": "Cyclone IV E",
+          "device": "EP4CE115F29C7",
+          "top_module": "traffic_fsm",
+          "project_dir": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus",
+          "qpf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qpf",
+          "qsf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qsf",
+          "sdc_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.sdc",
+          "tcl_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\compile_traffic_fsm.tcl",
+          "map_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\output_files\\traffic_fsm.map.rpt",
+          "fit_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\output_files\\traffic_fsm.fit.rpt",
+          "sta_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\output_files\\traffic_fsm.sta.rpt",
+          "resources": {
+            "logic_elements_or_alms": 133,
+            "combinational_functions": 132,
+            "dedicated_logic_registers": 81,
+            "memory_bits": 0,
+            "dsp_elements": 0,
+            "total_pins": 15,
+            "inferred_latches": 0
+          },
+          "timing": {
+            "fmax_mhz": 71.69,
+            "restricted_fmax_mhz": 71.69,
+            "worst_setup_slack_ns": 6.051,
+            "worst_hold_slack_ns": 0.181,
+            "worst_recovery_slack_ns": 9.439,
+            "worst_removal_slack_ns": 9.439,
+            "max_comb_delay_ns": null,
+            "timing_met": true
+          },
+          "warnings": [],
+          "errors": []
+        },
+        "visual_captures": [
+          {
+            "capture_type": "gtkwave_waveform",
+            "tool_name": "gtkwave",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_waveform.png",
+            "window_title": "GTKWave - traffic_fsm.vcd",
+            "window_bbox": [
+              50,
+              40,
+              1420,
+              820
+            ],
+            "width_px": 1420,
+            "height_px": 820,
+            "visual_audit_passed": true,
+            "edge_density": 0.12307,
+            "transition_columns_detected": 638,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Crisp digital signal transitions verified"
+          },
+          {
+            "capture_type": "quartus_rtl_viewer",
+            "tool_name": "quartus",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_rtl_viewer.png",
+            "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+            "window_bbox": [
+              30,
+              30,
+              1460,
+              860
+            ],
+            "width_px": 1460,
+            "height_px": 860,
+            "visual_audit_passed": true,
+            "edge_density": 0.07818,
+            "transition_columns_detected": 1039,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Schematic symbols and nets verified"
+          },
+          {
+            "capture_type": "quartus_fsm_viewer",
+            "tool_name": "quartus",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_fsm_viewer.png",
+            "window_title": "State Machine Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+            "window_bbox": [
+              30,
+              30,
+              1460,
+              860
+            ],
+            "width_px": 1460,
+            "height_px": 860,
+            "visual_audit_passed": true,
+            "edge_density": 0.04505,
+            "transition_columns_detected": 1139,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Schematic symbols and nets verified"
+          }
+        ],
+        "summary_md_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\summary.md",
+        "latex_tex_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\lab_report.tex",
+        "latex_pdf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\lab_report.pdf",
+        "overall_passed": true
+      },
+      "sources": {
+        "rtl": [
+          {
+            "filename": "traffic_fsm.sv",
+            "code": "// Auto-generated by fpga_autopilot \u2014 Strict Synthesizable SystemVerilog-2012\n// Parameterized tick divider + 2-FF synchronizer + debouncer + Moore Traffic FSM\n\nmodule traffic_fsm #(\n    parameter [31:0] SIM_MODE          = 32'd0,\n    parameter [31:0] CLK_FREQ_HZ       = 32'd50000000,\n    parameter [31:0] SIM_TICKS_PER_SEC = 32'd4,\n    parameter [3:0]  GREEN_SEC         = 4'd6,\n    parameter [3:0]  YELLOW_SEC        = 4'd2,\n    parameter [3:0]  PED_SEC           = 4'd4,\n    parameter [3:0]  ALL_RED_SEC       = 4'd1\n) (\n    input  logic       clk,\n    input  logic       rst_n,\n    input  logic       ped_btn_raw,\n    input  logic       emergency_ovr,\n    output logic [2:0] ns_light,\n    output logic [2:0] ew_light,\n    output logic       ped_walk,\n    output logic [3:0] countdown\n);\n\n    typedef enum logic [2:0] {\n        ST_NS_GREEN  = 3'd0,\n        ST_NS_YELLOW = 3'd1,\n        ST_ALL_RED_1 = 3'd2,\n        ST_EW_GREEN  = 3'd3,\n        ST_EW_YELLOW = 3'd4,\n        ST_ALL_RED_2 = 3'd5,\n        ST_PED_WALK  = 3'd6,\n        ST_EMERGENCY = 3'd7\n    } state_t;\n\n    localparam [31:0] TICKS_PER_SEC = (SIM_MODE != 32'd0) ? SIM_TICKS_PER_SEC : CLK_FREQ_HZ;\n    localparam [31:0] DEBOUNCE_MAX  = (SIM_MODE != 32'd0) ? 32'd2 : (CLK_FREQ_HZ / 32'd100);\n\n    localparam [2:0] LIGHT_RED    = 3'b100;\n    localparam [2:0] LIGHT_YELLOW = 3'b010;\n    localparam [2:0] LIGHT_GREEN  = 3'b001;\n\n    state_t      state, next_state;\n    logic [31:0] tick_cnt;\n    logic        sec_tick;\n    logic        phase_done;\n    logic [3:0]  timer_sec;\n    logic [3:0]  next_duration;\n\n    // 2-FF synchronizer + debouncer for asynchronous pedestrian button\n    logic        ped_sync_ff1;\n    logic        ped_sync_ff2;\n    logic [31:0] db_cnt;\n    logic        ped_debounced;\n    logic        ped_debounced_d;\n    logic        ped_pulse;\n    logic        ped_pending;\n    logic        resume_to_ew;\n\n    // 2-FF Synchronizer & Counter-Based Debouncer\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            ped_sync_ff1    <= 1'b0;\n            ped_sync_ff2    <= 1'b0;\n            db_cnt          <= 32'd0;\n            ped_debounced   <= 1'b0;\n            ped_debounced_d <= 1'b0;\n        end else begin\n            ped_sync_ff1    <= ped_btn_raw;\n            ped_sync_ff2    <= ped_sync_ff1;\n            ped_debounced_d <= ped_debounced;\n\n            if (ped_sync_ff2 == ped_debounced) begin\n                db_cnt <= 32'd0;\n            end else if (db_cnt >= (DEBOUNCE_MAX - 32'd1)) begin\n                db_cnt        <= 32'd0;\n                ped_debounced <= ped_sync_ff2;\n            end else begin\n                db_cnt <= db_cnt + 32'd1;\n            end\n        end\n    end\n\n    always_comb begin\n        ped_pulse  = 1'b0;\n        sec_tick   = 1'b0;\n        phase_done = 1'b0;\n\n        ped_pulse  = ped_debounced && !ped_debounced_d;\n        sec_tick   = (tick_cnt == (TICKS_PER_SEC - 32'd1));\n        phase_done = sec_tick && (timer_sec <= 4'd1);\n    end\n\n    // Pedestrian Request Latch & Fair Direction Resume Memory\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            ped_pending  <= 1'b0;\n            resume_to_ew <= 1'b1;\n        end else begin\n            if (emergency_ovr || (state == ST_PED_WALK)) begin\n                ped_pending <= 1'b0;\n            end else if (ped_pulse || ped_debounced) begin\n                ped_pending <= 1'b1;\n            end\n\n            if (state == ST_ALL_RED_1) begin\n                resume_to_ew <= 1'b1;\n            end else if (state == ST_ALL_RED_2) begin\n                resume_to_ew <= 1'b0;\n            end\n        end\n    end\n\n    // FSM State Register\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            state <= ST_NS_GREEN;\n        end else begin\n            state <= next_state;\n        end\n    end\n\n    // Parameterized Tick Generator & Countdown Timer\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            tick_cnt  <= 32'd0;\n            timer_sec <= GREEN_SEC;\n        end else if (emergency_ovr) begin\n            tick_cnt  <= 32'd0;\n            timer_sec <= 4'd0;\n        end else if (state != next_state) begin\n            tick_cnt  <= 32'd0;\n            timer_sec <= next_duration;\n        end else if (sec_tick) begin\n            tick_cnt <= 32'd0;\n            if (timer_sec > 4'd1) begin\n                timer_sec <= timer_sec - 4'd1;\n            end\n        end else begin\n            tick_cnt <= tick_cnt + 32'd1;\n        end\n    end\n\n    // Next-State & Next-Phase-Duration Combinational Logic\n    always_comb begin\n        next_state    = state;\n        next_duration = GREEN_SEC;\n\n        if (emergency_ovr) begin\n            next_state    = ST_EMERGENCY;\n            next_duration = 4'd0;\n        end else begin\n            case (state)\n                ST_NS_GREEN: begin\n                    if (phase_done) begin\n                        next_state    = ST_NS_YELLOW;\n                        next_duration = YELLOW_SEC;\n                    end\n                end\n                ST_NS_YELLOW: begin\n                    if (phase_done) begin\n                        next_state    = ST_ALL_RED_1;\n                        next_duration = ALL_RED_SEC;\n                    end\n                end\n                ST_ALL_RED_1: begin\n                    if (phase_done) begin\n                        if (ped_pending) begin\n                            next_state    = ST_PED_WALK;\n                            next_duration = PED_SEC;\n                        end else begin\n                            next_state    = ST_EW_GREEN;\n                            next_duration = GREEN_SEC;\n                        end\n                    end\n                end\n                ST_EW_GREEN: begin\n                    if (phase_done) begin\n                        next_state    = ST_EW_YELLOW;\n                        next_duration = YELLOW_SEC;\n                    end\n                end\n                ST_EW_YELLOW: begin\n                    if (phase_done) begin\n                        next_state    = ST_ALL_RED_2;\n                        next_duration = ALL_RED_SEC;\n                    end\n                end\n                ST_ALL_RED_2: begin\n                    if (phase_done) begin\n                        if (ped_pending) begin\n                            next_state    = ST_PED_WALK;\n                            next_duration = PED_SEC;\n                        end else begin\n                            next_state    = ST_NS_GREEN;\n                            next_duration = GREEN_SEC;\n                        end\n                    end\n                end\n                ST_PED_WALK: begin\n                    if (phase_done) begin\n                        if (resume_to_ew) begin\n                            next_state    = ST_EW_GREEN;\n                            next_duration = GREEN_SEC;\n                        end else begin\n                            next_state    = ST_NS_GREEN;\n                            next_duration = GREEN_SEC;\n                        end\n                    end\n                end\n                ST_EMERGENCY: begin\n                    next_state    = ST_ALL_RED_1;\n                    next_duration = ALL_RED_SEC;\n                end\n                default: begin\n                    next_state    = ST_NS_GREEN;\n                    next_duration = GREEN_SEC;\n                end\n            endcase\n        end\n    end\n\n    // Glitch-Free Pure Moore Output Logic\n    always_comb begin\n        ns_light  = LIGHT_RED;\n        ew_light  = LIGHT_RED;\n        ped_walk  = 1'b0;\n        countdown = timer_sec;\n\n        case (state)\n            ST_NS_GREEN: begin\n                ns_light = LIGHT_GREEN;\n                ew_light = LIGHT_RED;\n                ped_walk = 1'b0;\n            end\n            ST_NS_YELLOW: begin\n                ns_light = LIGHT_YELLOW;\n                ew_light = LIGHT_RED;\n                ped_walk = 1'b0;\n            end\n            ST_ALL_RED_1: begin\n                ns_light = LIGHT_RED;\n                ew_light = LIGHT_RED;\n                ped_walk = 1'b0;\n            end\n            ST_EW_GREEN: begin\n                ns_light = LIGHT_RED;\n                ew_light = LIGHT_GREEN;\n                ped_walk = 1'b0;\n            end\n            ST_EW_YELLOW: begin\n                ns_light = LIGHT_RED;\n                ew_light = LIGHT_YELLOW;\n                ped_walk = 1'b0;\n            end\n            ST_ALL_RED_2: begin\n                ns_light = LIGHT_RED;\n                ew_light = LIGHT_RED;\n                ped_walk = 1'b0;\n            end\n            ST_PED_WALK: begin\n                ns_light = LIGHT_RED;\n                ew_light = LIGHT_RED;\n                ped_walk = 1'b1;\n            end\n            ST_EMERGENCY: begin\n                ns_light  = LIGHT_RED;\n                ew_light  = LIGHT_RED;\n                ped_walk  = 1'b0;\n                countdown = 4'd0;\n            end\n            default: begin\n                ns_light  = LIGHT_RED;\n                ew_light  = LIGHT_RED;\n                ped_walk  = 1'b0;\n                countdown = 4'd0;\n            end\n        endcase\n    end\n\nendmodule\n"
+          }
+        ],
+        "tb_filename": "tb_traffic_fsm.sv",
+        "tb": "`timescale 1ns/1ps\n\nmodule tb_traffic_fsm;\n\n    localparam [31:0] TICKS_PER_SEC = 32'd4;\n    localparam [3:0]  GREEN_SEC     = 4'd4;\n    localparam [3:0]  YELLOW_SEC    = 4'd2;\n    localparam [3:0]  PED_SEC       = 4'd3;\n    localparam [3:0]  ALL_RED_SEC   = 4'd1;\n\n    logic       clk;\n    logic       rst_n;\n    logic       ped_btn_raw;\n    logic       emergency_ovr;\n    logic [2:0] ns_light;\n    logic [2:0] ew_light;\n    logic       ped_walk;\n    logic [3:0] countdown;\n\n    integer passed_cnt;\n    integer failed_cnt;\n    integer cycle_cnt;\n\n    // Coverage flags across all 8 states & safety checks\n    logic [7:0] state_seen;\n\n    traffic_fsm #(\n        .SIM_MODE          (32'd1),\n        .CLK_FREQ_HZ       (32'd50_000_000),\n        .SIM_TICKS_PER_SEC (TICKS_PER_SEC),\n        .GREEN_SEC         (GREEN_SEC),\n        .YELLOW_SEC        (YELLOW_SEC),\n        .PED_SEC           (PED_SEC),\n        .ALL_RED_SEC       (ALL_RED_SEC)\n    ) dut (\n        .clk           (clk),\n        .rst_n         (rst_n),\n        .ped_btn_raw   (ped_btn_raw),\n        .emergency_ovr (emergency_ovr),\n        .ns_light      (ns_light),\n        .ew_light      (ew_light),\n        .ped_walk      (ped_walk),\n        .countdown     (countdown)\n    );\n\n    initial begin\n        clk = 1'b0;\n        forever #5 clk = ~clk;\n    end\n\n    // Cycle-accurate Golden Reference Model\n    logic [2:0]  g_state, g_next_state;\n    logic [31:0] g_tick_cnt, g_db_cnt;\n    logic [3:0]  g_timer_sec, g_next_dur;\n    logic        g_ff1, g_ff2, g_db, g_db_d, g_ped_pend, g_resume_ew;\n    logic        g_sec_tick, g_phase_done, g_ped_pulse;\n    logic [2:0]  g_ns, g_ew;\n    logic        g_walk;\n    logic [3:0]  g_cd;\n\n    always_comb begin\n        g_ped_pulse  = g_db && !g_db_d;\n        g_sec_tick   = (g_tick_cnt == (TICKS_PER_SEC - 32'd1));\n        g_phase_done = g_sec_tick && (g_timer_sec <= 4'd1);\n\n        g_next_state = g_state;\n        g_next_dur   = GREEN_SEC;\n        if (emergency_ovr) begin\n            g_next_state = 3'd7;\n            g_next_dur   = 4'd0;\n        end else begin\n            case (g_state)\n                3'd0: if (g_phase_done) begin g_next_state = 3'd1; g_next_dur = YELLOW_SEC; end\n                3'd1: if (g_phase_done) begin g_next_state = 3'd2; g_next_dur = ALL_RED_SEC; end\n                3'd2: if (g_phase_done) begin\n                    if (g_ped_pend) begin g_next_state = 3'd6; g_next_dur = PED_SEC; end\n                    else            begin g_next_state = 3'd3; g_next_dur = GREEN_SEC; end\n                end\n                3'd3: if (g_phase_done) begin g_next_state = 3'd4; g_next_dur = YELLOW_SEC; end\n                3'd4: if (g_phase_done) begin g_next_state = 3'd5; g_next_dur = ALL_RED_SEC; end\n                3'd5: if (g_phase_done) begin\n                    if (g_ped_pend) begin g_next_state = 3'd6; g_next_dur = PED_SEC; end\n                    else            begin g_next_state = 3'd0; g_next_dur = GREEN_SEC; end\n                end\n                3'd6: if (g_phase_done) begin\n                    if (g_resume_ew) begin g_next_state = 3'd3; g_next_dur = GREEN_SEC; end\n                    else             begin g_next_state = 3'd0; g_next_dur = GREEN_SEC; end\n                end\n                3'd7: begin g_next_state = 3'd2; g_next_dur = ALL_RED_SEC; end\n                default: begin g_next_state = 3'd0; g_next_dur = GREEN_SEC; end\n            endcase\n        end\n\n        g_ns   = 3'b100;\n        g_ew   = 3'b100;\n        g_walk = 1'b0;\n        g_cd   = g_timer_sec;\n        case (g_state)\n            3'd0: g_ns = 3'b001;\n            3'd1: g_ns = 3'b010;\n            3'd3: g_ew = 3'b001;\n            3'd4: g_ew = 3'b010;\n            3'd6: g_walk = 1'b1;\n            3'd7: g_cd = 4'd0;\n            default: ;\n        endcase\n    end\n\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            g_ff1       <= 1'b0;\n            g_ff2       <= 1'b0;\n            g_db_cnt    <= 32'd0;\n            g_db        <= 1'b0;\n            g_db_d      <= 1'b0;\n            g_ped_pend  <= 1'b0;\n            g_resume_ew <= 1'b1;\n            g_state     <= 3'd0;\n            g_tick_cnt  <= 32'd0;\n            g_timer_sec <= GREEN_SEC;\n        end else begin\n            g_ff1  <= ped_btn_raw;\n            g_ff2  <= g_ff1;\n            g_db_d <= g_db;\n            if (g_ff2 == g_db) begin\n                g_db_cnt <= 32'd0;\n            end else if (g_db_cnt >= 32'd1) begin\n                g_db_cnt <= 32'd0;\n                g_db     <= g_ff2;\n            end else begin\n                g_db_cnt <= g_db_cnt + 32'd1;\n            end\n\n            if (emergency_ovr || (g_state == 3'd6)) begin\n                g_ped_pend <= 1'b0;\n            end else if (g_ped_pulse || g_db) begin\n                g_ped_pend <= 1'b1;\n            end\n\n            if (g_state == 3'd2) g_resume_ew <= 1'b1;\n            else if (g_state == 3'd5) g_resume_ew <= 1'b0;\n\n            g_state <= g_next_state;\n            if (emergency_ovr) begin\n                g_tick_cnt  <= 32'd0;\n                g_timer_sec <= 4'd0;\n            end else if (g_state != g_next_state) begin\n                g_tick_cnt  <= 32'd0;\n                g_timer_sec <= g_next_dur;\n            end else if (g_sec_tick) begin\n                g_tick_cnt <= 32'd0;\n                if (g_timer_sec > 4'd1) g_timer_sec <= g_timer_sec - 4'd1;\n            end else begin\n                g_tick_cnt <= g_tick_cnt + 32'd1;\n            end\n        end\n    end\n\n    task automatic step_and_verify(input integer n_cycles);\n        integer i;\n        logic [10:0] exp_vec, got_vec;\n        logic [2:0]  pre_ns, pre_ew;\n        logic        pre_walk;\n        begin\n            for (i = 0; i < n_cycles; i = i + 1) begin\n                @(posedge clk);\n                #1;\n                cycle_cnt = cycle_cnt + 1;\n                exp_vec = {g_ns, g_ew, g_walk, g_cd};\n                got_vec = {ns_light, ew_light, ped_walk, countdown};\n                state_seen[g_state] = 1'b1;\n\n                // Mutual-exclusion safety assertion: never NS & EW non-red simultaneously, never walk unless both red\n                if (((ns_light != 3'b100) && (ew_light != 3'b100)) ||\n                    (ped_walk && ((ns_light != 3'b100) || (ew_light != 3'b100)))) begin\n                    failed_cnt = failed_cnt + 1;\n                    $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, {rst_n, ped_btn_raw, emergency_ovr}, exp_vec, got_vec);\n                end else if (got_vec === exp_vec) begin\n                    passed_cnt = passed_cnt + 1;\n                end else begin\n                    failed_cnt = failed_cnt + 1;\n                    $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, {rst_n, ped_btn_raw, emergency_ovr}, exp_vec, got_vec);\n                end\n\n                // Mid-cycle Moore glitch check check at +2ns\n                pre_ns   = ns_light;\n                pre_ew   = ew_light;\n                pre_walk = ped_walk;\n                #2;\n                if ((ns_light !== pre_ns) || (ew_light !== pre_ew) || (ped_walk !== pre_walk)) begin\n                    failed_cnt = failed_cnt + 1;\n                    $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 4'hF, {pre_ns, pre_ew, pre_walk}, {ns_light, ew_light, ped_walk});\n                end\n            end\n        end\n    endtask\n\n    initial begin\n        $dumpfile(\"traffic_fsm.vcd\");\n        $dumpvars(0, tb_traffic_fsm);\n\n        passed_cnt    = 0;\n        failed_cnt    = 0;\n        cycle_cnt     = 0;\n        state_seen    = 8'd0;\n        rst_n         = 1'b0;\n        ped_btn_raw   = 1'b0;\n        emergency_ovr = 1'b0;\n\n        // 1. Initial asynchronous reset assertion & release\n        #12;\n        rst_n = 1'b1;\n        step_and_verify(64); // Full normal NS -> EW -> NS cycle\n\n        // 2. Bouncy pedestrian button press (1-cycle glitch ignored, sustained press accepted)\n        @(negedge clk);\n        ped_btn_raw = 1'b1;\n        step_and_verify(1);\n        @(negedge clk);\n        ped_btn_raw = 1'b0; // Glitch < debounce threshold\n        step_and_verify(3);\n\n        // Real sustained pedestrian request during NS_GREEN\n        @(negedge clk);\n        ped_btn_raw = 1'b1;\n        step_and_verify(6);\n        @(negedge clk);\n        ped_btn_raw = 1'b0;\n        step_and_verify(48); // Crosses ST_PED_WALK and resumes EW_GREEN\n\n        // Second pedestrian request during EW_GREEN to exercise ALL_RED_2 -> ST_PED_WALK -> NS_GREEN\n        @(negedge clk);\n        ped_btn_raw = 1'b1;\n        step_and_verify(6);\n        @(negedge clk);\n        ped_btn_raw = 1'b0;\n        step_and_verify(48);\n\n        // 3. Emergency override assertion mid-green & recovery\n        @(negedge clk);\n        emergency_ovr = 1'b1;\n        step_and_verify(8);\n        @(negedge clk);\n        emergency_ovr = 1'b0;\n        step_and_verify(24);\n\n        // 4. Mid-transaction asynchronous reset recovery\n        #3;\n        rst_n = 1'b0;\n        #9;\n        if ((ns_light !== 3'b001) || (ew_light !== 3'b100) || (ped_walk !== 1'b0)) begin\n            failed_cnt = failed_cnt + 1;\n            $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 4'h0, 7'b001_100_0, {ns_light, ew_light, ped_walk});\n        end else begin\n            passed_cnt = passed_cnt + 1;\n        end\n        @(negedge clk);\n        rst_n = 1'b1;\n        step_and_verify(20);\n\n        // 5. Verify 100% state coverage across all 8 FSM states\n        if (state_seen !== 8'hFF) begin\n            failed_cnt = failed_cnt + 1;\n            $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 8'hFF, 8'hFF, state_seen);\n        end else begin\n            passed_cnt = passed_cnt + 1;\n        end\n\n        $display(\"[SUMMARY] passed=%0d failed=%0d\", passed_cnt, failed_cnt);\n        $finish;\n    end\n\nendmodule\n",
+        "qsf": "# Auto-generated Quartus II Settings File (.qsf) \u2014 fpga_autopilot\nset_global_assignment -name FAMILY \"Cyclone IV E\"\nset_global_assignment -name DEVICE EP4CE115F29C7\nset_global_assignment -name TOP_LEVEL_ENTITY traffic_fsm\nset_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files\nset_global_assignment -name MIN_CORE_JUNCTION_TEMP 0\nset_global_assignment -name MAX_CORE_JUNCTION_TEMP 85\nset_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1\nset_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005\nset_global_assignment -name SDC_FILE traffic_fsm.sdc\n\nset_global_assignment -name SYSTEMVERILOG_FILE \"../rtl/traffic_fsm.sv\"\n\n# Board Pinout Preset: DE2-115 (EP4CE115F29C7)\nset_location_assignment PIN_Y2 -to clk\nset_location_assignment PIN_M23 -to rst_n\nset_location_assignment PIN_AB28 -to ped_btn_raw\nset_location_assignment PIN_AC28 -to emergency_ovr\nset_location_assignment PIN_G18 -to ns_light[0]\nset_location_assignment PIN_F22 -to ns_light[1]\nset_location_assignment PIN_E17 -to ns_light[2]\nset_location_assignment PIN_L26 -to ew_light[0]\nset_location_assignment PIN_L25 -to ew_light[1]\nset_location_assignment PIN_J22 -to ew_light[2]\nset_location_assignment PIN_H22 -to ped_walk\nset_location_assignment PIN_M24 -to countdown[0]\nset_location_assignment PIN_Y22 -to countdown[1]\nset_location_assignment PIN_W21 -to countdown[2]\nset_location_assignment PIN_W22 -to countdown[3]\n\nset_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top\nset_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top\nset_global_assignment -name PARTITION_COLOR 16764057 -section_id Top\n\nset_global_assignment -name LAST_QUARTUS_VERSION \"13.0 SP1\"\nset_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top",
+        "sdc": "# Auto-generated Synopsys Design Constraints (.sdc) \u2014 fpga_autopilot\nset_time_format -unit ns -decimal_places 3\n\ncreate_clock -name {clk} -period 20.000 [get_ports {clk}]\nderive_clock_uncertainty\n\nset_false_path -from [get_ports {rst_n}] -to [all_registers]\n\nset_input_delay -clock {clk} -max 2.000 [get_ports {ped_btn_raw}]\nset_input_delay -clock {clk} -min 0.400 [get_ports {ped_btn_raw}]\nset_input_delay -clock {clk} -max 2.000 [get_ports {emergency_ovr}]\nset_input_delay -clock {clk} -min 0.400 [get_ports {emergency_ovr}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {ns_light[*]}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {ns_light[*]}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {ew_light[*]}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {ew_light[*]}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {ped_walk}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {ped_walk}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {countdown[*]}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {countdown[*]}]\n",
+        "tex": "\\documentclass[11pt,a4paper]{article}\n\\usepackage{fontspec}\n\\setmainfont{Times New Roman}\n\\setsansfont{Arial}\n\\setmonofont{Consolas}\n\\usepackage[a4paper,margin=2.0cm]{geometry}\n\\usepackage{xcolor}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\\usepackage{booktabs}\n\\usepackage{tabularx}\n\\usepackage{graphicx}\n\\usepackage{float}\n\\usepackage{listings}\n\\usepackage{hyperref}\n\\usepackage{fancyhdr}\n\n\\definecolor{deepblue}{RGB}{14,58,130}\n\\definecolor{accentblue}{RGB}{37,99,235}\n\\definecolor{codebg}{RGB}{247,249,252}\n\n\\setlength{\\emergencystretch}{3em}\n\\hbadness=10000\n\\hfuzz=2pt\n\n\\lstdefinelanguage{SystemVerilog}{\n    keywords={module,endmodule,input,output,inout,logic,signed,parameter,localparam,typedef,enum,always_ff,always_comb,posedge,negedge,or,if,else,case,endcase,default,begin,end,for,integer},\n    sensitive=true,\n    morecomment=[l]{//},\n    morecomment=[s]{/*}{*/}\n}\n\n\\lstset{\n    language=SystemVerilog,\n    backgroundcolor=\\color{codebg},\n    basicstyle=\\ttfamily\\scriptsize,\n    keywordstyle=\\color{deepblue}\\bfseries,\n    commentstyle=\\color{gray}\\itshape,\n    frame=single,\n    rulecolor=\\color{accentblue!40},\n    breaklines=true,\n    breakatwhitespace=false,\n    columns=fullflexible,\n    keepspaces=true,\n    showstringspaces=false,\n    tabsize=4\n}\n\n\\pagestyle{fancy}\n\\fancyhf{}\n\\fancyhead[L]{\\small\\textcolor{deepblue}{B\u00e1o C\u00e1o Th\u1ef1c H\u00e0nh Thi\u1ebft K\u1ebf S\u1ed1 \\& FPGA Autopilot}}\n\\fancyhead[R]{\\small\\texttt{traffic\\_fsm}}\n\\fancyfoot[C]{\\thepage}\n\n\\begin{document}\n\n% ==================== TIKZ BLUE DOUBLE-LINE COVER PAGE ====================\n\\begin{titlepage}\n    \\begin{tikzpicture}[remember picture, overlay]\n        \\draw[color=deepblue, line width=2.4pt]\n            ($(current page.north west)+(1.2cm,-1.2cm)$)\n            rectangle\n            ($(current page.south east)+(-1.2cm,1.2cm)$);\n        \\draw[color=accentblue, line width=0.9pt]\n            ($(current page.north west)+(1.42cm,-1.42cm)$)\n            rectangle\n            ($(current page.south east)+(-1.42cm,1.42cm)$);\n    \\end{tikzpicture}\n\n    \\centering\n    \\vspace*{1.6cm}\n    {\\Large\\bfseries\\textcolor{deepblue}{\u0110\u1ea0I H\u1eccC QU\u1ed0C GIA \u2014 PH\u00d2NG TH\u00cd NGHI\u1ec6M VI M\u1ea0CH \\& FPGA}\\\\[0.3cm]}\n    {\\large\\textsc{Digital Systems Design \\& Quartus II Verification Lab Report}}\\\\[1.2cm]\n\n    \\rule{0.82\\textwidth}{1.2pt}\\\\[0.5cm]\n    {\\huge\\bfseries\\textcolor{deepblue}{Parameterized Clock Divider + Smart Traffic Light Moore FSM}}\\\\[0.4cm]\n    {\\Large Module: \\texttt{traffic\\_fsm}}\\\\[0.4cm]\n    \\rule{0.82\\textwidth}{1.2pt}\\\\[1.4cm]\n\n    \\begin{tabularx}{0.84\\textwidth}{@{}lX@{}}\n        \\toprule\n        \\textbf{H\u1ea1ng m\u1ee5c (Metadata)} & \\textbf{Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt (Specification)} \\\\\n        \\midrule\n        T\u00ean b\u00e0i th\u00ed nghi\u1ec7m (Benchmark) & \\texttt{traffic\\_fsm} \\\\\n        Kit FPGA m\u1ee5c ti\u00eau (Target Kit) & DE2-115 (Cyclone IV E) \\\\\n        M\u00e3 chip FPGA (Device Part) & \\texttt{EP4CE115F29C7} \\\\\n        T\u1ea7n s\u1ed1 xung nh\u1ecbp (Target Clock) & 50.0 MHz \\\\\n        K\u1ebft qu\u1ea3 ki\u1ec3m tra t\u0129nh (Static Lint) & PASS (0 Latches, 0 Width Warnings) \\\\\n        K\u1ebft qu\u1ea3 m\u00f4 ph\u1ecfng (Self-Checking TB) & 230 / 230 Vectors Passed (100\\%) \\\\\n        Tr\u00ecnh t\u1ed5ng h\u1ee3p (Synthesis Engine) & \\texttt{quartus} \\\\\n        \\bottomrule\n    \\end{tabularx}\n\n    \\vfill\n    {\\normalsize H\u1ec7 th\u1ed1ng t\u1ef1 \u0111\u1ed9ng h\u00f3a thi\u1ebft k\u1ebf v\u00e0 ki\u1ec3m ch\u1ee9ng ph\u1ea7n c\u1ee9ng \\textbf{FPGA Autopilot}}\\\\[0.2cm]\n    {\\small Generated with 100\\% Bit-Exact Simulation \\& Hardware Synthesis Verification}\n    \\vspace*{1.2cm}\n\\end{titlepage}\n\n\\section{T\u1ed5ng Quan Thi\u1ebft K\u1ebf \\& \u0110\u1eb7c T\u1ea3 C\u1ed5ng Giao Ti\u1ebfp (Port Specification)}\nSynchronous smart intersection controller featuring a parameterized 50 MHz / SIM\\_MODE 1-Hz tick divider, 2-FF asynchronous input synchronizer and counter debouncer for pedestrian button requests, emergency all-red override, countdown display, and glitch-free Moore traffic outputs.\n\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{B\u1ea3ng \u0111\u1eb7c t\u1ea3 giao di\u1ec7n c\u1ed5ng v\u00e0o/ra c\u1ee7a module \\texttt{traffic\\_fsm}}\n    \\begin{tabularx}{\\textwidth}{@{}llllX@{}}\n        \\toprule\n        \\textbf{Port} & \\textbf{Dir} & \\textbf{Width} & \\textbf{Type} & \\textbf{Ch\u1ee9c n\u0103ng (Description)} \\\\\n        \\midrule\n        \\texttt{clk} & input & 1 & logic & 50 MHz system clock \\\\\n        \\texttt{rst\\_n} & input & 1 & active-low & Asynchronous active-low system reset \\\\\n        \\texttt{ped\\_btn\\_raw} & input & 1 & logic & Asynchronous pedestrian request push-button \\\\\n        \\texttt{emergency\\_ovr} & input & 1 & logic & Synchronous high-priority emergency all-red override \\\\\n        \\texttt{ns\\_light} & output & 3 & logic & North-South \\{Red, Yellow, Green\\} one-hot lamp bus \\\\\n        \\texttt{ew\\_light} & output & 3 & logic & East-West \\{Red, Yellow, Green\\} one-hot lamp bus \\\\\n        \\texttt{ped\\_walk} & output & 1 & logic & Pedestrian WALK indicator \\\\\n        \\texttt{countdown} & output & 4 & logic & Remaining seconds in active phase \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\\section{Finite State Machine Transition Table}\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{Synchronous Moore FSM State Encoding and Transitions}\n    \\begin{tabularx}{\\textwidth}{@{}llXX@{}}\n        \\toprule\n        \\textbf{State} & \\textbf{Code} & \\textbf{Moore Outputs} & \\textbf{Transition Condition} \\\\\n        \\midrule\n        \\texttt{ST\\_NS\\_GREEN} & 3'd0 & ns\\_light=GREEN (001), ew\\_light=RED (100), ped\\_walk=0 & emergency\\_ovr -> ST\\_EMERGENCY; phase\\_done -> ST\\_NS\\_YELLOW \\\\\n        \\texttt{ST\\_NS\\_YELLOW} & 3'd1 & ns\\_light=YELLOW (010), ew\\_light=RED (100), ped\\_walk=0 & emergency\\_ovr -> ST\\_EMERGENCY; phase\\_done -> ST\\_ALL\\_RED\\_1 \\\\\n        \\texttt{ST\\_ALL\\_RED\\_1} & 3'd2 & ns\\_light=RED (100), ew\\_light=RED (100), ped\\_walk=0 & phase\\_done \\& ped\\_pending -> ST\\_PED\\_WALK; phase\\_done \\& !ped\\_pending -> ST\\_EW\\_GREEN \\\\\n        \\texttt{ST\\_EW\\_GREEN} & 3'd3 & ns\\_light=RED (100), ew\\_light=GREEN (001), ped\\_walk=0 & emergency\\_ovr -> ST\\_EMERGENCY; phase\\_done -> ST\\_EW\\_YELLOW \\\\\n        \\texttt{ST\\_EW\\_YELLOW} & 3'd4 & ns\\_light=RED (100), ew\\_light=YELLOW (010), ped\\_walk=0 & emergency\\_ovr -> ST\\_EMERGENCY; phase\\_done -> ST\\_ALL\\_RED\\_2 \\\\\n        \\texttt{ST\\_ALL\\_RED\\_2} & 3'd5 & ns\\_light=RED (100), ew\\_light=RED (100), ped\\_walk=0 & phase\\_done \\& ped\\_pending -> ST\\_PED\\_WALK; phase\\_done \\& !ped\\_pending -> ST\\_NS\\_GREEN \\\\\n        \\texttt{ST\\_PED\\_WALK} & 3'd6 & ns\\_light=RED (100), ew\\_light=RED (100), ped\\_walk=1 & phase\\_done \\& resume\\_to\\_ew -> ST\\_EW\\_GREEN; phase\\_done \\& !resume\\_to\\_ew -> ST\\_NS\\_GREEN \\\\\n        \\texttt{ST\\_EMERGENCY} & 3'd7 & ns\\_light=RED (100), ew\\_light=RED (100), ped\\_walk=0 & !emergency\\_ovr -> ST\\_ALL\\_RED\\_1 \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\n\\section{Tri\u1ec3n Khai RTL SystemVerilog Chu\u1ea9n T\u1ed5ng H\u1ee3p (Synthesizable RTL)}\nThi\u1ebft k\u1ebf tu\u00e2n th\u1ee7 nghi\u00eam ng\u1eb7t quy t\u1eafc SystemVerilog-2012: s\u1eed d\u1ee5ng \\texttt{always\\_ff} v\u1edbi ph\u00e9p g\u00e1n kh\u00f4ng ch\u1eb7n (\\texttt{<=}) cho m\u1ea1ch tu\u1ea7n t\u1ef1, \\texttt{always\\_comb} v\u1edbi gi\u00e1 tr\u1ecb m\u1eb7c \u0111\u1ecbnh t\u01b0\u1eddng minh \u1edf \u0111\u1ea7u kh\u1ed1i cho m\u1ea1ch t\u1ed5 h\u1ee3p, cam k\u1ebft \\textbf{0 inferred latches}.\n\n\\begin{lstlisting}\n// Auto-generated by fpga_autopilot \u2014 Strict Synthesizable SystemVerilog-2012\n// Parameterized tick divider + 2-FF synchronizer + debouncer + Moore Traffic FSM\n\nmodule traffic_fsm #(\n    parameter [31:0] SIM_MODE          = 32'd0,\n    parameter [31:0] CLK_FREQ_HZ       = 32'd50000000,\n    parameter [31:0] SIM_TICKS_PER_SEC = 32'd4,\n    parameter [3:0]  GREEN_SEC         = 4'd6,\n    parameter [3:0]  YELLOW_SEC        = 4'd2,\n    parameter [3:0]  PED_SEC           = 4'd4,\n    parameter [3:0]  ALL_RED_SEC       = 4'd1\n) (\n    input  logic       clk,\n    input  logic       rst_n,\n    input  logic       ped_btn_raw,\n    input  logic       emergency_ovr,\n    output logic [2:0] ns_light,\n    output logic [2:0] ew_light,\n    output logic       ped_walk,\n    output logic [3:0] countdown\n);\n\n    typedef enum logic [2:0] {\n        ST_NS_GREEN  = 3'd0,\n        ST_NS_YELLOW = 3'd1,\n        ST_ALL_RED_1 = 3'd2,\n        ST_EW_GREEN  = 3'd3,\n        ST_EW_YELLOW = 3'd4,\n        ST_ALL_RED_2 = 3'd5,\n        ST_PED_WALK  = 3'd6,\n        ST_EMERGENCY = 3'd7\n    } state_t;\n\n    localparam [31:0] TICKS_PER_SEC = (SIM_MODE != 32'd0) ? SIM_TICKS_PER_SEC : CLK_FREQ_HZ;\n    localparam [31:0] DEBOUNCE_MAX  = (SIM_MODE != 32'd0) ? 32'd2 : (CLK_FREQ_HZ / 32'd100);\n\n    localparam [2:0] LIGHT_RED    = 3'b100;\n    localparam [2:0] LIGHT_YELLOW = 3'b010;\n    localparam [2:0] LIGHT_GREEN  = 3'b001;\n\n    state_t      state, next_state;\n    logic [31:0] tick_cnt;\n    logic        sec_tick;\n    logic        phase_done;\n    logic [3:0]  timer_sec;\n    logic [3:0]  next_duration;\n\n    // 2-FF synchronizer + debouncer for asynchronous pedestrian button\n    logic        ped_sync_ff1;\n    logic        ped_sync_ff2;\n    logic [31:0] db_cnt;\n    logic        ped_debounced;\n    logic        ped_debounced_d;\n    logic        ped_pulse;\n    logic        ped_pending;\n    logic        resume_to_ew;\n\n    // 2-FF Synchronizer & Counter-Based Debouncer\n// ... (truncated for report conciseness; full source in rtl/ directory)\n\\end{lstlisting}\n\n\\section{Ki\u1ec3m Ch\u1ee9ng T\u1ef1 \u0110\u1ed9ng (Self-Checking Testbench Coverage)}\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{T\u1ed5ng h\u1ee3p k\u1ebft qu\u1ea3 Linting v\u00e0 M\u00f4 ph\u1ecfng \u0111\u1ed1i chi\u1ebfu Golden Model}\n    \\begin{tabularx}{\\textwidth}{@{}lX@{}}\n        \\toprule\n        \\textbf{Ti\u00eau ch\u00ed ki\u1ec3m ch\u1ee9ng (Metric)} & \\textbf{K\u1ebft qu\u1ea3 \u0111o l\u01b0\u1eddng (Verified Value)} \\\\\n        \\midrule\n        Tr\u00ecnh m\u00f4 ph\u1ecfng HDL (Simulator) & \\texttt{iverilog} \\\\\n        C\u00f4ng c\u1ee5 ph\u00e2n t\u00edch t\u0129nh (Linters) & \\texttt{static\\_analyzer, verilator, iverilog} \\\\\n        S\u1ed1 ch\u1ed1t suy di\u1ec5n (Inferred Latches) & 0 (RTL) / 0 (Netlist) \\\\\n        T\u1ed5ng s\u1ed1 vector ki\u1ec3m th\u1eed (Total Vectors) & 230 \\\\\n        S\u1ed1 vector \u0111\u1ea1t chu\u1ea9n (Passed / Failed) & 230 Passed / 0 Failed \\\\\n        S\u1ed1 v\u00f2ng t\u1ef1 s\u1eeda l\u1ed7i (Self-Healing Loops) & 0 \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\\section{T\u00e0i Nguy\u00ean Ph\u1ea7n C\u1ee9ng \\& Ph\u00e2n T\u00edch \u0110\u1ecbnh Th\u1eddi (Synthesis \\& STA)}\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{B\u00e1o c\u00e1o t\u00e0i nguy\u00ean FPGA v\u00e0 ph\u00e2n t\u00edch \u0111\u1ecbnh th\u1eddi (EP4CE115F29C7)}\n    \\begin{tabularx}{\\textwidth}{@{}Xr@{}}\n        \\toprule\n        \\textbf{Th\u00f4ng s\u1ed1 ph\u1ea7n c\u1ee9ng / \u0110\u1ecbnh th\u1eddi (Hardware \\& Timing Metric)} & \\textbf{Gi\u00e1 tr\u1ecb} \\\\\n        \\midrule\n        Total Logic Elements / ALMs & 133 \\\\\n        Combinational Functions (LUTs) & 132 \\\\\n        Dedicated Logic Registers (Flip-Flops) & 81 \\\\\n        Total Memory Bits & 0 \\\\\n        Embedded Multiplier / DSP Elements & 0 \\\\\n        Total I/O Pins & 15 \\\\\n        Synthesized Inferred Latches & 0 \\\\\n        Worst-Case $F_{\\max}$ & 71.69 MHz \\\\\n        Worst-Case Setup Slack & 6.051 ns \\\\\n        Worst-Case Hold Slack & 0.181 ns \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\\section{K\u1ebft Qu\u1ea3 Ch\u1ee5p D\u1ea1ng S\u00f3ng GTKWave \\& S\u01a1 \u0110\u1ed3 M\u1ea1ch RTL Viewer}\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_0_gtkwave_waveform.png}\n    \\caption{GTKWave Verified Simulation Waveform (traffic\\_fsm) \u2014 638 transition columns audited.}\n\\end{figure}\n\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_1_quartus_rtl_viewer.png}\n    \\caption{Quartus II RTL Viewer Synthesized Schematic (traffic\\_fsm).}\n\\end{figure}\n\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_2_quartus_fsm_viewer.png}\n    \\caption{Quartus II State Machine Viewer Diagram (traffic\\_fsm).}\n\\end{figure}\n\n\n\\end{document}\n",
+        "markdown": "# Engineering Verification Summary \u2014 `traffic_fsm`\n\n**Title:** Parameterized Clock Divider + Smart Traffic Light Moore FSM  \n**Top Module:** `traffic_fsm`  \n**Target Board / Device:** `DE2-115` (`Cyclone IV E` \u2014 `EP4CE115F29C7`)  \n**Overall Gate Status:** **PASS**\n\n## 1. Static Lint & Synchronous Design Audit\n- **Lint Status:** `PASS` (Tools: `static_analyzer, verilator, iverilog`)\n- **Inferred Latches:** `0` (Synthesis Latches: `0`)\n- **Blocking in `always_ff`:** `0`\n- **Width Mismatches:** `0`\n- **Self-Healing Patch Iterations:** `0`\n\n## 2. Cycle-Accurate Self-Checking Simulation\n- **Simulator:** `iverilog`\n- **Vectors Passed:** `230 / 230` (`0` failures)\n- **Runtime:** `0.095 s`\n- **Waveform VCD:** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\sim\\traffic_fsm.vcd`\n\n## 3. Hardware Resource Utilization & Timing (`quartus`)\n\n| Metric | Value |\n| :--- | ---: |\n| Logic Elements / ALMs | 133 |\n| Combinational Functions (LUTs) | 132 |\n| Dedicated Logic Registers | 81 |\n| Memory Bits | 0 |\n| DSP / Multiplier Elements | 0 |\n| Total I/O Pins | 15 |\n| Inferred Latches | 0 |\n| Worst-Case Fmax | 71.69 MHz |\n| Worst Setup Slack | 6.051 ns |\n| Worst Hold Slack | 0.181 ns |\n\n## 4. Generated Artifacts & Visual Captures\n- **Quartus Project (`.qpf`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qpf`\n- **Quartus Settings (`.qsf`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qsf`\n- **Timing Constraints (`.sdc`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.sdc`\n- **gtkwave_waveform** (`1420x820`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_waveform.png`\n- **quartus_rtl_viewer** (`1460x860`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_rtl_viewer.png`\n- **quartus_fsm_viewer** (`1460x860`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_fsm_viewer.png`\n"
+      },
+      "captures": [
+        {
+          "capture_type": "gtkwave_waveform",
+          "tool_name": "gtkwave",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_waveform.png",
+          "window_title": "GTKWave - traffic_fsm.vcd",
+          "window_bbox": [
+            50,
+            40,
+            1420,
+            820
+          ],
+          "width_px": 1420,
+          "height_px": 820,
+          "visual_audit_passed": true,
+          "edge_density": 0.12307,
+          "transition_columns_detected": 638,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Crisp digital signal transitions verified",
+          "url": "./assets/traffic_fsm/traffic_fsm_waveform.png"
+        },
+        {
+          "capture_type": "quartus_rtl_viewer",
+          "tool_name": "quartus",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_rtl_viewer.png",
+          "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+          "window_bbox": [
+            30,
+            30,
+            1460,
+            860
+          ],
+          "width_px": 1460,
+          "height_px": 860,
+          "visual_audit_passed": true,
+          "edge_density": 0.07818,
+          "transition_columns_detected": 1039,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Schematic symbols and nets verified",
+          "url": "./assets/traffic_fsm/traffic_fsm_rtl_viewer.png"
+        },
+        {
+          "capture_type": "quartus_fsm_viewer",
+          "tool_name": "quartus",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\traffic_fsm_fsm_viewer.png",
+          "window_title": "State Machine Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+          "window_bbox": [
+            30,
+            30,
+            1460,
+            860
+          ],
+          "width_px": 1460,
+          "height_px": 860,
+          "visual_audit_passed": true,
+          "edge_density": 0.04505,
+          "transition_columns_detected": 1139,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Schematic symbols and nets verified",
+          "url": "./assets/traffic_fsm/traffic_fsm_fsm_viewer.png"
+        }
+      ],
+      "downloads": {
+        "pdf_url": "./assets/traffic_fsm/lab_report.pdf",
+        "vcd_url": "./assets/traffic_fsm/traffic_fsm.vcd",
+        "quartus_zip_url": "./assets/traffic_fsm/traffic_fsm_quartus_bundle.zip"
+      }
+    },
+    {
+      "name": "uart_fifo_top",
+      "title": "Configurable UART TX/RX Transceiver with 8-Byte Sync FIFO",
+      "description": "Full-duplex 8N1 UART transceiver with parameterized CLK_FREQ and BAUD_RATE, 16x mid-bit oversampling receiver, stop-bit framing-error detector with safe line-idle recovery, and dual 8-byte circular show-ahead synchronous TX/RX FIFOs with full/empty write/read guards targeting Terasic DE1-SoC (Cyclone V).",
+      "clock_freq_mhz": 50.0,
+      "ports": [
+        {
+          "name": "clk",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "50 MHz system clock",
+          "pin_assignment": null
+        },
+        {
+          "name": "rst_n",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": true,
+          "description": "Asynchronous active-low system reset",
+          "pin_assignment": null
+        },
+        {
+          "name": "wr_en",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "TX FIFO write enable strobe",
+          "pin_assignment": null
+        },
+        {
+          "name": "wr_data",
+          "direction": "input",
+          "width": 8,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "8-bit parallel payload written to TX FIFO",
+          "pin_assignment": null
+        },
+        {
+          "name": "rd_en",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "RX FIFO read pop strobe",
+          "pin_assignment": null
+        },
+        {
+          "name": "rx_serial",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Asynchronous UART serial RX line",
+          "pin_assignment": null
+        },
+        {
+          "name": "clr_err",
+          "direction": "input",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Synchronous clear for sticky framing_error flag",
+          "pin_assignment": null
+        },
+        {
+          "name": "tx_serial",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "UART serial TX output line (idles high)",
+          "pin_assignment": null
+        },
+        {
+          "name": "rd_data",
+          "direction": "output",
+          "width": 8,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "8-bit parallel byte at head of RX FIFO",
+          "pin_assignment": null
+        },
+        {
+          "name": "tx_full",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "TX 8-byte FIFO full flag",
+          "pin_assignment": null
+        },
+        {
+          "name": "tx_empty",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "TX 8-byte FIFO empty flag",
+          "pin_assignment": null
+        },
+        {
+          "name": "rx_full",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "RX 8-byte FIFO full flag",
+          "pin_assignment": null
+        },
+        {
+          "name": "rx_empty",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "RX 8-byte FIFO empty flag",
+          "pin_assignment": null
+        },
+        {
+          "name": "tx_busy",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Asserted while UART TX shifter is active",
+          "pin_assignment": null
+        },
+        {
+          "name": "framing_error",
+          "direction": "output",
+          "width": 1,
+          "width_expr": null,
+          "signed": false,
+          "active_low": false,
+          "description": "Sticky framing error flag asserted on invalid stop bit",
+          "pin_assignment": null
+        }
+      ],
+      "fsm_states": [],
+      "summary": {
+        "spec_name": "uart_fifo_top",
+        "top_module": "uart_fifo_top",
+        "board_preset": "DE1-SoC",
+        "rtl_paths": [
+          "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\sync_fifo.sv",
+          "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\uart_tx.sv",
+          "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\uart_rx.sv",
+          "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\uart_fifo_top.sv"
+        ],
+        "tb_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\tb\\tb_uart_fifo_top.sv",
+        "healing_iterations": 0,
+        "lint_report": {
+          "passed": true,
+          "inferred_latches": 0,
+          "blocking_in_seq": 0,
+          "nonblocking_in_comb": 0,
+          "missing_reset_clauses": 0,
+          "undriven_nets": 0,
+          "multidriven_nets": 0,
+          "width_mismatches": 0,
+          "error_count": 0,
+          "warning_count": 0,
+          "tools_used": [
+            "static_analyzer",
+            "verilator",
+            "iverilog"
+          ],
+          "warnings": []
+        },
+        "sim_result": {
+          "simulator": "iverilog",
+          "compile_passed": true,
+          "sim_passed": true,
+          "timed_out": false,
+          "total_vectors": 66,
+          "passed_vectors": 66,
+          "failed_vectors": 0,
+          "mismatches": [],
+          "vcd_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\sim\\uart_fifo_top.vcd",
+          "stdout": "VCD info: dumpfile uart_fifo_top.vcd opened for output.\n[SUMMARY] passed=66 failed=0\ntb_uart_fifo_top.sv:262: $finish called at 209466000 (1ps)\n",
+          "stderr": "warning: Some design elements have no explicit time unit and/or\n       : time precision. This may cause confusing timing results.\n       : Affected design elements are:\n       :   -- module sync_fifo declared here: sync_fifo.sv:3\n       :   -- module uart_fifo_top declared here: uart_fifo_top.sv:3\n       :   -- module uart_rx declared here: uart_rx.sv:3\n       :   -- module uart_tx declared here: uart_tx.sv:3\nuart_tx.sv:52: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'shift_reg[7:0]').\n",
+          "runtime_sec": 0.4126
+        },
+        "synthesis_report": {
+          "backend": "quartus",
+          "compile_passed": true,
+          "family": "Cyclone V",
+          "device": "5CSEMA5F31C6",
+          "top_module": "uart_fifo_top",
+          "project_dir": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus",
+          "qpf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.qpf",
+          "qsf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.qsf",
+          "sdc_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.sdc",
+          "tcl_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\compile_uart_fifo_top.tcl",
+          "map_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\output_files\\uart_fifo_top.map.rpt",
+          "fit_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\output_files\\uart_fifo_top.fit.rpt",
+          "sta_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\output_files\\uart_fifo_top.sta.rpt",
+          "resources": {
+            "logic_elements_or_alms": 182,
+            "combinational_functions": 269,
+            "dedicated_logic_registers": 283,
+            "memory_bits": 0,
+            "dsp_elements": 0,
+            "total_pins": 29,
+            "inferred_latches": 0
+          },
+          "timing": {
+            "fmax_mhz": 70.46,
+            "restricted_fmax_mhz": 70.46,
+            "worst_setup_slack_ns": 5.808,
+            "worst_hold_slack_ns": 0.159,
+            "worst_recovery_slack_ns": 9.325,
+            "worst_removal_slack_ns": 9.325,
+            "max_comb_delay_ns": null,
+            "timing_met": true
+          },
+          "warnings": [],
+          "errors": [
+            "Critical Warning (169244): Total number of single-ended output or bi-directional pins in bank 5A have exceeded the recommended amount in a bank where dedicated LVDS, RSDS, or mini-LVDS outputs exists."
+          ]
+        },
+        "visual_captures": [
+          {
+            "capture_type": "gtkwave_waveform",
+            "tool_name": "gtkwave",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_waveform.png",
+            "window_title": "GTKWave - uart_fifo_top.vcd",
+            "window_bbox": [
+              50,
+              40,
+              1420,
+              820
+            ],
+            "width_px": 1420,
+            "height_px": 820,
+            "visual_audit_passed": true,
+            "edge_density": 0.17138,
+            "transition_columns_detected": 295,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Crisp digital signal transitions verified"
+          },
+          {
+            "capture_type": "quartus_rtl_viewer",
+            "tool_name": "quartus",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_rtl_viewer.png",
+            "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+            "window_bbox": [
+              30,
+              30,
+              1460,
+              860
+            ],
+            "width_px": 1460,
+            "height_px": 860,
+            "visual_audit_passed": true,
+            "edge_density": 0.04826,
+            "transition_columns_detected": 1008,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Schematic symbols and nets verified"
+          },
+          {
+            "capture_type": "quartus_fsm_viewer",
+            "tool_name": "quartus",
+            "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_fsm_viewer.png",
+            "window_title": "State Machine Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+            "window_bbox": [
+              30,
+              30,
+              1460,
+              860
+            ],
+            "width_px": 1460,
+            "height_px": 860,
+            "visual_audit_passed": true,
+            "edge_density": 0.04494,
+            "transition_columns_detected": 1139,
+            "zoom_adjustments": 0,
+            "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+            "notes": "Schematic symbols and nets verified"
+          }
+        ],
+        "summary_md_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\summary.md",
+        "latex_tex_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\lab_report.tex",
+        "latex_pdf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\lab_report.pdf",
+        "overall_passed": true
+      },
+      "sources": {
+        "rtl": [
+          {
+            "filename": "sync_fifo.sv",
+            "code": "// Auto-generated by fpga_autopilot \u2014 Parameterized Show-Ahead Circular Sync FIFO\n\nmodule sync_fifo #(\n    parameter DATA_WIDTH = 8,\n    parameter ADDR_WIDTH = 3\n) (\n    input  logic                  clk,\n    input  logic                  rst_n,\n    input  logic                  wr_en,\n    input  logic [DATA_WIDTH-1:0] wr_data,\n    input  logic                  rd_en,\n    output logic [DATA_WIDTH-1:0] rd_data,\n    output logic                  full,\n    output logic                  empty\n);\n\n    localparam DEPTH = (1 << ADDR_WIDTH);\n    localparam [ADDR_WIDTH:0] FULL_COUNT  = {1'b1, {ADDR_WIDTH{1'b0}}};\n    localparam [ADDR_WIDTH:0] EMPTY_COUNT = {(ADDR_WIDTH + 1){1'b0}};\n    localparam [ADDR_WIDTH:0] ONE_COUNT   = {{ADDR_WIDTH{1'b0}}, 1'b1};\n    localparam [ADDR_WIDTH-1:0] ONE_PTR   = {{(ADDR_WIDTH - 1){1'b0}}, 1'b1};\n\n    logic [DATA_WIDTH-1:0] mem [0:DEPTH-1];\n    logic [ADDR_WIDTH-1:0] wr_ptr;\n    logic [ADDR_WIDTH-1:0] rd_ptr;\n    logic [ADDR_WIDTH:0]   count;\n    logic                  do_wr;\n    logic                  do_rd;\n\n    always_comb begin\n        full    = (count == FULL_COUNT);\n        empty   = (count == EMPTY_COUNT);\n        rd_data = mem[rd_ptr];\n    end\n\n    always_comb begin\n        do_wr = wr_en && !full;\n        do_rd = rd_en && !empty;\n    end\n\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            wr_ptr <= {ADDR_WIDTH{1'b0}};\n            rd_ptr <= {ADDR_WIDTH{1'b0}};\n            count  <= EMPTY_COUNT;\n            for (int idx = 0; idx < DEPTH; idx = idx + 1) begin\n                mem[idx] <= {DATA_WIDTH{1'b0}};\n            end\n        end else begin\n            if (do_wr) begin\n                mem[wr_ptr] <= wr_data;\n                wr_ptr      <= wr_ptr + ONE_PTR;\n            end\n            if (do_rd) begin\n                rd_ptr <= rd_ptr + ONE_PTR;\n            end\n            case ({do_wr, do_rd})\n                2'b10:   count <= count + ONE_COUNT;\n                2'b01:   count <= count - ONE_COUNT;\n                default: count <= count;\n            endcase\n        end\n    end\n\nendmodule\n"
+          },
+          {
+            "filename": "uart_tx.sv",
+            "code": "// Auto-generated by fpga_autopilot \u2014 UART Transmitter FSM (8N1)\n\nmodule uart_tx #(\n    parameter [31:0] BIT_CLKS = 32'd432\n) (\n    input  logic       clk,\n    input  logic       rst_n,\n    input  logic       fifo_empty,\n    input  logic [7:0] fifo_data,\n    output logic       fifo_pop,\n    output logic       tx_serial,\n    output logic       tx_busy\n);\n\n    typedef enum logic [1:0] {\n        TX_IDLE  = 2'd0,\n        TX_START = 2'd1,\n        TX_DATA  = 2'd2,\n        TX_STOP  = 2'd3\n    } tx_state_t;\n\n    tx_state_t   state, next_state;\n    logic [31:0] clk_cnt;\n    logic        bit_done;\n    logic [2:0]  bit_idx;\n    logic [7:0]  shift_reg;\n\n    always_comb begin\n        fifo_pop   = 1'b0;\n        tx_serial  = 1'b1;\n        tx_busy    = 1'b1;\n        next_state = state;\n        bit_done   = (clk_cnt == (BIT_CLKS - 32'd1));\n\n        case (state)\n            TX_IDLE: begin\n                tx_serial = 1'b1;\n                tx_busy   = 1'b0;\n                if (!fifo_empty) begin\n                    fifo_pop   = 1'b1;\n                    next_state = TX_START;\n                end\n            end\n            TX_START: begin\n                tx_serial = 1'b0;\n                tx_busy   = 1'b1;\n                if (bit_done) begin\n                    next_state = TX_DATA;\n                end\n            end\n            TX_DATA: begin\n                tx_serial = shift_reg[0];\n                tx_busy   = 1'b1;\n                if (bit_done && (bit_idx == 3'd7)) begin\n                    next_state = TX_STOP;\n                end\n            end\n            TX_STOP: begin\n                tx_serial = 1'b1;\n                tx_busy   = 1'b1;\n                if (bit_done) begin\n                    next_state = TX_IDLE;\n                end\n            end\n            default: begin\n                tx_serial  = 1'b1;\n                tx_busy    = 1'b0;\n                next_state = TX_IDLE;\n            end\n        endcase\n    end\n\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            state     <= TX_IDLE;\n            clk_cnt   <= 32'd0;\n            bit_idx   <= 3'd0;\n            shift_reg <= 8'd0;\n        end else begin\n            state <= next_state;\n            case (state)\n                TX_IDLE: begin\n                    clk_cnt <= 32'd0;\n                    bit_idx <= 3'd0;\n                    if (!fifo_empty) begin\n                        shift_reg <= fifo_data;\n                    end\n                end\n                TX_START: begin\n                    if (bit_done) begin\n                        clk_cnt <= 32'd0;\n                        bit_idx <= 3'd0;\n                    end else begin\n                        clk_cnt <= clk_cnt + 32'd1;\n                    end\n                end\n                TX_DATA: begin\n                    if (bit_done) begin\n                        clk_cnt   <= 32'd0;\n                        shift_reg <= {1'b0, shift_reg[7:1]};\n                        if (bit_idx != 3'd7) begin\n                            bit_idx <= bit_idx + 3'd1;\n                        end\n                    end else begin\n                        clk_cnt <= clk_cnt + 32'd1;\n                    end\n                end\n                TX_STOP: begin\n                    if (bit_done) begin\n                        clk_cnt <= 32'd0;\n                    end else begin\n                        clk_cnt <= clk_cnt + 32'd1;\n                    end\n                end\n                default: begin\n                    clk_cnt <= 32'd0;\n                end\n            endcase\n        end\n    end\n\nendmodule\n"
+          },
+          {
+            "filename": "uart_rx.sv",
+            "code": "// Auto-generated by fpga_autopilot \u2014 UART Receiver FSM with 16x Oversampling\n\nmodule uart_rx #(\n    parameter [31:0] OS_DIV = 32'd27\n) (\n    input  logic       clk,\n    input  logic       rst_n,\n    input  logic       rx_serial,\n    input  logic       clr_err,\n    output logic       rx_valid,\n    output logic [7:0] rx_byte,\n    output logic       framing_error\n);\n\n    typedef enum logic [2:0] {\n        RX_IDLE     = 3'd0,\n        RX_START    = 3'd1,\n        RX_DATA     = 3'd2,\n        RX_STOP     = 3'd3,\n        RX_ERR_WAIT = 3'd4\n    } rx_state_t;\n\n    rx_state_t   state, next_state;\n    logic        rx_ff1;\n    logic        rx_sync;\n    logic [31:0] div_cnt;\n    logic        os_tick;\n    logic [3:0]  os_cnt;\n    logic [2:0]  bit_idx;\n    logic [7:0]  shift_reg;\n\n    // 2-FF input synchronizer (idle UART line is logic HIGH)\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            rx_ff1  <= 1'b1;\n            rx_sync <= 1'b1;\n        end else begin\n            rx_ff1  <= rx_serial;\n            rx_sync <= rx_ff1;\n        end\n    end\n\n    always_comb begin\n        os_tick    = 1'b0;\n        next_state = state;\n\n        os_tick = (div_cnt == (OS_DIV - 32'd1));\n\n        case (state)\n            RX_IDLE: begin\n                if (!rx_sync) begin\n                    next_state = RX_START;\n                end\n            end\n            RX_START: begin\n                if (os_tick && (os_cnt == 4'd7)) begin\n                    if (!rx_sync) begin\n                        next_state = RX_DATA;\n                    end else begin\n                        next_state = RX_IDLE;\n                    end\n                end\n            end\n            RX_DATA: begin\n                if (os_tick && (os_cnt == 4'd15) && (bit_idx == 3'd7)) begin\n                    next_state = RX_STOP;\n                end\n            end\n            RX_STOP: begin\n                if (os_tick && (os_cnt == 4'd15)) begin\n                    if (rx_sync) begin\n                        next_state = RX_IDLE;\n                    end else begin\n                        next_state = RX_ERR_WAIT;\n                    end\n                end\n            end\n            RX_ERR_WAIT: begin\n                if (rx_sync) begin\n                    next_state = RX_IDLE;\n                end\n            end\n            default: begin\n                next_state = RX_IDLE;\n            end\n        endcase\n    end\n\n    always_ff @(posedge clk or negedge rst_n) begin\n        if (!rst_n) begin\n            state         <= RX_IDLE;\n            div_cnt       <= 32'd0;\n            os_cnt        <= 4'd0;\n            bit_idx       <= 3'd0;\n            shift_reg     <= 8'd0;\n            rx_byte       <= 8'd0;\n            rx_valid      <= 1'b0;\n            framing_error <= 1'b0;\n        end else begin\n            state    <= next_state;\n            rx_valid <= 1'b0;\n\n            if (clr_err) begin\n                framing_error <= 1'b0;\n            end\n\n            case (state)\n                RX_IDLE: begin\n                    div_cnt <= 32'd0;\n                    os_cnt  <= 4'd0;\n                    bit_idx <= 3'd0;\n                end\n                RX_START: begin\n                    if (os_tick) begin\n                        div_cnt <= 32'd0;\n                        if (os_cnt == 4'd7) begin\n                            os_cnt <= 4'd0;\n                        end else begin\n                            os_cnt <= os_cnt + 4'd1;\n                        end\n                    end else begin\n                        div_cnt <= div_cnt + 32'd1;\n                    end\n                end\n                RX_DATA: begin\n                    if (os_tick) begin\n                        div_cnt <= 32'd0;\n                        if (os_cnt == 4'd15) begin\n                            os_cnt    <= 4'd0;\n                            shift_reg <= {rx_sync, shift_reg[7:1]};\n                            if (bit_idx != 3'd7) begin\n                                bit_idx <= bit_idx + 3'd1;\n                            end\n                        end else begin\n                            os_cnt <= os_cnt + 4'd1;\n                        end\n                    end else begin\n                        div_cnt <= div_cnt + 32'd1;\n                    end\n                end\n                RX_STOP: begin\n                    if (os_tick) begin\n                        div_cnt <= 32'd0;\n                        if (os_cnt == 4'd15) begin\n                            os_cnt <= 4'd0;\n                            if (rx_sync) begin\n                                rx_byte  <= shift_reg;\n                                rx_valid <= 1'b1;\n                            end else begin\n                                framing_error <= 1'b1;\n                            end\n                        end else begin\n                            os_cnt <= os_cnt + 4'd1;\n                        end\n                    end else begin\n                        div_cnt <= div_cnt + 32'd1;\n                    end\n                end\n                RX_ERR_WAIT: begin\n                    div_cnt <= 32'd0;\n                    os_cnt  <= 4'd0;\n                end\n                default: begin\n                    div_cnt <= 32'd0;\n                    os_cnt  <= 4'd0;\n                end\n            endcase\n        end\n    end\n\nendmodule\n"
+          },
+          {
+            "filename": "uart_fifo_top.sv",
+            "code": "// Auto-generated by fpga_autopilot \u2014 Configurable UART TX/RX Transceiver + 8-Byte Sync FIFOs\n\nmodule uart_fifo_top #(\n    parameter [31:0] CLK_FREQ  = 32'd50000000,\n    parameter [31:0] BAUD_RATE = 32'd115200\n) (\n    input  logic       clk,\n    input  logic       rst_n,\n    input  logic       wr_en,\n    input  logic [7:0] wr_data,\n    input  logic       rd_en,\n    input  logic       rx_serial,\n    input  logic       clr_err,\n    output logic       tx_serial,\n    output logic [7:0] rd_data,\n    output logic       tx_full,\n    output logic       tx_empty,\n    output logic       rx_full,\n    output logic       rx_empty,\n    output logic       tx_busy,\n    output logic       framing_error\n);\n\n    localparam [31:0] OS_DIV_RAW = CLK_FREQ / (BAUD_RATE * 32'd16);\n    localparam [31:0] OS_DIV     = (OS_DIV_RAW == 32'd0) ? 32'd1 : OS_DIV_RAW;\n    localparam [31:0] BIT_CLKS   = OS_DIV * 32'd16;\n\n    logic [7:0] tx_fifo_dout;\n    logic       tx_fifo_pop;\n    logic       rx_valid;\n    logic [7:0] rx_byte;\n    logic       rx_fifo_wr;\n\n    always_comb begin\n        rx_fifo_wr = rx_valid && !rx_full;\n    end\n\n    sync_fifo #(\n        .DATA_WIDTH (8),\n        .ADDR_WIDTH (3)\n    ) u_tx_fifo (\n        .clk     (clk),\n        .rst_n   (rst_n),\n        .wr_en   (wr_en),\n        .wr_data (wr_data),\n        .rd_en   (tx_fifo_pop),\n        .rd_data (tx_fifo_dout),\n        .full    (tx_full),\n        .empty   (tx_empty)\n    );\n\n    uart_tx #(\n        .BIT_CLKS (BIT_CLKS)\n    ) u_uart_tx (\n        .clk        (clk),\n        .rst_n      (rst_n),\n        .fifo_empty (tx_empty),\n        .fifo_data  (tx_fifo_dout),\n        .fifo_pop   (tx_fifo_pop),\n        .tx_serial  (tx_serial),\n        .tx_busy    (tx_busy)\n    );\n\n    uart_rx #(\n        .OS_DIV (OS_DIV)\n    ) u_uart_rx (\n        .clk           (clk),\n        .rst_n         (rst_n),\n        .rx_serial     (rx_serial),\n        .clr_err       (clr_err),\n        .rx_valid      (rx_valid),\n        .rx_byte       (rx_byte),\n        .framing_error (framing_error)\n    );\n\n    sync_fifo #(\n        .DATA_WIDTH (8),\n        .ADDR_WIDTH (3)\n    ) u_rx_fifo (\n        .clk     (clk),\n        .rst_n   (rst_n),\n        .wr_en   (rx_fifo_wr),\n        .wr_data (rx_byte),\n        .rd_en   (rd_en),\n        .rd_data (rd_data),\n        .full    (rx_full),\n        .empty   (rx_empty)\n    );\n\nendmodule\n"
+          }
+        ],
+        "tb_filename": "tb_uart_fifo_top.sv",
+        "tb": "`timescale 1ns/1ps\n\nmodule tb_uart_fifo_top;\n\n    // Accelerated baud rate for simulation: OS_DIV = 3_200_000 / (100_000 * 16) = 2 clocks/oversample, 32 clocks/bit\n    localparam [31:0] SIM_CLK_FREQ  = 32'd3_200_000;\n    localparam [31:0] SIM_BAUD_RATE = 32'd100_000;\n    localparam integer BIT_CLKS     = 32;\n\n    logic       clk;\n    logic       rst_n;\n    logic       wr_en;\n    logic [7:0] wr_data;\n    logic       rd_en;\n    logic       rx_serial;\n    logic       clr_err;\n    logic       tx_serial;\n    logic [7:0] rd_data;\n    logic       tx_full;\n    logic       tx_empty;\n    logic       rx_full;\n    logic       rx_empty;\n    logic       tx_busy;\n    logic       framing_error;\n\n    logic       loopback_en;\n    logic       manual_rx;\n\n    logic [7:0] tx_vec [0:63];\n    integer     tx_idx;\n    integer     rx_idx;\n    integer     passed_cnt;\n    integer     failed_cnt;\n    integer     cycle_cnt;\n    integer     guard_Wait;\n\n    assign rx_serial = loopback_en ? tx_serial : manual_rx;\n\n    uart_fifo_top #(\n        .CLK_FREQ  (SIM_CLK_FREQ),\n        .BAUD_RATE (SIM_BAUD_RATE)\n    ) dut (\n        .clk           (clk),\n        .rst_n         (rst_n),\n        .wr_en         (wr_en),\n        .wr_data       (wr_data),\n        .rd_en         (rd_en),\n        .rx_serial     (rx_serial),\n        .clr_err       (clr_err),\n        .tx_serial     (tx_serial),\n        .rd_data       (rd_data),\n        .tx_full       (tx_full),\n        .tx_empty      (tx_empty),\n        .rx_full       (rx_full),\n        .rx_empty      (rx_empty),\n        .tx_busy       (tx_busy),\n        .framing_error (framing_error)\n    );\n\n    initial begin\n        clk = 1'b0;\n        forever #5 clk = ~clk;\n    end\n\n    always @(posedge clk) begin\n        cycle_cnt <= cycle_cnt + 1;\n    end\n\n    task automatic inject_bad_stop_frame(input [7:0] bad_payload);\n        integer b, c;\n        begin\n            // Start bit (0)\n            manual_rx = 1'b0;\n            for (c = 0; c < BIT_CLKS; c = c + 1) @(posedge clk);\n            // 8 Data bits LSB-first\n            for (b = 0; b < 8; b = b + 1) begin\n                manual_rx = bad_payload[b];\n                for (c = 0; c < BIT_CLKS; c = c + 1) @(posedge clk);\n            end\n            // Deliberate BAD stop bit (0 instead of 1) -> must assert framing_error!\n            manual_rx = 1'b0;\n            for (c = 0; c < BIT_CLKS; c = c + 1) @(posedge clk);\n            // Return line to idle high\n            manual_rx = 1'b1;\n            for (c = 0; c < (BIT_CLKS / 2); c = c + 1) @(posedge clk);\n        end\n    endtask\n\n    initial begin\n        $dumpfile(\"uart_fifo_top.vcd\");\n        $dumpvars(0, tb_uart_fifo_top);\n\n        tx_vec[0] = 8'h00;\n        tx_vec[1] = 8'hFF;\n        tx_vec[2] = 8'h55;\n        tx_vec[3] = 8'hAA;\n        tx_vec[4] = 8'h01;\n        tx_vec[5] = 8'h80;\n        tx_vec[6] = 8'h7F;\n        tx_vec[7] = 8'hFE;\n        tx_vec[8] = 8'h12;\n        tx_vec[9] = 8'h85;\n        tx_vec[10] = 8'h9A;\n        tx_vec[11] = 8'h4B;\n        tx_vec[12] = 8'h55;\n        tx_vec[13] = 8'h91;\n        tx_vec[14] = 8'hC9;\n        tx_vec[15] = 8'h79;\n        tx_vec[16] = 8'h89;\n        tx_vec[17] = 8'h2C;\n        tx_vec[18] = 8'h52;\n        tx_vec[19] = 8'hED;\n        tx_vec[20] = 8'h11;\n        tx_vec[21] = 8'h53;\n        tx_vec[22] = 8'h68;\n        tx_vec[23] = 8'h14;\n        tx_vec[24] = 8'hFA;\n        tx_vec[25] = 8'h4D;\n        tx_vec[26] = 8'h0E;\n        tx_vec[27] = 8'h1B;\n        tx_vec[28] = 8'hE4;\n        tx_vec[29] = 8'h8C;\n        tx_vec[30] = 8'hF2;\n        tx_vec[31] = 8'h11;\n        tx_vec[32] = 8'h10;\n        tx_vec[33] = 8'hF3;\n        tx_vec[34] = 8'h7B;\n        tx_vec[35] = 8'h56;\n        tx_vec[36] = 8'hC4;\n        tx_vec[37] = 8'h81;\n        tx_vec[38] = 8'h4F;\n        tx_vec[39] = 8'h8C;\n        tx_vec[40] = 8'hD1;\n        tx_vec[41] = 8'h46;\n        tx_vec[42] = 8'hEA;\n        tx_vec[43] = 8'h78;\n        tx_vec[44] = 8'h90;\n        tx_vec[45] = 8'h36;\n        tx_vec[46] = 8'h88;\n        tx_vec[47] = 8'h31;\n        tx_vec[48] = 8'h46;\n        tx_vec[49] = 8'hA0;\n        tx_vec[50] = 8'h28;\n        tx_vec[51] = 8'hF9;\n        tx_vec[52] = 8'h56;\n        tx_vec[53] = 8'h2A;\n        tx_vec[54] = 8'h24;\n        tx_vec[55] = 8'h0C;\n        tx_vec[56] = 8'h14;\n        tx_vec[57] = 8'h97;\n        tx_vec[58] = 8'h70;\n        tx_vec[59] = 8'h8E;\n        tx_vec[60] = 8'hA9;\n        tx_vec[61] = 8'hE3;\n        tx_vec[62] = 8'h81;\n        tx_vec[63] = 8'h7D;\n\n\n        passed_cnt  = 0;\n        failed_cnt  = 0;\n        cycle_cnt   = 0;\n        rst_n       = 1'b0;\n        wr_en       = 1'b0;\n        wr_data     = 8'h00;\n        rd_en       = 1'b0;\n        clr_err     = 1'b0;\n        loopback_en = 1'b1;\n        manual_rx   = 1'b1;\n        tx_idx      = 0;\n        rx_idx      = 0;\n\n        // Asynchronous reset\n        repeat (4) @(posedge clk);\n        rst_n = 1'b1;\n        @(posedge clk);\n\n        // Verify empty guard when RX FIFO is empty\n        @(negedge clk);\n        rd_en = 1'b1;\n        @(posedge clk);\n        @(negedge clk);\n        rd_en = 1'b0;\n        if (!rx_empty) begin\n            failed_cnt = failed_cnt + 1;\n            $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 8'hEE, 1'b1, rx_empty);\n        end\n\n        // Phase 1: Stream all 64 golden bytes through 8-byte TX/RX FIFOs in serial loopback\n        guard_Wait = 0;\n        while ((rx_idx < 64) && (guard_Wait < 40000)) begin\n            @(negedge clk);\n            wr_en = 1'b0;\n            rd_en = 1'b0;\n\n            if ((tx_idx < 64) && !tx_full) begin\n                wr_en   = 1'b1;\n                wr_data = tx_vec[tx_idx];\n                tx_idx  = tx_idx + 1;\n            end\n\n            if (!rx_empty) begin\n                if (rd_data === tx_vec[rx_idx]) begin\n                    passed_cnt = passed_cnt + 1;\n                end else begin\n                    failed_cnt = failed_cnt + 1;\n                    $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, rx_idx[7:0], tx_vec[rx_idx], rd_data);\n                end\n                rd_en  = 1'b1;\n                rx_idx = rx_idx + 1;\n            end\n\n            @(posedge clk);\n            guard_Wait = guard_Wait + 1;\n        end\n        @(negedge clk);\n        wr_en = 1'b0;\n        rd_en = 1'b0;\n\n        if (rx_idx != 64) begin\n            failed_cnt = failed_cnt + 1;\n            $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 8'd64, 8'd64, rx_idx[7:0]);\n        end\n\n        // Ensure no framing errors occurred during clean 64-byte loopback\n        if (framing_error !== 1'b0) begin\n            failed_cnt = failed_cnt + 1;\n            $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 8'hF0, 1'b0, framing_error);\n        end\n\n        // Phase 2: Deliberate Framing Error Injection & Recovery Check\n        repeat (BIT_CLKS * 2) @(posedge clk);\n        loopback_en = 1'b0;\n        manual_rx   = 1'b1;\n        repeat (4) @(posedge clk);\n\n        inject_bad_stop_frame(8'hA5);\n\n        if ((framing_error === 1'b1) && (rx_empty === 1'b1)) begin\n            passed_cnt = passed_cnt + 1;\n        end else begin\n            failed_cnt = failed_cnt + 1;\n            $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 8'hA5, 2'b11, {framing_error, rx_empty});\n        end\n\n        // Clear framing error flag and verify clean recovery\n        @(negedge clk);\n        clr_err = 1'b1;\n        @(posedge clk);\n        @(negedge clk);\n        clr_err     = 1'b0;\n        loopback_en = 1'b1;\n        @(posedge clk);\n        #1;\n        if (framing_error === 1'b0) begin\n            passed_cnt = passed_cnt + 1;\n        end else begin\n            failed_cnt = failed_cnt + 1;\n            $display(\"[FAIL] cycle=%0d input=%h exp=%h got=%h\", cycle_cnt, 8'hC1, 1'b0, framing_error);\n        end\n\n        $display(\"[SUMMARY] passed=%0d failed=%0d\", passed_cnt, failed_cnt);\n        $finish;\n    end\n\nendmodule\n",
+        "qsf": "# Auto-generated Quartus II Settings File (.qsf) \u2014 fpga_autopilot\nset_global_assignment -name FAMILY \"Cyclone V\"\nset_global_assignment -name DEVICE 5CSEMA5F31C6\nset_global_assignment -name TOP_LEVEL_ENTITY uart_fifo_top\nset_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files\nset_global_assignment -name MIN_CORE_JUNCTION_TEMP 0\nset_global_assignment -name MAX_CORE_JUNCTION_TEMP 85\nset_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1\nset_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005\nset_global_assignment -name SDC_FILE uart_fifo_top.sdc\n\nset_global_assignment -name SYSTEMVERILOG_FILE \"../rtl/sync_fifo.sv\"\nset_global_assignment -name SYSTEMVERILOG_FILE \"../rtl/uart_tx.sv\"\nset_global_assignment -name SYSTEMVERILOG_FILE \"../rtl/uart_rx.sv\"\nset_global_assignment -name SYSTEMVERILOG_FILE \"../rtl/uart_fifo_top.sv\"\n\n# Board Pinout Preset: DE1-SoC (5CSEMA5F31C6)\nset_location_assignment PIN_AF14 -to clk\nset_location_assignment PIN_AA14 -to rst_n\nset_location_assignment PIN_AB12 -to wr_en\nset_location_assignment PIN_AC12 -to wr_data[0]\nset_location_assignment PIN_AF9 -to wr_data[1]\nset_location_assignment PIN_AF10 -to wr_data[2]\nset_location_assignment PIN_AD11 -to wr_data[3]\nset_location_assignment PIN_AD12 -to wr_data[4]\nset_location_assignment PIN_AE11 -to wr_data[5]\nset_location_assignment PIN_AC9 -to wr_data[6]\nset_location_assignment PIN_AD10 -to wr_data[7]\nset_location_assignment PIN_AE12 -to rd_en\nset_location_assignment PIN_AA15 -to rx_serial\nset_location_assignment PIN_W15 -to clr_err\nset_location_assignment PIN_AE26 -to tx_serial\nset_location_assignment PIN_AE27 -to rd_data[0]\nset_location_assignment PIN_AE28 -to rd_data[1]\nset_location_assignment PIN_AG27 -to rd_data[2]\nset_location_assignment PIN_AF28 -to rd_data[3]\nset_location_assignment PIN_AG28 -to rd_data[4]\nset_location_assignment PIN_AH28 -to rd_data[5]\nset_location_assignment PIN_AJ29 -to rd_data[6]\nset_location_assignment PIN_AH29 -to rd_data[7]\nset_location_assignment PIN_AH30 -to tx_full\nset_location_assignment PIN_AG30 -to tx_empty\nset_location_assignment PIN_AF29 -to rx_full\nset_location_assignment PIN_AF30 -to rx_empty\nset_location_assignment PIN_AD27 -to tx_busy\nset_location_assignment PIN_V16 -to framing_error\n\nset_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top\nset_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top\nset_global_assignment -name PARTITION_COLOR 16764057 -section_id Top\n\nset_global_assignment -name LAST_QUARTUS_VERSION \"13.0 SP1\"\nset_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top",
+        "sdc": "# Auto-generated Synopsys Design Constraints (.sdc) \u2014 fpga_autopilot\nset_time_format -unit ns -decimal_places 3\n\ncreate_clock -name {clk} -period 20.000 [get_ports {clk}]\nderive_clock_uncertainty\n\nset_false_path -from [get_ports {rst_n}] -to [all_registers]\n\nset_input_delay -clock {clk} -max 2.000 [get_ports {wr_en}]\nset_input_delay -clock {clk} -min 0.400 [get_ports {wr_en}]\nset_input_delay -clock {clk} -max 2.000 [get_ports {wr_data[*]}]\nset_input_delay -clock {clk} -min 0.400 [get_ports {wr_data[*]}]\nset_input_delay -clock {clk} -max 2.000 [get_ports {rd_en}]\nset_input_delay -clock {clk} -min 0.400 [get_ports {rd_en}]\nset_input_delay -clock {clk} -max 2.000 [get_ports {rx_serial}]\nset_input_delay -clock {clk} -min 0.400 [get_ports {rx_serial}]\nset_input_delay -clock {clk} -max 2.000 [get_ports {clr_err}]\nset_input_delay -clock {clk} -min 0.400 [get_ports {clr_err}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {tx_serial}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {tx_serial}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {rd_data[*]}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {rd_data[*]}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {tx_full}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {tx_full}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {tx_empty}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {tx_empty}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {rx_full}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {rx_full}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {rx_empty}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {rx_empty}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {tx_busy}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {tx_busy}]\nset_output_delay -clock {clk} -max 2.000 [get_ports {framing_error}]\nset_output_delay -clock {clk} -min 0.400 [get_ports {framing_error}]\n",
+        "tex": "\\documentclass[11pt,a4paper]{article}\n\\usepackage{fontspec}\n\\setmainfont{Times New Roman}\n\\setsansfont{Arial}\n\\setmonofont{Consolas}\n\\usepackage[a4paper,margin=2.0cm]{geometry}\n\\usepackage{xcolor}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\\usepackage{booktabs}\n\\usepackage{tabularx}\n\\usepackage{graphicx}\n\\usepackage{float}\n\\usepackage{listings}\n\\usepackage{hyperref}\n\\usepackage{fancyhdr}\n\n\\definecolor{deepblue}{RGB}{14,58,130}\n\\definecolor{accentblue}{RGB}{37,99,235}\n\\definecolor{codebg}{RGB}{247,249,252}\n\n\\setlength{\\emergencystretch}{3em}\n\\hbadness=10000\n\\hfuzz=2pt\n\n\\lstdefinelanguage{SystemVerilog}{\n    keywords={module,endmodule,input,output,inout,logic,signed,parameter,localparam,typedef,enum,always_ff,always_comb,posedge,negedge,or,if,else,case,endcase,default,begin,end,for,integer},\n    sensitive=true,\n    morecomment=[l]{//},\n    morecomment=[s]{/*}{*/}\n}\n\n\\lstset{\n    language=SystemVerilog,\n    backgroundcolor=\\color{codebg},\n    basicstyle=\\ttfamily\\scriptsize,\n    keywordstyle=\\color{deepblue}\\bfseries,\n    commentstyle=\\color{gray}\\itshape,\n    frame=single,\n    rulecolor=\\color{accentblue!40},\n    breaklines=true,\n    breakatwhitespace=false,\n    columns=fullflexible,\n    keepspaces=true,\n    showstringspaces=false,\n    tabsize=4\n}\n\n\\pagestyle{fancy}\n\\fancyhf{}\n\\fancyhead[L]{\\small\\textcolor{deepblue}{B\u00e1o C\u00e1o Th\u1ef1c H\u00e0nh Thi\u1ebft K\u1ebf S\u1ed1 \\& FPGA Autopilot}}\n\\fancyhead[R]{\\small\\texttt{uart\\_fifo\\_top}}\n\\fancyfoot[C]{\\thepage}\n\n\\begin{document}\n\n% ==================== TIKZ BLUE DOUBLE-LINE COVER PAGE ====================\n\\begin{titlepage}\n    \\begin{tikzpicture}[remember picture, overlay]\n        \\draw[color=deepblue, line width=2.4pt]\n            ($(current page.north west)+(1.2cm,-1.2cm)$)\n            rectangle\n            ($(current page.south east)+(-1.2cm,1.2cm)$);\n        \\draw[color=accentblue, line width=0.9pt]\n            ($(current page.north west)+(1.42cm,-1.42cm)$)\n            rectangle\n            ($(current page.south east)+(-1.42cm,1.42cm)$);\n    \\end{tikzpicture}\n\n    \\centering\n    \\vspace*{1.6cm}\n    {\\Large\\bfseries\\textcolor{deepblue}{\u0110\u1ea0I H\u1eccC QU\u1ed0C GIA \u2014 PH\u00d2NG TH\u00cd NGHI\u1ec6M VI M\u1ea0CH \\& FPGA}\\\\[0.3cm]}\n    {\\large\\textsc{Digital Systems Design \\& Quartus II Verification Lab Report}}\\\\[1.2cm]\n\n    \\rule{0.82\\textwidth}{1.2pt}\\\\[0.5cm]\n    {\\huge\\bfseries\\textcolor{deepblue}{Configurable UART TX/RX Transceiver with 8-Byte Sync FIFO}}\\\\[0.4cm]\n    {\\Large Module: \\texttt{uart\\_fifo\\_top}}\\\\[0.4cm]\n    \\rule{0.82\\textwidth}{1.2pt}\\\\[1.4cm]\n\n    \\begin{tabularx}{0.84\\textwidth}{@{}lX@{}}\n        \\toprule\n        \\textbf{H\u1ea1ng m\u1ee5c (Metadata)} & \\textbf{Th\u00f4ng s\u1ed1 k\u1ef9 thu\u1eadt (Specification)} \\\\\n        \\midrule\n        T\u00ean b\u00e0i th\u00ed nghi\u1ec7m (Benchmark) & \\texttt{uart\\_fifo\\_top} \\\\\n        Kit FPGA m\u1ee5c ti\u00eau (Target Kit) & DE1-SoC (Cyclone V) \\\\\n        M\u00e3 chip FPGA (Device Part) & \\texttt{5CSEMA5F31C6} \\\\\n        T\u1ea7n s\u1ed1 xung nh\u1ecbp (Target Clock) & 50.0 MHz \\\\\n        K\u1ebft qu\u1ea3 ki\u1ec3m tra t\u0129nh (Static Lint) & PASS (0 Latches, 0 Width Warnings) \\\\\n        K\u1ebft qu\u1ea3 m\u00f4 ph\u1ecfng (Self-Checking TB) & 66 / 66 Vectors Passed (100\\%) \\\\\n        Tr\u00ecnh t\u1ed5ng h\u1ee3p (Synthesis Engine) & \\texttt{quartus} \\\\\n        \\bottomrule\n    \\end{tabularx}\n\n    \\vfill\n    {\\normalsize H\u1ec7 th\u1ed1ng t\u1ef1 \u0111\u1ed9ng h\u00f3a thi\u1ebft k\u1ebf v\u00e0 ki\u1ec3m ch\u1ee9ng ph\u1ea7n c\u1ee9ng \\textbf{FPGA Autopilot}}\\\\[0.2cm]\n    {\\small Generated with 100\\% Bit-Exact Simulation \\& Hardware Synthesis Verification}\n    \\vspace*{1.2cm}\n\\end{titlepage}\n\n\\section{T\u1ed5ng Quan Thi\u1ebft K\u1ebf \\& \u0110\u1eb7c T\u1ea3 C\u1ed5ng Giao Ti\u1ebfp (Port Specification)}\nFull-duplex 8N1 UART transceiver with parameterized CLK\\_FREQ and BAUD\\_RATE, 16x mid-bit oversampling receiver, stop-bit framing-error detector with safe line-idle recovery, and dual 8-byte circular show-ahead synchronous TX/RX FIFOs with full/empty write/read guards targeting Terasic DE1-SoC (Cyclone V).\n\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{B\u1ea3ng \u0111\u1eb7c t\u1ea3 giao di\u1ec7n c\u1ed5ng v\u00e0o/ra c\u1ee7a module \\texttt{uart\\_fifo\\_top}}\n    \\begin{tabularx}{\\textwidth}{@{}llllX@{}}\n        \\toprule\n        \\textbf{Port} & \\textbf{Dir} & \\textbf{Width} & \\textbf{Type} & \\textbf{Ch\u1ee9c n\u0103ng (Description)} \\\\\n        \\midrule\n        \\texttt{clk} & input & 1 & logic & 50 MHz system clock \\\\\n        \\texttt{rst\\_n} & input & 1 & active-low & Asynchronous active-low system reset \\\\\n        \\texttt{wr\\_en} & input & 1 & logic & TX FIFO write enable strobe \\\\\n        \\texttt{wr\\_data} & input & 8 & logic & 8-bit parallel payload written to TX FIFO \\\\\n        \\texttt{rd\\_en} & input & 1 & logic & RX FIFO read pop strobe \\\\\n        \\texttt{rx\\_serial} & input & 1 & logic & Asynchronous UART serial RX line \\\\\n        \\texttt{clr\\_err} & input & 1 & logic & Synchronous clear for sticky framing\\_error flag \\\\\n        \\texttt{tx\\_serial} & output & 1 & logic & UART serial TX output line (idles high) \\\\\n        \\texttt{rd\\_data} & output & 8 & logic & 8-bit parallel byte at head of RX FIFO \\\\\n        \\texttt{tx\\_full} & output & 1 & logic & TX 8-byte FIFO full flag \\\\\n        \\texttt{tx\\_empty} & output & 1 & logic & TX 8-byte FIFO empty flag \\\\\n        \\texttt{rx\\_full} & output & 1 & logic & RX 8-byte FIFO full flag \\\\\n        \\texttt{rx\\_empty} & output & 1 & logic & RX 8-byte FIFO empty flag \\\\\n        \\texttt{tx\\_busy} & output & 1 & logic & Asserted while UART TX shifter is active \\\\\n        \\texttt{framing\\_error} & output & 1 & logic & Sticky framing error flag asserted on invalid stop bit \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\n\n\\section{Tri\u1ec3n Khai RTL SystemVerilog Chu\u1ea9n T\u1ed5ng H\u1ee3p (Synthesizable RTL)}\nThi\u1ebft k\u1ebf tu\u00e2n th\u1ee7 nghi\u00eam ng\u1eb7t quy t\u1eafc SystemVerilog-2012: s\u1eed d\u1ee5ng \\texttt{always\\_ff} v\u1edbi ph\u00e9p g\u00e1n kh\u00f4ng ch\u1eb7n (\\texttt{<=}) cho m\u1ea1ch tu\u1ea7n t\u1ef1, \\texttt{always\\_comb} v\u1edbi gi\u00e1 tr\u1ecb m\u1eb7c \u0111\u1ecbnh t\u01b0\u1eddng minh \u1edf \u0111\u1ea7u kh\u1ed1i cho m\u1ea1ch t\u1ed5 h\u1ee3p, cam k\u1ebft \\textbf{0 inferred latches}.\n\n\\begin{lstlisting}\n// Auto-generated by fpga_autopilot \u2014 Configurable UART TX/RX Transceiver + 8-Byte Sync FIFO\n\nmodule uart_fifo_top #(\n    parameter [31:0] CLK_FREQ  = 32'd50000000,\n    parameter [31:0] BAUD_RATE = 32'd115200\n) (\n    input  logic       clk,\n    input  logic       rst_n,\n    input  logic       wr_en,\n    input  logic [7:0] wr_data,\n    input  logic       rd_en,\n    input  logic       rx_serial,\n    input  logic       clr_err,\n    output logic       tx_serial,\n    output logic [7:0] rd_data,\n    output logic       tx_full,\n    output logic       tx_empty,\n    output logic       rx_full,\n    output logic       rx_empty,\n    output logic       tx_busy,\n    output logic       framing_error\n);\n\n    localparam [31:0] OS_DIV_RAW = CLK_FREQ / (BAUD_RATE * 32'd16);\n    localparam [31:0] OS_DIV     = (OS_DIV_RAW == 32'd0) ? 32'd1 : OS_DIV_RAW;\n    localparam [31:0] BIT_CLKS   = OS_DIV * 32'd16;\n\n    logic [7:0] tx_fifo_dout;\n    logic       tx_fifo_pop;\n    logic       rx_valid;\n    logic [7:0] rx_byte;\n    logic       rx_fifo_wr;\n\n    always_comb begin\n        rx_fifo_wr = rx_valid && !rx_full;\n    end\n\n    sync_fifo #(\n        .DATA_WIDTH (8),\n        .ADDR_WIDTH (3)\n    ) u_tx_fifo (\n        .clk     (clk),\n        .rst_n   (rst_n),\n        .wr_en   (wr_en),\n        .wr_data (wr_data),\n        .rd_en   (tx_fifo_pop),\n        .rd_data (tx_fifo_dout),\n        .full    (tx_full),\n        .empty   (tx_empty)\n    );\n\n    uart_tx #(\n        .BIT_CLKS (BIT_CLKS)\n    ) u_uart_tx (\n        .clk        (clk),\n        .rst_n      (rst_n),\n        .fifo_empty (tx_empty),\n        .fifo_data  (tx_fifo_dout),\n// ... (truncated for report conciseness; full source in rtl/ directory)\n\\end{lstlisting}\n\n\\section{Ki\u1ec3m Ch\u1ee9ng T\u1ef1 \u0110\u1ed9ng (Self-Checking Testbench Coverage)}\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{T\u1ed5ng h\u1ee3p k\u1ebft qu\u1ea3 Linting v\u00e0 M\u00f4 ph\u1ecfng \u0111\u1ed1i chi\u1ebfu Golden Model}\n    \\begin{tabularx}{\\textwidth}{@{}lX@{}}\n        \\toprule\n        \\textbf{Ti\u00eau ch\u00ed ki\u1ec3m ch\u1ee9ng (Metric)} & \\textbf{K\u1ebft qu\u1ea3 \u0111o l\u01b0\u1eddng (Verified Value)} \\\\\n        \\midrule\n        Tr\u00ecnh m\u00f4 ph\u1ecfng HDL (Simulator) & \\texttt{iverilog} \\\\\n        C\u00f4ng c\u1ee5 ph\u00e2n t\u00edch t\u0129nh (Linters) & \\texttt{static\\_analyzer, verilator, iverilog} \\\\\n        S\u1ed1 ch\u1ed1t suy di\u1ec5n (Inferred Latches) & 0 (RTL) / 0 (Netlist) \\\\\n        T\u1ed5ng s\u1ed1 vector ki\u1ec3m th\u1eed (Total Vectors) & 66 \\\\\n        S\u1ed1 vector \u0111\u1ea1t chu\u1ea9n (Passed / Failed) & 66 Passed / 0 Failed \\\\\n        S\u1ed1 v\u00f2ng t\u1ef1 s\u1eeda l\u1ed7i (Self-Healing Loops) & 0 \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\\section{T\u00e0i Nguy\u00ean Ph\u1ea7n C\u1ee9ng \\& Ph\u00e2n T\u00edch \u0110\u1ecbnh Th\u1eddi (Synthesis \\& STA)}\n\\begin{table}[H]\n    \\centering\n    \\small\n    \\caption{B\u00e1o c\u00e1o t\u00e0i nguy\u00ean FPGA v\u00e0 ph\u00e2n t\u00edch \u0111\u1ecbnh th\u1eddi (5CSEMA5F31C6)}\n    \\begin{tabularx}{\\textwidth}{@{}Xr@{}}\n        \\toprule\n        \\textbf{Th\u00f4ng s\u1ed1 ph\u1ea7n c\u1ee9ng / \u0110\u1ecbnh th\u1eddi (Hardware \\& Timing Metric)} & \\textbf{Gi\u00e1 tr\u1ecb} \\\\\n        \\midrule\n        Total Logic Elements / ALMs & 182 \\\\\n        Combinational Functions (LUTs) & 269 \\\\\n        Dedicated Logic Registers (Flip-Flops) & 283 \\\\\n        Total Memory Bits & 0 \\\\\n        Embedded Multiplier / DSP Elements & 0 \\\\\n        Total I/O Pins & 29 \\\\\n        Synthesized Inferred Latches & 0 \\\\\n        Worst-Case $F_{\\max}$ & 70.46 MHz \\\\\n        Worst-Case Setup Slack & 5.808 ns \\\\\n        Worst-Case Hold Slack & 0.159 ns \\\\\n        \\bottomrule\n    \\end{tabularx}\n\\end{table}\n\n\\section{K\u1ebft Qu\u1ea3 Ch\u1ee5p D\u1ea1ng S\u00f3ng GTKWave \\& S\u01a1 \u0110\u1ed3 M\u1ea1ch RTL Viewer}\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_0_gtkwave_waveform.png}\n    \\caption{GTKWave Verified Simulation Waveform (uart\\_fifo\\_top) \u2014 295 transition columns audited.}\n\\end{figure}\n\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_1_quartus_rtl_viewer.png}\n    \\caption{Quartus II RTL Viewer Synthesized Schematic (uart\\_fifo\\_top).}\n\\end{figure}\n\n\\begin{figure}[H]\n    \\centering\n    \\includegraphics[width=0.95\\textwidth,height=0.40\\textheight,keepaspectratio]{figures/fig_2_quartus_fsm_viewer.png}\n    \\caption{Quartus II State Machine Viewer Diagram (uart\\_fifo\\_top).}\n\\end{figure}\n\n\n\\end{document}\n",
+        "markdown": "# Engineering Verification Summary \u2014 `uart_fifo_top`\n\n**Title:** Configurable UART TX/RX Transceiver with 8-Byte Sync FIFO  \n**Top Module:** `uart_fifo_top`  \n**Target Board / Device:** `DE1-SoC` (`Cyclone V` \u2014 `5CSEMA5F31C6`)  \n**Overall Gate Status:** **PASS**\n\n## 1. Static Lint & Synchronous Design Audit\n- **Lint Status:** `PASS` (Tools: `static_analyzer, verilator, iverilog`)\n- **Inferred Latches:** `0` (Synthesis Latches: `0`)\n- **Blocking in `always_ff`:** `0`\n- **Width Mismatches:** `0`\n- **Self-Healing Patch Iterations:** `0`\n\n## 2. Cycle-Accurate Self-Checking Simulation\n- **Simulator:** `iverilog`\n- **Vectors Passed:** `66 / 66` (`0` failures)\n- **Runtime:** `0.413 s`\n- **Waveform VCD:** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\sim\\uart_fifo_top.vcd`\n\n## 3. Hardware Resource Utilization & Timing (`quartus`)\n\n| Metric | Value |\n| :--- | ---: |\n| Logic Elements / ALMs | 182 |\n| Combinational Functions (LUTs) | 269 |\n| Dedicated Logic Registers | 283 |\n| Memory Bits | 0 |\n| DSP / Multiplier Elements | 0 |\n| Total I/O Pins | 29 |\n| Inferred Latches | 0 |\n| Worst-Case Fmax | 70.46 MHz |\n| Worst Setup Slack | 5.808 ns |\n| Worst Hold Slack | 0.159 ns |\n\n## 4. Generated Artifacts & Visual Captures\n- **Quartus Project (`.qpf`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.qpf`\n- **Quartus Settings (`.qsf`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.qsf`\n- **Timing Constraints (`.sdc`):** `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.sdc`\n- **gtkwave_waveform** (`1420x820`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_waveform.png`\n- **quartus_rtl_viewer** (`1460x860`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_rtl_viewer.png`\n- **quartus_fsm_viewer** (`1460x860`, audit=`True`): `C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_fsm_viewer.png`\n"
+      },
+      "captures": [
+        {
+          "capture_type": "gtkwave_waveform",
+          "tool_name": "gtkwave",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_waveform.png",
+          "window_title": "GTKWave - uart_fifo_top.vcd",
+          "window_bbox": [
+            50,
+            40,
+            1420,
+            820
+          ],
+          "width_px": 1420,
+          "height_px": 820,
+          "visual_audit_passed": true,
+          "edge_density": 0.17138,
+          "transition_columns_detected": 295,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Crisp digital signal transitions verified",
+          "url": "./assets/uart_fifo_top/uart_fifo_top_waveform.png"
+        },
+        {
+          "capture_type": "quartus_rtl_viewer",
+          "tool_name": "quartus",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_rtl_viewer.png",
+          "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+          "window_bbox": [
+            30,
+            30,
+            1460,
+            860
+          ],
+          "width_px": 1460,
+          "height_px": 860,
+          "visual_audit_passed": true,
+          "edge_density": 0.04826,
+          "transition_columns_detected": 1008,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Schematic symbols and nets verified",
+          "url": "./assets/uart_fifo_top/uart_fifo_top_rtl_viewer.png"
+        },
+        {
+          "capture_type": "quartus_fsm_viewer",
+          "tool_name": "quartus",
+          "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_fsm_viewer.png",
+          "window_title": "State Machine Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+          "window_bbox": [
+            30,
+            30,
+            1460,
+            860
+          ],
+          "width_px": 1460,
+          "height_px": 860,
+          "visual_audit_passed": true,
+          "edge_density": 0.04494,
+          "transition_columns_detected": 1139,
+          "zoom_adjustments": 0,
+          "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+          "notes": "Schematic symbols and nets verified",
+          "url": "./assets/uart_fifo_top/uart_fifo_top_fsm_viewer.png"
+        }
+      ],
+      "downloads": {
+        "pdf_url": "./assets/uart_fifo_top/lab_report.pdf",
+        "vcd_url": "./assets/uart_fifo_top/uart_fifo_top.vcd",
+        "quartus_zip_url": "./assets/uart_fifo_top/uart_fifo_top_quartus_bundle.zip"
+      }
+    }
+  ],
+  "gui_audit_events": [
+    {
+      "timestamp": "2026-11-27T04:25:37.190348+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_GTKWAVE",
+      "cmd": [
+        "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "adder_sub_7seg.vcd",
+        "adder_sub_7seg.gtkw",
+        "--script",
+        "adder_sub_7seg_gtkw.tcl"
+      ],
+      "vcd": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\sim\\adder_sub_7seg.vcd"
+    },
+    {
+      "timestamp": "2026-11-27T04:25:39.029284+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_GTKWAVE",
+      "pid": 24764
+    },
+    {
+      "timestamp": "2026-11-27T04:38:52.905132+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_GTKWAVE",
+      "attempt": 0,
+      "cmd": [
+        "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "adder_sub_7seg.vcd",
+        "adder_sub_7seg.gtkw"
+      ],
+      "zoom_pow": -15.9922
+    },
+    {
+      "timestamp": "2026-11-27T04:38:54.843767+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 930,
+      "y": 450,
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "window_title": "GTKWave - adder_sub_7seg.vcd",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Focus GTKWave waveform canvas"
+    },
+    {
+      "timestamp": "2026-11-27T04:38:55.269875+00:00",
+      "failsafe_enabled": true,
+      "event": "OPENCV_WAVEFORM_AUDIT",
+      "attempt": 0,
+      "window_title": "GTKWave - adder_sub_7seg.vcd",
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "zoom_pow": -15.9922,
+      "audit": {
+        "passed": true,
+        "edge_density": 0.1214,
+        "bright_ratio": 0.13479,
+        "transition_columns": 477,
+        "solid_green_ratio": 0.0,
+        "reason": "Crisp digital signal transitions verified",
+        "roi_bbox": [
+          482,
+          155,
+          881,
+          550
+        ]
+      },
+      "audit_image": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\adder_sub_7seg_gtkwave_try0_audit.png"
+    },
+    {
+      "timestamp": "2026-11-27T04:38:55.295340+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_GTKWAVE",
+      "pid": 18480,
+      "attempt": 0
+    },
+    {
+      "timestamp": "2026-11-27T04:38:55.311581+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_QUARTUS_GUI",
+      "cmd": [
+        "C:\\altera\\quartus\\bin64\\quartus.exe",
+        "adder_sub_7seg.qpf"
+      ],
+      "qpf": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.qpf"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:01.959150+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 402,
+      "y": 82,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "Quartus II 64-Bit - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/adder_sub_7seg/quartus/adder_sub_7seg - adder_sub_7seg",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Open Quartus Tools menu for RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:02.602779+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 497,
+      "y": 305,
+      "bbox": [
+        377,
+        93,
+        295,
+        669
+      ],
+      "window_title": "quartus",
+      "purpose": "Expand Netlist Viewers submenu"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:03.246642+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 765,
+      "y": 305,
+      "bbox": [
+        665,
+        291,
+        308,
+        102
+      ],
+      "window_title": "quartus",
+      "purpose": "Launch RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:05.027768+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 591,
+      "y": 122,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/adder_sub_7seg/quartus/adder_sub_7seg - adder_sub_7seg",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Fit RTL Viewer schematic in viewport"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:06.101059+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_QUARTUS_GUI",
+      "pid": 26780
+    },
+    {
+      "timestamp": "2026-11-27T04:39:28.601552+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_GTKWAVE",
+      "attempt": 0,
+      "cmd": [
+        "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "traffic_fsm.vcd",
+        "traffic_fsm.gtkw"
+      ],
+      "zoom_pow": -18.3142
+    },
+    {
+      "timestamp": "2026-11-27T04:39:30.405093+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 930,
+      "y": 450,
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "window_title": "GTKWave - traffic_fsm.vcd",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Focus GTKWave waveform canvas"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:30.824612+00:00",
+      "failsafe_enabled": true,
+      "event": "OPENCV_WAVEFORM_AUDIT",
+      "attempt": 0,
+      "window_title": "GTKWave - traffic_fsm.vcd",
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "zoom_pow": -18.3142,
+      "audit": {
+        "passed": true,
+        "edge_density": 0.12307,
+        "bright_ratio": 0.13297,
+        "transition_columns": 638,
+        "solid_green_ratio": 0.0,
+        "reason": "Crisp digital signal transitions verified",
+        "roi_bbox": [
+          482,
+          155,
+          881,
+          550
+        ]
+      },
+      "audit_image": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\traffic_fsm_gtkwave_try0_audit.png"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:30.851783+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_GTKWAVE",
+      "pid": 24604,
+      "attempt": 0
+    },
+    {
+      "timestamp": "2026-11-27T04:39:30.866583+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_QUARTUS_GUI",
+      "cmd": [
+        "C:\\altera\\quartus\\bin64\\quartus.exe",
+        "traffic_fsm.qpf"
+      ],
+      "qpf": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qpf"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:37.288196+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 402,
+      "y": 82,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "Quartus II 64-Bit - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Open Quartus Tools menu for RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:37.931447+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 497,
+      "y": 305,
+      "bbox": [
+        377,
+        93,
+        295,
+        669
+      ],
+      "window_title": "quartus",
+      "purpose": "Expand Netlist Viewers submenu"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:38.574572+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 765,
+      "y": 305,
+      "bbox": [
+        665,
+        291,
+        308,
+        102
+      ],
+      "window_title": "quartus",
+      "purpose": "Launch RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:40.358320+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 591,
+      "y": 122,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Fit RTL Viewer schematic in viewport"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:42.032887+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 402,
+      "y": 82,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "Quartus II 64-Bit - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Open Quartus Tools menu for State Machine Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:42.676290+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 497,
+      "y": 305,
+      "bbox": [
+        377,
+        93,
+        295,
+        669
+      ],
+      "window_title": "quartus",
+      "purpose": "Expand Netlist Viewers submenu"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:43.319282+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 765,
+      "y": 329,
+      "bbox": [
+        665,
+        291,
+        308,
+        102
+      ],
+      "window_title": "quartus",
+      "purpose": "Launch State Machine Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:39:45.228409+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_QUARTUS_GUI",
+      "pid": 22864
+    },
+    {
+      "timestamp": "2026-11-27T04:43:03.768347+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_GTKWAVE",
+      "attempt": 0,
+      "cmd": [
+        "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "uart_fifo_top.vcd",
+        "uart_fifo_top.gtkw"
+      ],
+      "zoom_pow": -19.7065
+    },
+    {
+      "timestamp": "2026-11-27T04:43:22.012281+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_GTKWAVE",
+      "pid": 24148,
+      "attempt": 0
+    },
+    {
+      "timestamp": "2026-11-27T04:46:34.017124+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_GTKWAVE",
+      "attempt": 0,
+      "cmd": [
+        "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "traffic_fsm.vcd",
+        "traffic_fsm.gtkw"
+      ],
+      "zoom_pow": -18.3142
+    },
+    {
+      "timestamp": "2026-11-27T04:46:35.818277+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 930,
+      "y": 450,
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "window_title": "GTKWave - traffic_fsm.vcd",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Focus GTKWave waveform canvas"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:36.541035+00:00",
+      "failsafe_enabled": true,
+      "event": "OPENCV_WAVEFORM_AUDIT",
+      "attempt": 0,
+      "window_title": "GTKWave - traffic_fsm.vcd",
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "zoom_pow": -18.3142,
+      "audit": {
+        "passed": true,
+        "edge_density": 0.12307,
+        "bright_ratio": 0.13297,
+        "transition_columns": 638,
+        "solid_green_ratio": 0.0,
+        "reason": "Crisp digital signal transitions verified",
+        "roi_bbox": [
+          482,
+          155,
+          881,
+          550
+        ]
+      },
+      "audit_image": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\traffic_fsm_gtkwave_try0_audit.png"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:36.557086+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_GTKWAVE",
+      "pid": 24604,
+      "attempt": 0
+    },
+    {
+      "timestamp": "2026-11-27T04:46:36.571255+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_QUARTUS_GUI",
+      "cmd": [
+        "C:\\altera\\quartus\\bin64\\quartus.exe",
+        "traffic_fsm.qpf"
+      ],
+      "qpf": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\traffic_fsm\\quartus\\traffic_fsm.qpf"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:42.924063+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 402,
+      "y": 82,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "Quartus II 64-Bit - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Open Quartus Tools menu for RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:43.567631+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 497,
+      "y": 305,
+      "bbox": [
+        377,
+        93,
+        295,
+        669
+      ],
+      "window_title": "quartus",
+      "purpose": "Expand Netlist Viewers submenu"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:44.210838+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 765,
+      "y": 305,
+      "bbox": [
+        665,
+        291,
+        308,
+        102
+      ],
+      "window_title": "quartus",
+      "purpose": "Launch RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:46.000562+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 591,
+      "y": 122,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Fit RTL Viewer schematic in viewport"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:47.984517+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 402,
+      "y": 82,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "Quartus II 64-Bit - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/traffic_fsm/quartus/traffic_fsm - traffic_fsm",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Open Quartus Tools menu for State Machine Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:48.628424+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 497,
+      "y": 305,
+      "bbox": [
+        377,
+        93,
+        295,
+        669
+      ],
+      "window_title": "quartus",
+      "purpose": "Expand Netlist Viewers submenu"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:49.271859+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 765,
+      "y": 329,
+      "bbox": [
+        665,
+        291,
+        308,
+        102
+      ],
+      "window_title": "quartus",
+      "purpose": "Launch State Machine Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:46:51.540206+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_QUARTUS_GUI",
+      "pid": 1744
+    },
+    {
+      "timestamp": "2026-11-27T04:48:03.368461+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_GTKWAVE",
+      "attempt": 0,
+      "cmd": [
+        "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "uart_fifo_top.vcd",
+        "uart_fifo_top.gtkw"
+      ],
+      "zoom_pow": -19.7065
+    },
+    {
+      "timestamp": "2026-11-27T04:48:05.234513+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 930,
+      "y": 450,
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "window_title": "gtkwave.exe",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Focus GTKWave waveform canvas"
+    },
+    {
+      "timestamp": "2026-11-27T04:48:05.612319+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_GTKWAVE",
+      "pid": 4068,
+      "attempt": 0
+    },
+    {
+      "timestamp": "2026-11-27T04:50:05.283510+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_GTKWAVE",
+      "attempt": 0,
+      "cmd": [
+        "C:\\msys64\\ucrt64\\bin\\gtkwave.exe",
+        "uart_fifo_top.vcd",
+        "uart_fifo_top.gtkw"
+      ],
+      "zoom_pow": -19.7065
+    },
+    {
+      "timestamp": "2026-11-27T04:50:07.138915+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 930,
+      "y": 450,
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "window_title": "GTKWave - uart_fifo_top.vcd",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Focus GTKWave waveform canvas"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:07.554653+00:00",
+      "failsafe_enabled": true,
+      "event": "OPENCV_WAVEFORM_AUDIT",
+      "attempt": 0,
+      "window_title": "GTKWave - uart_fifo_top.vcd",
+      "bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "zoom_pow": -19.7065,
+      "audit": {
+        "passed": true,
+        "edge_density": 0.17138,
+        "bright_ratio": 0.19853,
+        "transition_columns": 295,
+        "solid_green_ratio": 0.0,
+        "reason": "Crisp digital signal transitions verified",
+        "roi_bbox": [
+          482,
+          155,
+          881,
+          550
+        ]
+      },
+      "audit_image": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\uart_fifo_top_gtkwave_try0_audit.png"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:07.570774+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_GTKWAVE",
+      "pid": 20224,
+      "attempt": 0
+    },
+    {
+      "timestamp": "2026-11-27T04:50:07.587705+00:00",
+      "failsafe_enabled": true,
+      "event": "LAUNCH_QUARTUS_GUI",
+      "cmd": [
+        "C:\\altera\\quartus\\bin64\\quartus.exe",
+        "uart_fifo_top.qpf"
+      ],
+      "qpf": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.qpf"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:14.330169+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 402,
+      "y": 82,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "Quartus II 64-Bit - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Open Quartus Tools menu for RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:14.971800+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 497,
+      "y": 305,
+      "bbox": [
+        377,
+        93,
+        295,
+        669
+      ],
+      "window_title": "quartus",
+      "purpose": "Expand Netlist Viewers submenu"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:15.613762+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 765,
+      "y": 305,
+      "bbox": [
+        665,
+        291,
+        308,
+        102
+      ],
+      "window_title": "quartus",
+      "purpose": "Launch RTL Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:17.399745+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 591,
+      "y": 122,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Fit RTL Viewer schematic in viewport"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:19.222541+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 402,
+      "y": 82,
+      "bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "window_title": "Quartus II 64-Bit - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+      "delivery": "win32_confined_postmessage",
+      "purpose": "Open Quartus Tools menu for State Machine Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:19.864562+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 497,
+      "y": 305,
+      "bbox": [
+        377,
+        93,
+        295,
+        669
+      ],
+      "window_title": "quartus",
+      "purpose": "Expand Netlist Viewers submenu"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:20.507239+00:00",
+      "failsafe_enabled": true,
+      "event": "CONFINED_CLICK",
+      "x": 765,
+      "y": 329,
+      "bbox": [
+        665,
+        291,
+        308,
+        102
+      ],
+      "window_title": "quartus",
+      "purpose": "Launch State Machine Viewer"
+    },
+    {
+      "timestamp": "2026-11-27T04:50:22.423731+00:00",
+      "failsafe_enabled": true,
+      "event": "CLOSE_QUARTUS_GUI",
+      "pid": 6680
+    }
+  ]
+}

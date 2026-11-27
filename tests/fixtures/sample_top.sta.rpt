@@ -1,0 +1,30 @@
+TimeQuest Timing Analyzer report for sample_top
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 SJ Web Edition
+
+; Slow 1200mV 85C Model Fmax Summary ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 241.55 MHz ; 241.55 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+
+; Slow 1200mV 0C Model Fmax Summary ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 268.10 MHz ; 250.00 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; 15.860 ; 0.000         ;
++-------+--------+---------------+
+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.214 ; 0.000         ;
++-------+-------+---------------+

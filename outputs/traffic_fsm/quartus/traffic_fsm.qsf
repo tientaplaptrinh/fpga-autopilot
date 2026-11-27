@@ -1,0 +1,36 @@
+# Auto-generated Quartus II Settings File (.qsf) — fpga_autopilot
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY traffic_fsm
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name SDC_FILE traffic_fsm.sdc
+
+set_global_assignment -name SYSTEMVERILOG_FILE "../rtl/traffic_fsm.sv"
+
+# Board Pinout Preset: DE2-115 (EP4CE115F29C7)
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_M23 -to rst_n
+set_location_assignment PIN_AB28 -to ped_btn_raw
+set_location_assignment PIN_AC28 -to emergency_ovr
+set_location_assignment PIN_G18 -to ns_light[0]
+set_location_assignment PIN_F22 -to ns_light[1]
+set_location_assignment PIN_E17 -to ns_light[2]
+set_location_assignment PIN_L26 -to ew_light[0]
+set_location_assignment PIN_L25 -to ew_light[1]
+set_location_assignment PIN_J22 -to ew_light[2]
+set_location_assignment PIN_H22 -to ped_walk
+set_location_assignment PIN_M24 -to countdown[0]
+set_location_assignment PIN_Y22 -to countdown[1]
+set_location_assignment PIN_W21 -to countdown[2]
+set_location_assignment PIN_W22 -to countdown[3]
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

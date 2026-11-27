@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Design &amp; Quartus II Autopilot — EDA Web Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-brand">
+      <div class="chip-badge" aria-hidden="true">SV</div>
+      <div>
+        <h1>Digital Design &amp; Quartus II Autopilot</h1>
+        <p class="subtitle">SystemVerilog-2012 &middot; Self-Checking TB &middot; Quartus II STA &middot; GTKWave &amp; RTL Viewer</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <div id="engineBadge" class="status-pill status-checking">
+        <span class="dot"></span>
+        <span id="engineBadgeText">Connecting EDA Engine&hellip;</span>
+      </div>
+      <button id="btnOpenNewRun" class="btn btn-primary" type="button">+ New FPGA Lab Synthesis</button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <!-- Left Sidebar: Verified Benchmarks & Toolchain -->
+    <aside class="sidebar">
+      <section class="panel-block">
+        <div class="section-header">
+          <h2>Hardware Benchmarks</h2>
+          <span id="runCountBadge" class="count-tag">0</span>
+        </div>
+        <div id="runList" class="run-list" role="listbox" aria-label="Verified FPGA Benchmarks"></div>
+      </section>
+
+      <section class="panel-block">
+        <div class="section-header">
+          <h2>Host EDA Toolchain</h2>
+        </div>
+        <div id="toolchainList" class="toolchain-list"></div>
+      </section>
+
+      <section class="panel-block">
+        <div class="section-header">
+          <h2>GUI Safety Protocol</h2>
+          <span class="safe-tag">FAILSAFE=ON</span>
+        </div>
+        <p class="safety-note">
+          Strict Win32 bounding-box confinement active (`gtkwave`, `quartus`, `vsim`). Out-of-bounds actions raise <code>WindowConfinementError</code>.
+        </p>
+        <button id="btnViewAuditLog" class="btn btn-secondary btn-block" type="button">Inspect GUI Audit Log</button>
+      </section>
+    </aside>
+
+    <!-- Main Engineering Workbench -->
+    <main class="main-stage" id="mainStage">
+      <div id="benchmarkHeader" class="bench-header">
+        <div>
+          <div class="bench-meta-row">
+            <span id="benchPresetTag" class="kit-tag">DE2-115</span>
+            <span id="benchDeviceTag" class="mono-tag">EP4CE115F29C7</span>
+            <span id="benchGateBadge" class="gate-badge gate-pass">GATE PASS</span>
+          </div>
+          <h2 id="benchTitle">Loading benchmark&hellip;</h2>
+          <p id="benchDesc" class="bench-desc"></p>
+        </div>
+        <div class="download-bar">
+          <a id="dlPdfBtn" class="btn btn-outline" href="#" target="_blank" rel="noopener">Lab Report (.pdf)</a>
+          <a id="dlZipBtn" class="btn btn-outline" href="#" download>Quartus Project (.zip)</a>
+          <a id="dlVcdBtn" class="btn btn-outline" href="#" download>Waveform (.vcd)</a>
+        </div>
+      </div>
+
+      <!-- KPI Metric Strip -->
+      <section class="kpi-grid" aria-label="Verification and Synthesis Metrics">
+        <div class="kpi-card">
+          <span class="kpi-label">Self-Checking Sim</span>
+          <strong id="kpiSim" class="kpi-value">&mdash;</strong>
+          <span id="kpiSimSub" class="kpi-sub">100% Bit-Exact Golden Match</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Lint &amp; Inferred Latches</span>
+          <strong id="kpiLatches" class="kpi-value kpi-ok">0 Latches</strong>
+          <span id="kpiLintTools" class="kpi-sub">Verilator + Icarus + AST</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Logic Utilization</span>
+          <strong id="kpiLEs" class="kpi-value">&mdash;</strong>
+          <span id="kpiCombSub" class="kpi-sub">Combinational LUTs / ALUTs</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Dedicated Registers</span>
+          <strong id="kpiRegs" class="kpi-value">&mdash;</strong>
+          <span id="kpiPinsSub" class="kpi-sub">Flip-Flops &amp; I/O Pins</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Worst-Case Fmax</span>
+          <strong id="kpiFmax" class="kpi-value">&mdash;</strong>
+          <span id="kpiSlackSub" class="kpi-sub">TimeQuest Multi-Corner STA</span>
+        </div>
+      </section>
+
+      <!-- Visual Captures Gallery (GTKWave + Quartus RTL Viewer + FSM Viewer) -->
+      <section class="card-panel">
+        <div class="card-panel-header">
+          <h3>Desktop GUI Visual Verification (GTKWave &amp; Quartus II Viewers)</h3>
+          <span class="hint-text">Click any diagram to inspect full High-DPI capture</span>
+        </div>
+        <div id="capturesGallery" class="captures-grid"></div>
+      </section>
+
+      <!-- Source Code & Hardware Spec Inspector -->
+      <section class="card-panel">
+        <div class="tabs-bar" role="tablist">
+          <button class="tab-btn active" data-tab="rtl" type="button">SystemVerilog RTL (.sv)</button>
+          <button class="tab-btn" data-tab="tb" type="button">Self-Checking Testbench</button>
+          <button class="tab-btn" data-tab="qsf" type="button">Quartus Settings (.qsf)</button>
+          <button class="tab-btn" data-tab="sdc" type="button">Timing Constraints (.sdc)</button>
+          <button class="tab-btn" data-tab="ports" type="button">Port &amp; FSM Spec</button>
+          <button class="tab-btn" data-tab="tex" type="button">LaTeX Source (.tex)</button>
+        </div>
+        <div id="rtlFileSelectorBar" class="subfile-bar hidden"></div>
+        <div id="codePaneWrap" class="code-pane-wrap">
+          <button id="btnCopyCode" class="btn-copy" type="button">Copy</button>
+          <pre id="codeViewer" class="code-viewer"><code></code></pre>
+        </div>
+        <div id="specTableWrap" class="spec-table-wrap hidden"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal: Launch New Live FPGA Lab Run -->
+  <div id="runModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="runModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="runModalTitle">Launch Live FPGA Autopilot Synthesis</h3>
+        <button id="btnCloseRunModal" class="icon-close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="liveServerUrlBox" class="url-connect-bar hidden">
+          <label for="customApiInput">Live EDA Tunnel URL:</label>
+          <input id="customApiInput" type="url" placeholder="https://xxxx.trycloudflare.com" />
+          <button id="btnSaveApiUrl" class="btn btn-secondary" type="button">Connect</button>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inputModName">Top Module Name</label>
+            <input id="inputModName" type="text" value="custom_traffic_lab" spellcheck="false" />
+          </div>
+          <div class="form-group">
+            <label for="selectBoardPreset">Student FPGA Kit Preset</label>
+            <select id="selectBoardPreset">
+              <option value="DE2-115">Terasic DE2-115 (Cyclone IV E — EP4CE115F29C7)</option>
+              <option value="DE1-SoC">Terasic DE1-SoC (Cyclone V — 5CSEMA5F31C6)</option>
+              <option value="DE10-Lite">Terasic DE10-Lite (MAX 10 — 10M50DAF484C7G)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputLabPrompt">Hardware Lab Specification Prompt</label>
+          <textarea id="inputLabPrompt" rows="4">Design a parameterized smart traffic light FSM with 2-FF pedestrian button synchronizer, debouncer, emergency all-red override, and countdown timer.</textarea>
+        </div>
+
+        <label class="checkbox-row">
+          <input id="chkQuartusGui" type="checkbox" checked />
+          <span>Capture Quartus II Desktop RTL &amp; State Machine Viewers (in addition to GTKWave waveform)</span>
+        </label>
+
+        <div id="jobConsoleWrap" class="job-console hidden">
+          <div class="job-console-hdr">Live EDA Execution Log</div>
+          <pre id="jobConsoleLog"></pre>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btnCancelRun" class="btn btn-secondary" type="button">Cancel</button>
+        <button id="btnSubmitRun" class="btn btn-primary" type="button">Synthesize &amp; Verify Hardware</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Image Lightbox & GUI Audit Viewer -->
+  <div id="lightboxModal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="lightbox-card">
+      <div class="modal-header">
+        <h3 id="lightboxTitle">Visual Capture</h3>
+        <button id="btnCloseLightbox" class="icon-close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div id="lightboxBody" class="lightbox-body"></div>
+    </div>
+  </div>
+
+  <script src="./static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+{
+  "spec_name": "uart_fifo_top",
+  "top_module": "uart_fifo_top",
+  "board_preset": "DE1-SoC",
+  "rtl_paths": [
+    "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\sync_fifo.sv",
+    "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\uart_tx.sv",
+    "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\uart_rx.sv",
+    "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\rtl\\uart_fifo_top.sv"
+  ],
+  "tb_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\tb\\tb_uart_fifo_top.sv",
+  "healing_iterations": 0,
+  "lint_report": {
+    "passed": true,
+    "inferred_latches": 0,
+    "blocking_in_seq": 0,
+    "nonblocking_in_comb": 0,
+    "missing_reset_clauses": 0,
+    "undriven_nets": 0,
+    "multidriven_nets": 0,
+    "width_mismatches": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "tools_used": [
+      "static_analyzer",
+      "verilator",
+      "iverilog"
+    ],
+    "warnings": []
+  },
+  "sim_result": {
+    "simulator": "iverilog",
+    "compile_passed": true,
+    "sim_passed": true,
+    "timed_out": false,
+    "total_vectors": 66,
+    "passed_vectors": 66,
+    "failed_vectors": 0,
+    "mismatches": [],
+    "vcd_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\sim\\uart_fifo_top.vcd",
+    "stdout": "VCD info: dumpfile uart_fifo_top.vcd opened for output.\n[SUMMARY] passed=66 failed=0\ntb_uart_fifo_top.sv:262: $finish called at 209466000 (1ps)\n",
+    "stderr": "warning: Some design elements have no explicit time unit and/or\n       : time precision. This may cause confusing timing results.\n       : Affected design elements are:\n       :   -- module sync_fifo declared here: sync_fifo.sv:3\n       :   -- module uart_fifo_top declared here: uart_fifo_top.sv:3\n       :   -- module uart_rx declared here: uart_rx.sv:3\n       :   -- module uart_tx declared here: uart_tx.sv:3\nuart_tx.sv:52: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'shift_reg[7:0]').\n",
+    "runtime_sec": 0.4126
+  },
+  "synthesis_report": {
+    "backend": "quartus",
+    "compile_passed": true,
+    "family": "Cyclone V",
+    "device": "5CSEMA5F31C6",
+    "top_module": "uart_fifo_top",
+    "project_dir": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus",
+    "qpf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.qpf",
+    "qsf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.qsf",
+    "sdc_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\uart_fifo_top.sdc",
+    "tcl_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\compile_uart_fifo_top.tcl",
+    "map_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\output_files\\uart_fifo_top.map.rpt",
+    "fit_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\output_files\\uart_fifo_top.fit.rpt",
+    "sta_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\quartus\\output_files\\uart_fifo_top.sta.rpt",
+    "resources": {
+      "logic_elements_or_alms": 182,
+      "combinational_functions": 269,
+      "dedicated_logic_registers": 283,
+      "memory_bits": 0,
+      "dsp_elements": 0,
+      "total_pins": 29,
+      "inferred_latches": 0
+    },
+    "timing": {
+      "fmax_mhz": 70.46,
+      "restricted_fmax_mhz": 70.46,
+      "worst_setup_slack_ns": 5.808,
+      "worst_hold_slack_ns": 0.159,
+      "worst_recovery_slack_ns": 9.325,
+      "worst_removal_slack_ns": 9.325,
+      "max_comb_delay_ns": null,
+      "timing_met": true
+    },
+    "warnings": [],
+    "errors": [
+      "Critical Warning (169244): Total number of single-ended output or bi-directional pins in bank 5A have exceeded the recommended amount in a bank where dedicated LVDS, RSDS, or mini-LVDS outputs exists."
+    ]
+  },
+  "visual_captures": [
+    {
+      "capture_type": "gtkwave_waveform",
+      "tool_name": "gtkwave",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_waveform.png",
+      "window_title": "GTKWave - uart_fifo_top.vcd",
+      "window_bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "width_px": 1420,
+      "height_px": 820,
+      "visual_audit_passed": true,
+      "edge_density": 0.17138,
+      "transition_columns_detected": 295,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Crisp digital signal transitions verified"
+    },
+    {
+      "capture_type": "quartus_rtl_viewer",
+      "tool_name": "quartus",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_rtl_viewer.png",
+      "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+      "window_bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "width_px": 1460,
+      "height_px": 860,
+      "visual_audit_passed": true,
+      "edge_density": 0.04826,
+      "transition_columns_detected": 1008,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Schematic symbols and nets verified"
+    },
+    {
+      "capture_type": "quartus_fsm_viewer",
+      "tool_name": "quartus",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\uart_fifo_top_fsm_viewer.png",
+      "window_title": "State Machine Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/uart_fifo_top/quartus/uart_fifo_top - uart_fifo_top",
+      "window_bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "width_px": 1460,
+      "height_px": 860,
+      "visual_audit_passed": true,
+      "edge_density": 0.04494,
+      "transition_columns_detected": 1139,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Schematic symbols and nets verified"
+    }
+  ],
+  "summary_md_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\summary.md",
+  "latex_tex_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\lab_report.tex",
+  "latex_pdf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\uart_fifo_top\\lab_report.pdf",
+  "overall_passed": true
+}

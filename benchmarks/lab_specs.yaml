@@ -1,0 +1,296 @@
+benchmarks:
+  - name: adder_sub_7seg
+    top_module: adder_sub_7seg
+    title: "4-Bit Signed Adder/Subtractor + Dual 7-Segment Decoder"
+    description: >
+      Pure combinational 4-bit two's-complement adder/subtractor with carry-out, signed
+      overflow, zero flag, and dual active-low 7-segment display decoders for sign and
+      magnitude on Terasic DE2-115.
+    archetype: adder_sub_7seg
+    clock_port: null
+    reset_port: null
+    clock_freq_mhz: 50.0
+    board_preset: DE2-115
+    ports:
+      - name: a
+        direction: input
+        width: 4
+        signed: true
+        description: "4-bit signed operand A (-8 to +7)"
+      - name: b
+        direction: input
+        width: 4
+        signed: true
+        description: "4-bit signed operand B (-8 to +7)"
+      - name: sub_mode
+        direction: input
+        width: 1
+        description: "Operation select (0: A + B, 1: A - B)"
+      - name: result
+        direction: output
+        width: 4
+        signed: true
+        description: "4-bit two's-complement signed sum/difference"
+      - name: cout
+        direction: output
+        width: 1
+        description: "Carry-out bit from MSB adder stage"
+      - name: overflow
+        direction: output
+        width: 1
+        description: "Signed two's-complement arithmetic overflow flag"
+      - name: zero
+        direction: output
+        width: 1
+        description: "Asserted high when result == 0"
+      - name: seg_sign
+        direction: output
+        width: 7
+        active_low: true
+        description: "Active-low 7-segment sign output ('-' when result < 0, blank otherwise)"
+      - name: seg_mag
+        direction: output
+        width: 7
+        active_low: true
+        description: "Active-low 7-segment magnitude output (0..8)"
+    gtkwave_signals:
+      - sub_mode
+      - a
+      - b
+      - result
+      - cout
+      - overflow
+      - zero
+      - seg_sign
+      - seg_mag
+    verification:
+      mode: exhaustive_truth_table
+      total_combinations: 512
+
+  - name: traffic_fsm
+    top_module: traffic_fsm
+    title: "Parameterized Clock Divider + Smart Traffic Light Moore FSM"
+    description: >
+      Synchronous smart intersection controller featuring a parameterized 50 MHz / SIM_MODE
+      1-Hz tick divider, 2-FF asynchronous input synchronizer and counter debouncer for
+      pedestrian button requests, emergency all-red override, countdown display, and
+      glitch-free Moore traffic outputs.
+    archetype: traffic_fsm
+    clock_port: clk
+    reset_port: rst_n
+    reset_active_low: true
+    clock_freq_mhz: 50.0
+    board_preset: DE2-115
+    parameters:
+      - name: SIM_MODE
+        default_value: 0
+        sim_value: 1
+        description: "0 for 50 MHz FPGA hardware, 1 for accelerated simulation"
+      - name: CLK_FREQ_HZ
+        default_value: 50000000
+        description: "System clock frequency in Hz"
+      - name: SIM_TICKS_PER_SEC
+        default_value: 4
+        description: "Clocks per 1-second tick when SIM_MODE=1"
+      - name: GREEN_SEC
+        default_value: 6
+        description: "Green phase duration in seconds"
+      - name: YELLOW_SEC
+        default_value: 2
+        description: "Yellow phase duration in seconds"
+      - name: PED_SEC
+        default_value: 4
+        description: "Pedestrian walk phase duration in seconds"
+      - name: ALL_RED_SEC
+        default_value: 1
+        description: "Safety all-red clearance interval in seconds"
+    ports:
+      - name: clk
+        direction: input
+        width: 1
+        description: "50 MHz system clock"
+      - name: rst_n
+        direction: input
+        width: 1
+        active_low: true
+        description: "Asynchronous active-low system reset"
+      - name: ped_btn_raw
+        direction: input
+        width: 1
+        description: "Asynchronous pedestrian request push-button"
+      - name: emergency_ovr
+        direction: input
+        width: 1
+        description: "Synchronous high-priority emergency all-red override"
+      - name: ns_light
+        direction: output
+        width: 3
+        description: "North-South {Red, Yellow, Green} one-hot lamp bus"
+      - name: ew_light
+        direction: output
+        width: 3
+        description: "East-West {Red, Yellow, Green} one-hot lamp bus"
+      - name: ped_walk
+        direction: output
+        width: 1
+        description: "Pedestrian WALK indicator"
+      - name: countdown
+        direction: output
+        width: 4
+        description: "Remaining seconds in active phase"
+    fsm_states:
+      - name: ST_NS_GREEN
+        encoding: "3'd0"
+        outputs: {ns_light: "GREEN (001)", ew_light: "RED (100)", ped_walk: "0"}
+        transitions:
+          - {cond: "emergency_ovr", next: "ST_EMERGENCY"}
+          - {cond: "phase_done", next: "ST_NS_YELLOW"}
+      - name: ST_NS_YELLOW
+        encoding: "3'd1"
+        outputs: {ns_light: "YELLOW (010)", ew_light: "RED (100)", ped_walk: "0"}
+        transitions:
+          - {cond: "emergency_ovr", next: "ST_EMERGENCY"}
+          - {cond: "phase_done", next: "ST_ALL_RED_1"}
+      - name: ST_ALL_RED_1
+        encoding: "3'd2"
+        outputs: {ns_light: "RED (100)", ew_light: "RED (100)", ped_walk: "0"}
+        transitions:
+          - {cond: "phase_done & ped_pending", next: "ST_PED_WALK"}
+          - {cond: "phase_done & !ped_pending", next: "ST_EW_GREEN"}
+      - name: ST_EW_GREEN
+        encoding: "3'd3"
+        outputs: {ns_light: "RED (100)", ew_light: "GREEN (001)", ped_walk: "0"}
+        transitions:
+          - {cond: "emergency_ovr", next: "ST_EMERGENCY"}
+          - {cond: "phase_done", next: "ST_EW_YELLOW"}
+      - name: ST_EW_YELLOW
+        encoding: "3'd4"
+        outputs: {ns_light: "RED (100)", ew_light: "YELLOW (010)", ped_walk: "0"}
+        transitions:
+          - {cond: "emergency_ovr", next: "ST_EMERGENCY"}
+          - {cond: "phase_done", next: "ST_ALL_RED_2"}
+      - name: ST_ALL_RED_2
+        encoding: "3'd5"
+        outputs: {ns_light: "RED (100)", ew_light: "RED (100)", ped_walk: "0"}
+        transitions:
+          - {cond: "phase_done & ped_pending", next: "ST_PED_WALK"}
+          - {cond: "phase_done & !ped_pending", next: "ST_NS_GREEN"}
+      - name: ST_PED_WALK
+        encoding: "3'd6"
+        outputs: {ns_light: "RED (100)", ew_light: "RED (100)", ped_walk: "1"}
+        transitions:
+          - {cond: "phase_done & resume_to_ew", next: "ST_EW_GREEN"}
+          - {cond: "phase_done & !resume_to_ew", next: "ST_NS_GREEN"}
+      - name: ST_EMERGENCY
+        encoding: "3'd7"
+        outputs: {ns_light: "RED (100)", ew_light: "RED (100)", ped_walk: "0"}
+        transitions:
+          - {cond: "!emergency_ovr", next: "ST_ALL_RED_1"}
+    gtkwave_signals:
+      - clk
+      - rst_n
+      - ped_btn_raw
+      - emergency_ovr
+      - state
+      - ped_pending
+      - ns_light
+      - ew_light
+      - ped_walk
+      - countdown
+
+  - name: uart_fifo_top
+    top_module: uart_fifo_top
+    title: "Configurable UART TX/RX Transceiver with 8-Byte Sync FIFO"
+    description: >
+      Full-duplex 8N1 UART transceiver with parameterized CLK_FREQ and BAUD_RATE,
+      16x mid-bit oversampling receiver, stop-bit framing-error detector with safe line-idle
+      recovery, and dual 8-byte circular show-ahead synchronous TX/RX FIFOs with full/empty
+      write/read guards targeting Terasic DE1-SoC (Cyclone V).
+    archetype: uart_fifo_top
+    clock_port: clk
+    reset_port: rst_n
+    reset_active_low: true
+    clock_freq_mhz: 50.0
+    board_preset: DE1-SoC
+    parameters:
+      - name: CLK_FREQ
+        default_value: 50000000
+        description: "System clock frequency in Hz"
+      - name: BAUD_RATE
+        default_value: 115200
+        description: "UART serial baud rate in bps"
+    ports:
+      - name: clk
+        direction: input
+        width: 1
+        description: "50 MHz system clock"
+      - name: rst_n
+        direction: input
+        width: 1
+        active_low: true
+        description: "Asynchronous active-low system reset"
+      - name: wr_en
+        direction: input
+        width: 1
+        description: "TX FIFO write enable strobe"
+      - name: wr_data
+        direction: input
+        width: 8
+        description: "8-bit parallel payload written to TX FIFO"
+      - name: rd_en
+        direction: input
+        width: 1
+        description: "RX FIFO read pop strobe"
+      - name: rx_serial
+        direction: input
+        width: 1
+        description: "Asynchronous UART serial RX line"
+      - name: clr_err
+        direction: input
+        width: 1
+        description: "Synchronous clear for sticky framing_error flag"
+      - name: tx_serial
+        direction: output
+        width: 1
+        description: "UART serial TX output line (idles high)"
+      - name: rd_data
+        direction: output
+        width: 8
+        description: "8-bit parallel byte at head of RX FIFO"
+      - name: tx_full
+        direction: output
+        width: 1
+        description: "TX 8-byte FIFO full flag"
+      - name: tx_empty
+        direction: output
+        width: 1
+        description: "TX 8-byte FIFO empty flag"
+      - name: rx_full
+        direction: output
+        width: 1
+        description: "RX 8-byte FIFO full flag"
+      - name: rx_empty
+        direction: output
+        width: 1
+        description: "RX 8-byte FIFO empty flag"
+      - name: tx_busy
+        direction: output
+        width: 1
+        description: "Asserted while UART TX shifter is active"
+      - name: framing_error
+        direction: output
+        width: 1
+        description: "Sticky framing error flag asserted on invalid stop bit"
+    gtkwave_signals:
+      - clk
+      - rst_n
+      - wr_en
+      - wr_data
+      - tx_serial
+      - rx_serial
+      - rd_en
+      - rd_data
+      - tx_full
+      - rx_empty
+      - tx_busy
+      - framing_error

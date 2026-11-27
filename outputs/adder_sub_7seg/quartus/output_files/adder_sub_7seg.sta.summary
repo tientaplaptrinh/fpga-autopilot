@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'virt_clk'
+Slack : 3.840
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'virt_clk'
+Slack : 7.880
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'virt_clk'
+Slack : 5.129
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'virt_clk'
+Slack : 7.251
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'virt_clk'
+Slack : 8.976
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'virt_clk'
+Slack : 4.439
+TNS   : 0.000
+
+------------------------------------------------------------

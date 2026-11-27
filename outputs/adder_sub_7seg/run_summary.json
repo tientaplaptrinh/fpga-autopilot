@@ -1,0 +1,124 @@
+{
+  "spec_name": "adder_sub_7seg",
+  "top_module": "adder_sub_7seg",
+  "board_preset": "DE2-115",
+  "rtl_paths": [
+    "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\rtl\\adder_sub_7seg.sv"
+  ],
+  "tb_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\tb\\tb_adder_sub_7seg.sv",
+  "healing_iterations": 0,
+  "lint_report": {
+    "passed": true,
+    "inferred_latches": 0,
+    "blocking_in_seq": 0,
+    "nonblocking_in_comb": 0,
+    "missing_reset_clauses": 0,
+    "undriven_nets": 0,
+    "multidriven_nets": 0,
+    "width_mismatches": 0,
+    "error_count": 0,
+    "warning_count": 0,
+    "tools_used": [
+      "static_analyzer",
+      "verilator",
+      "iverilog"
+    ],
+    "warnings": []
+  },
+  "sim_result": {
+    "simulator": "iverilog",
+    "compile_passed": true,
+    "sim_passed": true,
+    "timed_out": false,
+    "total_vectors": 512,
+    "passed_vectors": 512,
+    "failed_vectors": 0,
+    "mismatches": [],
+    "vcd_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\sim\\adder_sub_7seg.vcd",
+    "stdout": "VCD info: dumpfile adder_sub_7seg.vcd opened for output.\n[SUMMARY] passed=512 failed=0\ntb_adder_sub_7seg.sv:132: $finish called at 5125000 (1ps)\n",
+    "stderr": "warning: Some design elements have no explicit time unit and/or\n       : time precision. This may cause confusing timing results.\n       : Affected design elements are:\n       :   -- module adder_sub_7seg declared here: adder_sub_7seg.sv:4\nadder_sub_7seg.sv:38: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:39: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'a_u[3:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'b_eff[3:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:40: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'a_u[3:0]').\nadder_sub_7seg.sv:41: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:43: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:45: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\nadder_sub_7seg.sv:48: sorry: constant selects in always_* processes are not fully supported (the process will be sensitive to all bits in 'sum_ext[4:0]').\n",
+    "runtime_sec": 0.0949
+  },
+  "synthesis_report": {
+    "backend": "quartus",
+    "compile_passed": true,
+    "family": "Cyclone IV E",
+    "device": "EP4CE115F29C7",
+    "top_module": "adder_sub_7seg",
+    "project_dir": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus",
+    "qpf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.qpf",
+    "qsf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.qsf",
+    "sdc_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\adder_sub_7seg.sdc",
+    "tcl_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\compile_adder_sub_7seg.tcl",
+    "map_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\output_files\\adder_sub_7seg.map.rpt",
+    "fit_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\output_files\\adder_sub_7seg.fit.rpt",
+    "sta_rpt_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\quartus\\output_files\\adder_sub_7seg.sta.rpt",
+    "resources": {
+      "logic_elements_or_alms": 19,
+      "combinational_functions": 19,
+      "dedicated_logic_registers": 0,
+      "memory_bits": 0,
+      "dsp_elements": 0,
+      "total_pins": 30,
+      "inferred_latches": 0
+    },
+    "timing": {
+      "fmax_mhz": 61.88,
+      "restricted_fmax_mhz": 50.01,
+      "worst_setup_slack_ns": 3.84,
+      "worst_hold_slack_ns": 4.439,
+      "worst_recovery_slack_ns": 5.129,
+      "worst_removal_slack_ns": 5.129,
+      "max_comb_delay_ns": null,
+      "timing_met": true
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "visual_captures": [
+    {
+      "capture_type": "gtkwave_waveform",
+      "tool_name": "gtkwave",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_waveform.png",
+      "window_title": "GTKWave - adder_sub_7seg.vcd",
+      "window_bbox": [
+        50,
+        40,
+        1420,
+        820
+      ],
+      "width_px": 1420,
+      "height_px": 820,
+      "visual_audit_passed": true,
+      "edge_density": 0.1214,
+      "transition_columns_detected": 477,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Crisp digital signal transitions verified"
+    },
+    {
+      "capture_type": "quartus_rtl_viewer",
+      "tool_name": "quartus",
+      "image_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\adder_sub_7seg_rtl_viewer.png",
+      "window_title": "RTL Viewer - C:/Users/DELL INSPIRON 5515/.gemini/antigravity/scratch/fpga_autopilot/outputs/adder_sub_7seg/quartus/adder_sub_7seg - adder_sub_7seg",
+      "window_bbox": [
+        30,
+        30,
+        1460,
+        860
+      ],
+      "width_px": 1460,
+      "height_px": 860,
+      "visual_audit_passed": true,
+      "edge_density": 0.03449,
+      "transition_columns_detected": 912,
+      "zoom_adjustments": 0,
+      "audit_log_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\artifacts\\gui_audit\\gui_audit_log.jsonl",
+      "notes": "Schematic symbols and nets verified"
+    }
+  ],
+  "summary_md_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\summary.md",
+  "latex_tex_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\lab_report.tex",
+  "latex_pdf_path": "C:\\Users\\DELL INSPIRON 5515\\.gemini\\antigravity\\scratch\\fpga_autopilot\\outputs\\adder_sub_7seg\\lab_report.pdf",
+  "overall_passed": true
+}
